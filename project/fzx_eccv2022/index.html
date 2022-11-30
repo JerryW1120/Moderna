@@ -86,30 +86,24 @@
       <div class="container" data-aos="fade-up">
         
         <h3>Project</h3>
-
-        <div class="row">
-
-          <div class="col-lg-8 entries">
-
             <article class="entry entry-single">
 
-              <div class="entry-img">
-                <img src="./img/Network.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
+              <h1 class="entry-title">
                 <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
-              </h2>
+              </h1>
 
-              <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming</li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2022">2022</time></li>
-              </ul>
+              <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</li></h5>
+
+              <img src="./img/Network.jpg" class="img-fluid"  alt="">
+              <p>
+                Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
+                (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
+              </p>
 
               <div class="entry-content">
                 <h3>Abstract</h3>
                 <p>
-                  Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
+                  &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
                   Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
                   To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
                   Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
@@ -120,9 +114,15 @@
 
                 <h3>Paper & Code & Demo</h3>
                 <ul>
-                    <li><i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a></li>
+                    <p>
+                        <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                    </p>
+                    <p>
+                        <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
+                    </p>
+                    <p>
+                        <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                    </p>
                 </ul>
                 
                 <h3>Experimental Results</h3>
@@ -135,15 +135,14 @@
 
                 <h3>Result Visualization</h3>
                 <ul>
+                    <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
                     <p>
                         Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
                     </p>
-                    <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
-                    
+                    <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
                     <p>
                         Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
                     </p>
-                    <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
                 </ul>
 
                 <h3>Citation</h3>
@@ -170,42 +169,34 @@
             </article><!-- End blog entry -->
 
             <div class="blog-comments">
-
                 <h3>Comment</h3>
-
                 <div class="reply-form">
-                <h4>Leave a Reply</h4>
-                <p>Your email address will not be published. Required fields are marked * </p>
-                <form action="">
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <input name="website" type="text" class="form-control" placeholder="Your Website">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Post Comment</button>
-
-                </form>
-
-              </div>
+                    <h4>Leave a Reply</h4>
+                    <p>Your email address will not be published. Required fields are marked * </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <input name="website" type="text" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                </div>
 
             </div><!-- End blog comments -->
-
-          </div><!-- End blog entries list -->
-
-        </div>
 
       </div>
     </section><!-- End Blog Single Section -->
