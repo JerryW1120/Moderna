@@ -1,0 +1,22 @@
+.a{
+    position:relative; 
+    display: inline-block;
+}
+.a img{
+    display: block;
+    user-select: none;
+}
+.b{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+#range{
+    position: absolute; 
+    width: 100%; 
+    left: 0; 
+    margin: auto; 
+}

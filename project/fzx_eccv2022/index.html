@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Moderna - v4.10.1
@@ -55,7 +56,7 @@
           <li><a href="../../services.html">Services</a></li>
           <li><a href="../../portfolio.html">Portfolio</a></li>
           <li><a href="../../team.html">Team</a></li>
-          <li><a class="active" href="../../blog.html">Publication</a></li>
+          <li><a class="active" href="../../research.html">Research</a></li>
           </li>
           <li><a href="../../contact.html">Contact Us</a></li>
         </ul>
@@ -73,7 +74,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <ol>
             <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../blog.html">Publications</a></li>
+            <li><a href="../../research.html">Research</a></li>
             <li>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</li>
           </ol>
         </div>
@@ -85,91 +86,136 @@
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
         
-        <h3>Project</h3>
+        <h2>Project</h2>
             <article class="entry entry-single">
 
-              <h1 class="entry-title">
-                <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
-              </h1>
+                <h1 class="entry-title">
+                    <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
+                </h1>
 
-              <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhenxuan Fang, Weisheng Dong*, Xin Li, Jinjian Wu, Leida Li, and Guangming Shi</li></h5>
 
-              <img src="./img/Network.jpg" class="img-fluid"  alt="">
-              <p>
-                Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
-                (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
-              </p>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <div class="a">
+                            <div class="b" id="b">
+                                <div><img src="./HR/img_005.png" alt="Befroe"></div>
+                            </div>
+                            <img src="./LR/img_005_LR.png" alt="After">
+                            <input type="range" id="range" value="50">
+                        </div>
+                    </div>
 
-              <div class="entry-content">
-                <h3>Abstract</h3>
+                    <div class="col-md-6 col-xs-6">
+                        <div class="a">
+                            <div class="b" id="b">
+                                <div><img src="./HR/img_009.png" alt="Befroe"></div>
+                            </div>
+                            <img src="./LR/img_009_LR.png" alt="After">
+                            <input type="range" id="range" value="50">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <div class="a">
+                            <div class="b" id="b">
+                                <div><img src="./HR/img_011.png" alt="Befroe"></div>
+                            </div>
+                            <img src="./LR/img_011_LR.png" alt="After">
+                            <input type="range" id="range" value="50">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <div class="a">
+                            <div class="b" id="b">
+                                <div><img src="./HR/img_014.png" alt="Befroe"></div>
+                            </div>
+                            <img src="./LR/img_014_LR.png" alt="After">
+                            <input type="range" id="range" value="50">
+                        </div>
+                    </div>
+                </div>
+
+                <img src="./img/Network.jpg" class="img-fluid"  alt="">
                 <p>
-                  &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
-                  Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
-                  To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
-                  Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
-                  Then we propose a novel SR network by unfolding the joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated kernel. 
-                  We have also developed a novel approach of estimating both the scale prior coefficient and the local means of the LSM model through a deep convolutional neural network (DCNN). 
-                  All parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive experiments on both synthetic and real-world images show that our method achieves state-of-the-art performance for the task of blind image SR.
+                    Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
+                    (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
                 </p>
 
-                <h3>Paper & Code & Demo</h3>
-                <ul>
+                <div class="entry-content">
+                    <h3>Abstract</h3>
                     <p>
-                        <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                    &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
+                    Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
+                    To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
+                    Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
+                    Then we propose a novel SR network by unfolding the joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated kernel. 
+                    We have also developed a novel approach of estimating both the scale prior coefficient and the local means of the LSM model through a deep convolutional neural network (DCNN). 
+                    All parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive experiments on both synthetic and real-world images show that our method achieves state-of-the-art performance for the task of blind image SR.
                     </p>
-                    <p>
-                        <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
-                    </p>
-                    <p>
-                        <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
-                    </p>
-                </ul>
-                
-                <h3>Experimental Results</h3>
-                <ul>
-                    <p>
-                        Table 1. Quantitative comparison of the SOTA blind SR methods and the proposed method on various datasets and noise levels.
-                    </p>
-                    <img src="./img/Quantitative_Results.jpg" class="img-fluid" alt="">
-                </ul>
 
-                <h3>Result Visualization</h3>
-                <ul>
-                    <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
-                    <p>
-                        Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
-                    </p>
-                    <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
-                    <p>
-                        Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
-                    </p>
-                </ul>
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p>
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                            Table 1. Quantitative comparison of the SOTA blind SR methods and the proposed method on various datasets and noise levels.
+                        </p>
+                        <img src="./img/Quantitative_Results.jpg" class="img-fluid" alt="">
+                    </ul>
 
-                <h3>Citation</h3>
-                @inproceedings{fang2022uncertainty,<br>
-                    &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
-                    &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
-                    &emsp;booktitle={European Conference on Computer Vision},<br>
-                    &emsp;pages={144--161},<br>
-                    &emsp;year={2022},<br>
-                    &emsp;organization={Springer}<br>
-                }
-                
-                <h3>Concat</h3>
-                <p>
-                    <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
-                    <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                    <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                    <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
-                    <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
-                    <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
-                </p>
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
+                        <p>
+                            Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
+                        </p>
+                        <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
+                        <p>
+                            Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
+                        </p>
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @inproceedings{fang2022uncertainty,<br>
+                            &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
+                            &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
+                            &emsp;booktitle={European Conference on Computer Vision},<br>
+                            &emsp;pages={144--161},<br>
+                            &emsp;year={2022},<br>
+                            &emsp;organization={Springer}<br>
+                        }
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
+                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
                   
-            </div>
+                </div>
             </article><!-- End blog entry -->
 
             <div class="blog-comments">
-                <h3>Comment</h3>
+                <h2>Comment</h2>
                 <div class="reply-form">
                     <h4>Leave a Reply</h4>
                     <p>Your email address will not be published. Required fields are marked * </p>
@@ -242,6 +288,7 @@
 
   <!-- Template Main JS File -->
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
 
 </body>
 
