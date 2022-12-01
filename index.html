@@ -51,13 +51,12 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="active " href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a class="" href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publication.html">Publication</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="contact.html">Join Us</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -171,37 +170,6 @@
         </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Why Us Section ======= -->
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-        <div class="container">
-
-            <div class="row">
-                <p class="mb-0 text-justify"> Need a video. Here's an example.
-                </p>
-                <div class="col-lg-6 video-box">
-                    <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
-                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-                </div>
-
-                <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                    </div>
-
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-gift"></i></div>
-                        <h4 class="title"><a href="">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Why Us Section -->
 
     <!-- ======= Features Section ======= -->
     <section class="features">
@@ -236,13 +204,9 @@
             <!-- ECCV_2022_Fang -->
             <div class="row" data-aos="fade-up">
 
-                <div class="col-md-7 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="assets/papers/ECCV_2022_Fang/network.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
-                </div>
+                
 
-                <div class="col-md-5 pt-4" data-aos="fade-up">
+                <div class="col-md-7 pt-4" data-aos="fade-up">
                     <h3>Uncertainty learning in kernel estimation for multi-stage blind image super-resolution</h3>
                     <h5>Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
                     <h6>ECCV 2022</h6>
@@ -275,92 +239,153 @@
                         state-of-the-art performance for the task of blind image SR.
                     </ul>
                 </div>
+                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                  <img src="project/fzx_eccv2022/img/network1.png" class="img-fluid" alt="" style="display: inline-block;">
+                  <li><i class="bi bi-check"></i> <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141.pdf">Paper</a></li>
+<<<<<<< HEAD
+                  <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a></li>
+                  <li><i class="bi bi-check"></i> <a href="http://10.193.131.49:8501">Demo</a></li>
+=======
+                  <li><i class="bi bi-check"></i> Code</li>
+                  <li><i class="bi bi-check"></i> Demo</li>
+>>>>>>> c76793427b8e08f79556951335a258c0155d3004
+              </div>
                 <br>
                 <br>
 
                 <!-- ECCV_2022_Yang -->
-                <div class="md-7 pt-4" data-aos="fade-up">
-                    <h3>Self-feature distillation with uncertainty modeling for degraded image recognition</h3>
-                    <h5>Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
-                    <h6>ECCV 2022</h6>
-                    <img src="assets/papers/ECCV_2022_Yang/network.png" class="img-fluid" alt="">
-
-                    <ul>
-                        <h4>Abstract</h4>
-                        Despite the remarkable performance on high-quality (HQ)
-                        data, the accuracy of deep image recognition models degrades rapidly
-                        in the presence of low-quality (LQ) images. Both feature de-drifting and
-                        quality agnostic models have been developed to make the features extracted
-                        from degraded images closer to those of HQ images. In these
-                        methods, the l2-norm is usually used as a constraint. It treats each pixel
-                        in the feature equally and may result in relatively poor reconstruction
-                        performance in some difficult regions. To address this issue, we propose a
-                        novel self-feature distillation method with uncertainty modeling for better
-                        producing HQ-like features from low-quality observations in this paper.
-                        Specifically, in a standard recognition model, we use the HQ features to
-                        distill the corresponding degraded ones and conduct uncertainty modeling
-                        according to the diversity of degradation sources, increasing the
-                        weights of feature regions that is difficult to recover in the distillation
-                        loss. Experiments demonstrate that our method can extract HQ-like fea
-                        tures better even when the inputs are degraded images, which makes the
-                        model more robust than other approaches.
-                    </ul>
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Self-Feature%20Distillation_ECCV2022.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
-                </div>
-
                 <div class="row" data-aos="fade-up">
-                    <div class="col-md-5 order-1 order-md-2">
-                        <img src="assets/img/features-2.svg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-7 pt-5 order-2 order-md-1">
-                        <h3>Corporis temporibus maiores provident</h3>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
-                        </p>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum
-                        </p>
-                    </div>
-                </div>
 
-                <div class="row" data-aos="fade-up">
-                    <div class="col-md-5">
-                        <img src="assets/img/features-3.svg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-7 pt-5">
-                        <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-                        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+                    <div class="col-md-7 pt-4" data-aos="fade-up">
+                      <h3>Self-feature distillation with uncertainty modeling for degraded image recognition</h3>
+                      <h5>Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
+                      <h6>ECCV 2022</h6>
                         <ul>
-                            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                            <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+                            <br>
+                            <h4>Abstract</h4>
+                            Despite the remarkable performance on high-quality (HQ)
+                            data, the accuracy of deep image recognition models degrades rapidly
+                            in the presence of low-quality (LQ) images. Both feature de-drifting and
+                            quality agnostic models have been developed to make the features extracted
+                            from degraded images closer to those of HQ images. In these
+                            methods, the l2-norm is usually used as a constraint. It treats each pixel
+                            in the feature equally and may result in relatively poor reconstruction
+                            performance in some difficult regions. To address this issue, we propose a
+                            novel self-feature distillation method with uncertainty modeling for better
+                            producing HQ-like features from low-quality observations in this paper.
+                            Specifically, in a standard recognition model, we use the HQ features to
+                            distill the corresponding degraded ones and conduct uncertainty modeling
+                            according to the diversity of degradation sources, increasing the
+                            weights of feature regions that is difficult to recover in the distillation
+                            loss. Experiments demonstrate that our method can extract HQ-like fea
+                            tures better even when the inputs are degraded images, which makes the
+                            model more robust than other approaches.
                         </ul>
                     </div>
-                </div>
+                    <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                      <img src="project/yz_eccv2022/img/network.png" class="img-fluid" alt="">
+                      <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Self-Feature%20Distillation_ECCV2022.pdf">Paper</a></li>
+                      <li><i class="bi bi-check"></i> Code</li>
+                      <li><i class="bi bi-check"></i> Demo</li>
+                  </div>
+                    <br>
+                    <br>
+                
 
+                <!--  IJCAI_2022_Ning -->
                 <div class="row" data-aos="fade-up">
-                    <div class="col-md-5 order-1 order-md-2">
-                        <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-7 pt-5 order-2 order-md-1">
-                        <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
-                        </p>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum
-                        </p>
-                    </div>
-                </div>
 
-            </div>
+                  <div class="col-md-7 pt-4" data-aos="fade-up">
+                    <h3>Learning degradation Uncertainty for unsupervised real-world image super-resolution</h3>
+                    <h5> Q. Ning, J. Tang, F. Wu, W. Dong*, X. Li, and G. Shi</h5>
+                    <h6>IJCAI 2022</h6>
+                      <!--            <p class="fst-italic">-->
+                      <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+                      <!--              magna aliqua.-->
+                      <!--            </p>-->
+                      <ul>
+                          <br>
+                          <h4>Abstract</h4>
+                          Acquiring degraded images with paired highresolution (HR) images is often 
+                          challenging, impeding the advance of image super-resolution in
+                          real-world applications. By generating realistic
+                          low-resolution (LR) images with degradation similar to that in real-world scenarios, 
+                          simulated paired LR-HR data can be constructed for supervised
+                          training. However, most of the existing work ignores the degradation 
+                          uncertainty of the generated realistic LR images, since only one LR image
+                          has been generated given an HR image. To address
+                          this weakness, we propose learning the degradation
+                          uncertainty of generated LR images and sampling
+                          multiple LR images from the learned LR image
+                          (mean) and degradation uncertainty (variance) and
+                          construct LR-HR pairs to train the super-resolution
+                          (SR) networks. Specifically, uncertainty can be
+                          learned by minimizing the proposed loss based on
+                          Kullback-Leibler (KL) divergence. Furthermore,
+                          the uncertainty in the feature domain is exploited
+                          by a novel perceptual loss; and we propose to calculate the adversarial loss 
+                          from the gradient information in the SR stage for stable training performance 
+                          and better visual quality. Experimental results on popular real-world datasets 
+                          show that our proposed method has performed better than other unsupervised approaches.
+                      </ul>
+                  </div>
+                  <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                    <img src="project/nq_ijcai2022/img/network.png" class="img-fluid" alt="">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/IJCAI-2022.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> Code</li>
+                    <li><i class="bi bi-check"></i> Demo</li>
+                </div>
+                  <br>
+                  <br>
+
+                
+                <!-- CVPR_2021_Huang -->
+                <div class="row" data-aos="fade-up">
+
+                    <div class="col-md-7 pt-4" data-aos="fade-up">
+                      <h3>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</h3>
+                      <h5>T. Huang, W. Dong*, X. Yuan*, J. Wu, and G. Shi</h5>
+                      <h6>CVPR 2021</h6>
+                        <!--            <p class="fst-italic">-->
+                        <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+                        <!--              magna aliqua.-->
+                        <!--            </p>-->
+                        <ul>
+                            <br>
+                            <h4>Abstract</h4>
+                            In coded aperture snapshot spectral imaging (CASSI)
+                            system, the real-world hyperspectral image (HSI) can be reconstructed 
+                            from the captured compressive image in a snapshot. Model-based HSI reconstruction methods employed
+                            hand-crafted priors to solve the reconstruction problem, but
+                            most of which achieved limited success due to the poor 
+                            representation capability of these hand-crafted priors. Deep
+                            learning based methods learning the mappings between the
+                            compressive images and the HSIs directly achieved much
+                            better results. Yet, it is nontrivial to design a powerful deep
+                            network heuristically for achieving satisfied results. In this
+                            paper, we propose a novel HSI reconstruction method based
+                            on the Maximum a Posterior (MAP) estimation framework
+                            using learned Gaussian Scale Mixture (GSM) prior. Different 
+                            from existing GSM models using hand-crafted scale
+                            priors (e.g., the Jeffrey’s prior), we propose to learn the
+                            scale prior through a deep convolutional neural network
+                            (DCNN). Furthermore, we also propose to estimate the local means 
+                            of the GSM models by the DCNN. All the parameters of the MAP estimation algorithm and the DCNN
+                            parameters are jointly optimized through end-to-end training. 
+                            Extensive experimental results on both synthetic and
+                            real datasets demonstrate that the proposed method outperforms existing state-of-the-art methods. 
+                        </ul>
+                    </div>
+                    <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                      <img src="project/ht_cvpr2021/img/network.png" class="img-fluid" alt="">
+                      <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Huang_Deep_Gaussian_Scale_Mixture_Prior_for_Spectral_Compressive_Imaging_CVPR_2021_paper.pdf">Paper</a></li>
+                      <li><i class="bi bi-check"></i> Code</li>
+                      <li><i class="bi bi-check"></i> Demo</li>
+                  </div>
+                    <br>
+                    <br>
+    
+                 
     </section><!-- End Features Section -->
 
 </main><!-- End #main -->
@@ -371,15 +396,16 @@
     <div class="footer-newsletter">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <h4>Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                <div class="lg-6">
+                    <h4>Admissions Information</h4>
+                    <p>Welcome aspiring young people to apply for my graduate students, 
+                        I recruit 5~7 master's students every year (including the university's recommended students, 
+                        the number of students guaranteed by foreign universities is not limited), 1-2 doctors. 
+                        The master's enrollment majors are the national double first-class disciplines "Computer Science and Technology" 
+                        and "Electronics and Communication Engineering". Students who apply for the exam are best to contact 
+                        (wsdong@mail.xidian.edu.cn) before applying for the exam for a preliminary interview.</p>
                 </div>
-                <div class="col-lg-6">
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
-                </div>
+                
             </div>
         </div>
     </div>

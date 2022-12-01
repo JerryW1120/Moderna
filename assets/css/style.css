@@ -1105,8 +1105,9 @@ section {
 }
 
 .service-details .card-img {
-  width: calc(100% + 60px);
-  margin-left: -30px;
+  /*width: calc(100% + 60px);*/
+  width: calc(100%);
+  /*margin-left: -30px;*/
   overflow: hidden;
   z-index: 9;
   border-radius: 0;
@@ -1143,7 +1144,7 @@ section {
 }
 
 .service-details .read-more a {
-  color: #777777;
+  color: #68A4C4;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
