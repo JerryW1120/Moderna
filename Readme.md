@@ -1,6 +1,4 @@
-Thanks for downloading this template!
+# The page of our lab
+这是我们实验室的主页，该readme主要面向后续的维护
 
-Template Name: Moderna
-Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+
