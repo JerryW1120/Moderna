@@ -181,7 +181,7 @@
 
             <div class="section-title">
                 <h2>最新工作</h2>
-                <p>下面是我们实验室的一些最新研究进展，按照时间逆序展示</p>
+                <p>下面是我们实验室的一些最新研究进展</p>
                 <p>部分工作已开源代码，欢迎您阅读，和我们讨论、交流！</p>
             </div>
 
@@ -205,42 +205,42 @@
 
 
 
-            <!-- ECCV_2022_Fang -->
-            <div class="row" data-aos="fade-up">
-
-                
-
+             <!-- ECCV_2022_Fang -->
+             <div class="row" data-aos="fade-up">
                 <div class="col-md-7 pt-4" data-aos="fade-up">
                     <h3>Uncertainty learning in kernel estimation for multi-stage blind image super-resolution</h3>
                     <h5>Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
                     <h6>ECCV 2022</h6>
-                    <!--            <p class="fst-italic">-->
-                    <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
-                    <!--              magna aliqua.-->
-                    <!--            </p>-->
-                    <ul>
-                        <br>
-                        <h4>Abstract</h4>
-                        Conventional wisdom in blind super-resolution (SR) first estimates the unknown
-                        degradation from the low-resolution image and then
-                        exploits the degradation information for image reconstruction. Such sequential
-                        approaches suffer from two fundamental weaknesses - i.e., the
-                        lack of robustness (the performance drops when the estimated degradation
-                        is inaccurate) and the lack of transparency (network architectures
-                        are heuristic without incorporating domain knowledge). To address these
-                        issues, we propose a joint Maximum a Posteriori (MAP) approach for
-                        estimating the unknown kernel and high-resolution image simultaneously.
-                        Our method first introduces uncertainty learning in the latent space when
-                        estimating the blur kernel, aiming at improving the robustness to the
-                        estimation error. Then we propose a novel SR network by unfolding the
-                        joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior
-                        and the estimated kernel. We have also developed a novel approach of
-                        estimating both the scale prior coefficient and the local means of the
-                        LSM model through a deep convolutional neural network (DCNN). All
-                        parameters of the MAP estimation algorithm and the DCNN parameters
-                        are jointly optimized through end-to-end training. Extensive experiments
-                        on both synthetic and real-world images show that our method achieves
-                        state-of-the-art performance for the task of blind image SR.
+                    <ul class="faq-list">
+                        <div>
+                            <br>
+                            <li>
+                                <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Fang_ECCV_2022"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                <div id="abstract_Fang_ECCV_2022" class="collapse" data-bs-parent=".faq-list">
+                                    <p>
+                                        Conventional wisdom in blind super-resolution (SR) first estimates the unknown
+                                        degradation from the low-resolution image and then
+                                        exploits the degradation information for image reconstruction. Such sequential
+                                        approaches suffer from two fundamental weaknesses - i.e., the
+                                        lack of robustness (the performance drops when the estimated degradation
+                                        is inaccurate) and the lack of transparency (network architectures
+                                        are heuristic without incorporating domain knowledge). To address these
+                                        issues, we propose a joint Maximum a Posteriori (MAP) approach for
+                                        estimating the unknown kernel and high-resolution image simultaneously.
+                                        Our method first introduces uncertainty learning in the latent space when
+                                        estimating the blur kernel, aiming at improving the robustness to the
+                                        estimation error. Then we propose a novel SR network by unfolding the
+                                        joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior
+                                        and the estimated kernel. We have also developed a novel approach of
+                                        estimating both the scale prior coefficient and the local means of the
+                                        LSM model through a deep convolutional neural network (DCNN). All
+                                        parameters of the MAP estimation algorithm and the DCNN parameters
+                                        are jointly optimized through end-to-end training. Extensive experiments
+                                        on both synthetic and real-world images show that our method achieves
+                                        state-of-the-art performance for the task of blind image SR.
+                                    </p>
+                                </div>                               
+                        </li>                          
                     </ul>
                 </div>
                 <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
@@ -248,7 +248,7 @@
                   <li><i class="bi bi-check"></i> <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141.pdf">Paper</a></li>
                   <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a></li>
                   <li><i class="bi bi-check"></i> <a href="http://106.14.213.79:8501">Demo</a></li>
-              </div>
+                </div>
                 <br>
                 <br>
 
@@ -259,28 +259,37 @@
                       <h3>Self-feature distillation with uncertainty modeling for degraded image recognition</h3>
                       <h5>Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
                       <h6>ECCV 2022</h6>
-                        <ul>
+                      <ul class="faq-list">
+                        <div>
                             <br>
-                            <h4>Abstract</h4>
-                            Despite the remarkable performance on high-quality (HQ)
-                            data, the accuracy of deep image recognition models degrades rapidly
-                            in the presence of low-quality (LQ) images. Both feature de-drifting and
-                            quality agnostic models have been developed to make the features extracted
-                            from degraded images closer to those of HQ images. In these
-                            methods, the l2-norm is usually used as a constraint. It treats each pixel
-                            in the feature equally and may result in relatively poor reconstruction
-                            performance in some difficult regions. To address this issue, we propose a
-                            novel self-feature distillation method with uncertainty modeling for better
-                            producing HQ-like features from low-quality observations in this paper.
-                            Specifically, in a standard recognition model, we use the HQ features to
-                            distill the corresponding degraded ones and conduct uncertainty modeling
-                            according to the diversity of degradation sources, increasing the
-                            weights of feature regions that is difficult to recover in the distillation
-                            loss. Experiments demonstrate that our method can extract HQ-like fea
-                            tures better even when the inputs are degraded images, which makes the
-                            model more robust than other approaches.
-                        </ul>
+                            <li>
+                                <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Yang_ECCV_2022"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                <div id="abstract_Yang_ECCV_2022" class="collapse">
+                                    <p>
+                                        Despite the remarkable performance on high-quality (HQ)
+                                        data, the accuracy of deep image recognition models degrades rapidly
+                                        in the presence of low-quality (LQ) images. Both feature de-drifting and
+                                        quality agnostic models have been developed to make the features extracted
+                                        from degraded images closer to those of HQ images. In these
+                                        methods, the l2-norm is usually used as a constraint. It treats each pixel
+                                        in the feature equally and may result in relatively poor reconstruction
+                                        performance in some difficult regions. To address this issue, we propose a
+                                        novel self-feature distillation method with uncertainty modeling for better
+                                        producing HQ-like features from low-quality observations in this paper.
+                                        Specifically, in a standard recognition model, we use the HQ features to
+                                        distill the corresponding degraded ones and conduct uncertainty modeling
+                                        according to the diversity of degradation sources, increasing the
+                                        weights of feature regions that is difficult to recover in the distillation
+                                        loss. Experiments demonstrate that our method can extract HQ-like fea
+                                        tures better even when the inputs are degraded images, which makes the
+                                        model more robust than other approaches.
+                                    </p>
+                                </div>                               
+                            </li>  
+                        </div>                        
+                      </ul>
                     </div>
+                    
                     <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
                       <img src="project/yz_eccv2022/img/network.png" class="img-fluid" alt="">
                       <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Self-Feature%20Distillation_ECCV2022.pdf">Paper</a></li>
@@ -293,41 +302,45 @@
 
                 <!--  IJCAI_2022_Ning -->
                 <div class="row" data-aos="fade-up">
-
                   <div class="col-md-7 pt-4" data-aos="fade-up">
                     <h3>Learning degradation Uncertainty for unsupervised real-world image super-resolution</h3>
                     <h5> Q. Ning, J. Tang, F. Wu, W. Dong*, X. Li, and G. Shi</h5>
                     <h6>IJCAI 2022</h6>
-                      <!--            <p class="fst-italic">-->
-                      <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
-                      <!--              magna aliqua.-->
-                      <!--            </p>-->
-                      <ul>
-                          <br>
-                          <h4>Abstract</h4>
-                          Acquiring degraded images with paired highresolution (HR) images is often 
-                          challenging, impeding the advance of image super-resolution in
-                          real-world applications. By generating realistic
-                          low-resolution (LR) images with degradation similar to that in real-world scenarios, 
-                          simulated paired LR-HR data can be constructed for supervised
-                          training. However, most of the existing work ignores the degradation 
-                          uncertainty of the generated realistic LR images, since only one LR image
-                          has been generated given an HR image. To address
-                          this weakness, we propose learning the degradation
-                          uncertainty of generated LR images and sampling
-                          multiple LR images from the learned LR image
-                          (mean) and degradation uncertainty (variance) and
-                          construct LR-HR pairs to train the super-resolution
-                          (SR) networks. Specifically, uncertainty can be
-                          learned by minimizing the proposed loss based on
-                          Kullback-Leibler (KL) divergence. Furthermore,
-                          the uncertainty in the feature domain is exploited
-                          by a novel perceptual loss; and we propose to calculate the adversarial loss 
-                          from the gradient information in the SR stage for stable training performance 
-                          and better visual quality. Experimental results on popular real-world datasets 
-                          show that our proposed method has performed better than other unsupervised approaches.
-                      </ul>
-                  </div>
+                    <ul class="faq-list">
+                        <div>
+                            <br>
+                            <li>
+                                <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Ning_IJCAI_2022"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                <div id="abstract_Ning_IJCAI_2022" class="collapse">
+                                    <p>
+                                        Acquiring degraded images with paired highresolution (HR) images is often 
+                                        challenging, impeding the advance of image super-resolution in
+                                        real-world applications. By generating realistic
+                                        low-resolution (LR) images with degradation similar to that in real-world scenarios, 
+                                        simulated paired LR-HR data can be constructed for supervised
+                                        training. However, most of the existing work ignores the degradation 
+                                        uncertainty of the generated realistic LR images, since only one LR image
+                                        has been generated given an HR image. To address
+                                        this weakness, we propose learning the degradation
+                                        uncertainty of generated LR images and sampling
+                                        multiple LR images from the learned LR image
+                                        (mean) and degradation uncertainty (variance) and
+                                        construct LR-HR pairs to train the super-resolution
+                                        (SR) networks. Specifically, uncertainty can be
+                                        learned by minimizing the proposed loss based on
+                                        Kullback-Leibler (KL) divergence. Furthermore,
+                                        the uncertainty in the feature domain is exploited
+                                        by a novel perceptual loss; and we propose to calculate the adversarial loss 
+                                        from the gradient information in the SR stage for stable training performance 
+                                        and better visual quality. Experimental results on popular real-world datasets 
+                                        show that our proposed method has performed better than other unsupervised approaches.
+                                    </p>
+                                </div>                               
+                            </li>  
+                        </div>                        
+                    </ul>
+                </div>  
+                      
                   <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
                     <img src="project/nq_ijcai2022/img/network.png" class="img-fluid" alt="">
                     <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/IJCAI-2022.pdf">Paper</a></li>
@@ -345,35 +358,39 @@
                       <h3>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</h3>
                       <h5>T. Huang, W. Dong*, X. Yuan*, J. Wu, and G. Shi</h5>
                       <h6>CVPR 2021</h6>
-                        <!--            <p class="fst-italic">-->
-                        <!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
-                        <!--              magna aliqua.-->
-                        <!--            </p>-->
-                        <ul>
+                      <ul class="faq-list">
+                        <div>
                             <br>
-                            <h4>Abstract</h4>
-                            In coded aperture snapshot spectral imaging (CASSI)
-                            system, the real-world hyperspectral image (HSI) can be reconstructed 
-                            from the captured compressive image in a snapshot. Model-based HSI reconstruction methods employed
-                            hand-crafted priors to solve the reconstruction problem, but
-                            most of which achieved limited success due to the poor 
-                            representation capability of these hand-crafted priors. Deep
-                            learning based methods learning the mappings between the
-                            compressive images and the HSIs directly achieved much
-                            better results. Yet, it is nontrivial to design a powerful deep
-                            network heuristically for achieving satisfied results. In this
-                            paper, we propose a novel HSI reconstruction method based
-                            on the Maximum a Posterior (MAP) estimation framework
-                            using learned Gaussian Scale Mixture (GSM) prior. Different 
-                            from existing GSM models using hand-crafted scale
-                            priors (e.g., the Jeffrey’s prior), we propose to learn the
-                            scale prior through a deep convolutional neural network
-                            (DCNN). Furthermore, we also propose to estimate the local means 
-                            of the GSM models by the DCNN. All the parameters of the MAP estimation algorithm and the DCNN
-                            parameters are jointly optimized through end-to-end training. 
-                            Extensive experimental results on both synthetic and
-                            real datasets demonstrate that the proposed method outperforms existing state-of-the-art methods. 
-                        </ul>
+                            <li>
+                                <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Huang_CVPR_2021"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                <div id="abstract_Huang_CVPR_2021" class="collapse">
+                                    <p>
+                                        In coded aperture snapshot spectral imaging (CASSI)
+                                        system, the real-world hyperspectral image (HSI) can be reconstructed 
+                                        from the captured compressive image in a snapshot. Model-based HSI reconstruction methods employed
+                                        hand-crafted priors to solve the reconstruction problem, but
+                                        most of which achieved limited success due to the poor 
+                                        representation capability of these hand-crafted priors. Deep
+                                        learning based methods learning the mappings between the
+                                        compressive images and the HSIs directly achieved much
+                                        better results. Yet, it is nontrivial to design a powerful deep
+                                        network heuristically for achieving satisfied results. In this
+                                        paper, we propose a novel HSI reconstruction method based
+                                        on the Maximum a Posterior (MAP) estimation framework
+                                        using learned Gaussian Scale Mixture (GSM) prior. Different 
+                                        from existing GSM models using hand-crafted scale
+                                        priors (e.g., the Jeffrey’s prior), we propose to learn the
+                                        scale prior through a deep convolutional neural network
+                                        (DCNN). Furthermore, we also propose to estimate the local means 
+                                        of the GSM models by the DCNN. All the parameters of the MAP estimation algorithm and the DCNN
+                                        parameters are jointly optimized through end-to-end training. 
+                                        Extensive experimental results on both synthetic and
+                                        real datasets demonstrate that the proposed method outperforms existing state-of-the-art methods. 
+                                    </p>
+                                </div>                               
+                            </li>  
+                        </div>                        
+                      </ul>
                     </div>
                     <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
                       <img src="project/ht_cvpr2021/img/network.png" class="img-fluid" alt="">

@@ -936,6 +936,72 @@ section {
   margin-bottom: 0;
 }
 
+
+.features .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+/* .features .faq-list li {
+  border-bottom: 1px solid #f1eeef;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+} */
+
+.features .faq-list .question {
+  display: block;
+  position: relative;
+  font-family: #68A4C4;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 25px;
+  cursor: pointer;
+  color: #68A4C4;
+  transition: 0.3s;
+}
+
+.features .faq-list i {
+  font-size: 21px;
+  position: absolute;
+  left: 0;
+  right: 1;
+  top: 0px;
+}
+
+/* .features .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 25px;
+} */
+
+.features .faq-list .icon-show {
+  display: none;
+}
+
+.features .faq-list .collapsed {
+  color: black;
+}
+
+.features .faq-list .collapsed:hover {
+  color: #68A4C4;
+}
+
+.features .faq-list .collapsed .icon-show {
+  display: inline-block;
+  transition: 0.6s;
+}
+
+.features .faq-list .collapsed .icon-close {
+  display: none;
+  transition: 0.6s;
+}
+
+/* @media (min-width: 1280px) {
+  .features .container {
+    padding: 0 120px;
+  }
+} */
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -1430,6 +1496,7 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Team
