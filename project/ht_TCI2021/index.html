@@ -103,7 +103,7 @@
                     <input type="range" id="range" value="50">
                 </div> -->
 
-                <img src="./img/image001.png" class="img-fluid" alt="">
+                <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
                   Figure 1. Architecture of the proposed network for hyperspectral image fusion. The architecture of (a) the overall network;
                   (b) the spatio-spectral regularization module; (c) the 3D filter generator.
@@ -130,9 +130,9 @@
                         <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/TaoHuang95/DHIF-Net">Code</a>
                         </p>
-                        <p>
+                        <!-- <p>
                             <i class="bi bi-check"></i> <a href="">Demo</a>
-                        </p>
+                        </p> -->
                     </ul>
                     
                     <h3>Experimental Results</h3>
@@ -147,33 +147,50 @@
 
                     <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/Vision_comparison_1.png" class="img-fluid" alt="">
                         <p>
-                            Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
+                          Figure 2. Reconstructed images of jelly beans in CAVE dataset at 700nm with Gaussian blur kernel and scaling factor s = 8. 
+                          The first row shows the reconstructed images, and the second row shows the error images of the competing methods. 
+                          (a) the RGB image and the reconstructed spectra of the selected patch (indicated by a green box); (b) the ground truth images ; 
+                          (c) the NSSR method [24] (PSNR = 39.49 dB, SAM = 4.00, ERGAS = 1.10, SSIM = 0.984) ; 
+                          (d) the DHSIS method [49] (PSNR= 41.98 dB, SAM = 3.88, ERGAS = 0.79, SSIM = 0.987); 
+                          (e) the MHF-net method [31] (PSNR = 44.04 dB, SAM = 3.58, ERGAS = 0.64, SSIM = 0.992); 
+                          (f) the DBIN method [10] (PSNR = 43.76 dB, SAM = 3.00, ERGAS = 0.60, SSIM = 0.993); 
+                          (g) the proposed DHIF-Net method (PSNR = 46.09 dB, SAM = 2.66, ERGAS = 0.52, SSIM = 0.995).
                         </p>
-                        <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
+                        <img src="./img/Vision_comparison_2.png" class="img-fluid" alt="">
                         <p>
-                            Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
+                          Figure 3. Reconstructed images of paints in CAVE dataset at 670 nm with noise level σ = 30 and scaling factor s = 8. 
+                          The first row shows the reconstructed images, and the second row shows the error images of the competing methods. 
+                          (a) the RGB image and the reconstructed spectra of the selected patch (indicated by a green box); 
+                          (b) the NSSR method [24] (PSNR = 26.49 dB, SAM = 24.58, ERGAS = 3.24, SSIM = 0.613) ; 
+                          (c) the MHF-net method [31] (PSNR = 30.66 dB, SAM = 10.90, ERGAS = 1.97, SSIM = 0.892); 
+                          (d) the DBIN method [10] (PSNR = 30.20 dB, SAM = 8.79, ERGAS = 2.10, SSIM = 0.939); 
+                          (e) the proposed DHIF-Net (T = 1) method (PSNR = 29.87 dB, SAM = 10.17, ERGAS = 2.18, SSIM = 0.930); 
+                          (f) the proposed DHIF-Net (T = 4) method (PSNR = 31.20 dB, SAM = 8.19, ERGAS = 1.87, SSIM = 0.943); 
+                          (g) the ground truth images.
                         </p>
                     </ul>
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{fang2022uncertainty,<br>
-                            &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
-                            &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
-                            &emsp;booktitle={European Conference on Computer Vision},<br>
-                            &emsp;pages={144--161},<br>
+                        @ARTICLE{Huang2022Deep,<br>
+                            &emsp;author={Huang, Tao and Dong, Weisheng and Wu, Jinjian and Li, Leida and Li, Xin and Shi, Guangming},<br>
+                            &emsp;journal={IEEE Transactions on Computational Imaging},<br>
+                            &emsp;title={Deep Hyperspectral Image Fusion Network With Iterative Spatio-Spectral Regularization},<br>
                             &emsp;year={2022},<br>
-                            &emsp;organization={Springer}<br>
+                            &emsp;volume={8},<br>
+                            &emsp;number={},<br>
+                            &emsp;pages={201-214},<br>
+                            &emsp;doi=doi={10.1109/TCI.2022.3152700}<br>
                         }
                     </p>
                     
                     <h3>Concat</h3>
                     <p>
-                        <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
+                        <strong>Tao Huang</strong>, Email: thuang_666@stu.xidian.edu.cn <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Xin Li</strong>, Email: xin.li@ieee.org <br>
                         <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
                         <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
                         <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
