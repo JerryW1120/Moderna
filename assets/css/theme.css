@@ -245,7 +245,7 @@ a:hover
 {
     text-decoration: underline; 
 
-    color: #be0c1d;
+    color: #68A4C4;
 }
 
 a:not([href]):not([class])
@@ -742,12 +742,12 @@ pre code
     color: inherit;
 }
 
-.pre-scrollable
+/* .pre-scrollable
 {
     overflow-y: scroll; 
 
     max-height: 340px;
-}
+} */
 
 .container,
 .container-fluid,
@@ -19466,13 +19466,13 @@ ul li a.active
    Reboot
    ========================================================================== */
 html
-{
+/* {
     overflow-x: hidden;
 
     -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
-}
+} */
 
 body
 {
