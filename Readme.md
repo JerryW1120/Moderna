@@ -1,3 +1,12 @@
+---
+html:
+    toc: true
+    # number_sections: true
+    toc_depth: 6
+    toc_float: true
+        collapsed: true
+        smooth_scroll: true
+--- 
 # VRL-Lab's Structure
 这里是VRL-Lab实验室主页的相关源代码，此readme主要方便后续维护者的工作。
 
@@ -37,7 +46,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 
     ![图片]()还没弄好，弄好了再截图
 
-- [demo.html](http://106.14.213.79/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) [后续维护看这里](#rreaserch.html和demo.html的论文卡片添加)
+- [demo.html](http://106.14.213.79/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) [后续维护看这里](#reaserch.html和demo.html的论文卡片添加)
 
     ![图片](assets/img/readme/demo.png)
 
@@ -45,7 +54,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 
     ![图片](assets/img/readme/index_zh.png)
 
-- [index.html](http://106.14.213.79/index.html): 实验室概览英文版 [后续维护看这里](#index.html和index_zh.html的论文简介)
+- [index.html](http://106.14.213.79/index.html): 实验室概览英文版 <a href="####index.html和index_zh.html的论文简介">后续维护看这里</a>
 
     ![图片](assets/img/readme/index.png)
 
