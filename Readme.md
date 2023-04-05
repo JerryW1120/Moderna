@@ -1,12 +1,15 @@
----
-html:
-    toc: true
-    # number_sections: true
-    toc_depth: 6
-    toc_float: true
-        collapsed: true
-        smooth_scroll: true
---- 
+<!-- - [VRL-Lab's Structure](#vrl-lab-s-structure)
+  * [前端](#--)
+    + [首先是各个文件夹](#--------)
+    + [下面是每个有用的html](#--------html)
+    + [后续维护](#----)
+      - [index.html和index_zh.html的论文简介](#indexhtml-index-zhhtml-----)
+      - [reaserch.html和demo.html的论文卡片添加](#reaserchhtml-demohtml-------)
+      - [publication.html的论文添加](#publicationhtml-----)
+      - [team.html的成员添加](#teamhtml-----)
+  * [后端](#--)
+    + [前端展示界面](#------)
+    + [后端神经网络演示代码](#----------) -->
 # VRL-Lab's Structure
 这里是VRL-Lab实验室主页的相关源代码，此readme主要方便后续维护者的工作。
 
@@ -50,7 +53,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 
     ![图片](assets/img/readme/demo.png)
 
-- [index_zh.html](http://106.14.213.79/index_zh.html): 实验室概览中文版 [后续维护看这里](#index.html和index_zh.html的论文简介)
+- [index_zh.html](http://106.14.213.79/index_zh.html): 实验室概览中文版 [后续维护看这里]((#indexhtml-index-zhhtml-----))
 
     ![图片](assets/img/readme/index_zh.png)
 
