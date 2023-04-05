@@ -49,32 +49,32 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 
     ![图片]()还没弄好，弄好了再截图
 
-- [demo.html](http://106.14.213.79/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) [后续维护看这里](#reaserch.html和demo.html的论文卡片添加)
+- [demo.html](http://106.14.213.79/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) <a href="#research_and_demo">后续维护看这里</a>
 
     ![图片](assets/img/readme/demo.png)
 
-- [index_zh.html](http://106.14.213.79/index_zh.html): 实验室概览中文版 [后续维护看这里]((#indexhtml-index-zhhtml-----))
+- [index_zh.html](http://106.14.213.79/index_zh.html): 实验室概览中文版 <a href="#index_eng_zh">后续维护看这里</a>
 
     ![图片](assets/img/readme/index_zh.png)
 
-- [index.html](http://106.14.213.79/index.html): 实验室概览英文版 <a href="####index.html和index_zh.html的论文简介">后续维护看这里</a>
+- [index.html](http://106.14.213.79/index.html): 实验室概览英文版 <a href="#index_eng_zh">后续维护看这里</a>
 
     ![图片](assets/img/readme/index.png)
 
-- [publication.html](http://106.14.213.79/publication.html): 以干条的形式列出所有的论文，以年份分类 [后续维护看这里](#publication.html的论文添加)
+- [publication.html](http://106.14.213.79/publication.html): 以干条的形式列出所有的论文，以年份分类 <a href="#publication">后续维护看这里</a>
 
     ![图片](assets/img/readme/publication.png)
 
-- [research.html](http://106.14.213.79/research.html): 卡片集合，点开卡片会跳转到相应论文的project page界面 [后续维护看这里](#rreaserch.html和demo.html的论文卡片添加)
+- [research.html](http://106.14.213.79/research.html): 卡片集合，点开卡片会跳转到相应论文的project page界面 <a href="#research_and_demo">后续维护看这里</a>
 
     ![图片](assets/img/readme/research.png)
 
-- [team.html](http://106.14.213.79/team.html): 实验室成员介绍 [后续维护看这里](#team.html的成员添加)
+- [team.html](http://106.14.213.79/team.html): 实验室成员介绍 <a href="#team">后续维护看这里</a>
 
     ![图片](assets/img/readme/team.png)
 
 ### 后续维护
-#### index.html和index_zh.html的论文简介
+#### index.html和index_zh.html的论文简介<a id="index_eng_zh">
 ```HTML
 <!-- ECCV_2022_Fang -->
     <div class="row" data-aos="fade-up">
@@ -105,7 +105,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
     </div>
 ```
 
-#### reaserch.html和demo.html的论文卡片添加
+#### research.html和demo.html的论文卡片添加<a id="research_and_demo">
 ```html
 <!--          所有涉及路径的文件，需要放到规定的储存位置-->
 <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
@@ -128,7 +128,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 </div>
 ```
 
-#### publication.html的论文添加
+#### publication.html的论文添加<a id="publication">
 ```html
 <li>
     <a href="论文project_page的链接，示例：./project/fzx_eccv2022/index.html">论文题目，示例：Uncertainty learning in kernel estimation for multi-stage blind image super-resolution</a>
@@ -147,7 +147,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 ```
 
 
-#### team.html的成员添加
+#### team.html的成员添加<a id="team">
 ```html
 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
     <div class="member">
