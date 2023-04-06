@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Deep Maximum a Posterior Estimator for Video Denoising</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Deep Maximum a Posterior Estimator for Video Denoising</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Deep Maximum a Posterior Estimator for Video Denoising</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Lu Sun, Weisheng Dong, Xin Li, Jinjian Wu, Leida Li and Guangming Shi</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./HR/img_014.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.png" class="img-fluid" alt="">
+                <p>
+                  Figure 1. The architecture of the proposed model-guided DCNN for video denoising. (a) The overall architecture of the proposed network, 
+                  (b) the architecture of the alignment module, (c) the architecture of the robust multi-frame fusion, and (d) the architecture of the encoding 
+                  and decoding block of the U-net denoiser.
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;Unlike the maturity of image denoising research, video denoising has remained a challenging problem. A fundamental issue at the core 
+                    of the video denoising (VD) problem is how to efficiently remove noise by exploiting temporal redundancy in video frames in a principled 
+                    manner. Based on the Maximum a Posterior (MAP) estimation framework and recent advances in deep learning, we present a novel deep MAP-based 
+                    video denoising method named MAP-VDNet with adaptive temporal fusion and deep image prior. The proposed MAP-based VD algorithm allows 
+                    computationally efficient untangling of motion estimation (frame alignment) and image restoration (denoising). To address the misalignment 
+                    issue, we also present a robust multi-frame fusion strategy for predicting spatially varying fusion weights by a neural network. To 
+                    facilitate end-to-end optimization, we unfold the proposed iterative MAP-based VD algorithm into a deep convolutional network named 
+                    MAP-VDNet. Extensive experimental results on three popular video datasets have shown that the proposed MAP-VDNet significantly outperforms 
+                    current state-of-the-art VD techniques such as ViDeNN and FastDVDnet.
+
+                    </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/IJCV_VD_final.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/sunlustar/MAP-VDNet">Code</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          Table 1. The average PSNR/SSIM video denoising results on Vimeo, ASU, and DTMC-HD dataset at different noise levels
+                          (boldface highlights the best).
+                        </p>
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+
+                        <p>
+                          Table 2. The average PSNR/SSIM super-resolution results on Vid4 test set for ×4 video super-resolution (boldface highlights the best.) 
+                          † denotes the results from their publications, and ∗ denotes the results from TGA [13].
+                        </p>
+                        <img src="./img/tabel_2.png" class="img-fluid" alt="">
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Denoising results for a noisy frame from Vimeo test set with noise level 25. (a) Original frame; denoised frame by (b) 
+                          V-BM4D [1] (31.66 dB, 0.7169), (c) RTA-LSM [2] (32.27 dB, 0.7429), (d) VNLB [3] (32.27 dB, 0.7427), (e) TOFlow [4] (35.13 dB, 0.8925), 
+                          (f) TOFlow-EN (36.75dB, 0.9484), (g) ViDeNN [5] (37.65 dB, 0.9533), (h) VNLnet [6] (36.63 dB, 0.9462), (i) FastDVDnet [7] (37.25 dB, 
+                          0.9546), and (j) MAP-VDNet (39.30 dB, 0.9627).
+                        </p>
+                        <img src="./img/vision_result_2.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3. Denoising results for a noisy frame of Station video of DTMC-HD test set with noise level 50. (a) Original frame; denoised frame by 
+                          (b) V-BM4D [1] (30.74 dB, 0.7445), (c) RTA-LSM [2] (30.63 dB, 0.7682), (d) VNLB [3] (31.78 dB, 0.8020), (e) TOFlow [4] (31.99 dB, 0.8029), 
+                          (f) TOFlow-EN (32.99 dB, 0.8391), (g) ViDeNN [5] (32.72 dB, 0.8274), (h) VNLnet [6] (30.79 dB, 0.7759), (i) FastDVDnet [7] (33.25 dB, 0.8497), 
+                          and (j) MAP-VDNet (33.82 dB, 0.8608).
+                        </p>
+                        <img src="./img/vision_result_3.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 4. Video superresolution results (×4 up-sampling) for a low-resolution frame of City video of Vid4 test set. (a) Original
+                          frame; superresolved frame by (b) TOFlow [4] (25.40 dB, 0.7081), (c) FRVSR [8] (26.78 dB, 0.8136), (d) RBPN [9] (26.51 dB, 0.7929), 
+                          (e) EDVR-L [10] (26.86 dB, 0.7995), (f) DUF-52L [11] (26.89 dB, 0.8147), (g) PFNL [12] (26.94 dB, 0.8298), (h) MAP-VDNet (27.28 dB, 0.8369).
+                        </p>
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @article{sun2021deep,<br>
+                            &emsp;title={Deep Maximum a Posterior Estimator for Video Denoising},<br>
+                            &emsp;author={Sun, Lu and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
+                            &emsp;booktitle={International Journal of Computer Vision },<br>
+                            &emsp;year={2021}
+                        }
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Lu Sun</strong>, Email: sunlu@stu.xidian.edu.cn <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
+                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+            <div class="blog-comments">
+                <h2>Comment</h2>
+                <div class="reply-form">
+                    <h4>Leave a Reply</h4>
+                    <p>Your email address will not be published. Required fields are marked * </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <input name="website" type="text" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                </div>
+
+            </div><!-- End blog comments -->
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2022</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Searching Efficient Model-Guided Deep Network for Image Denoising</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Searching Efficient Model-Guided Deep Network for Image Denoising</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Searching Efficient Model-Guided Deep Network for Image Denoising</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Qian Ning, Weisheng Dong, Xin Li and Jinjian Wu</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./HR/img_014.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.png" class="img-fluid" alt="">
+                <p>
+                  Figure 1. (a) The overall architecture of the proposed network; (b)-(d) a list of candidate operations to be searched for NL, DSL, and USL, 
+                  respectively; (e) network depth searching; (f) layer operations searching; (g) network width searching.
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;Unlike the success of neural architecture search (NAS) in high-level vision tasks, it remains challenging to find computationally efficient and 
+                    memory-efficient solutions to low-level vision problems such as image restoration throughNAS. One of the fundamental barriers to differential NAS based 
+                    image restoration is the optimization gap between the super-network and the sub-architectures, causing instability during the searching process. In this 
+                    paper, we present a novel approach to fill this gap in image denoising application by connecting model-guided design (MoD) with NAS (MoDNAS). Specifically, 
+                    we propose to construct a new search space under a model-guided framework and develop more stable and efficient differential search strategies. MoD-NAS 
+                    employs a highly reusable width search strategy and a densely connected search block to automatically select the operations of each layer as well as 
+                    network width and depth via gradient descent. During the search process, the proposed MoD-NAS remains stable because of the smoother search space designed 
+                    under the model-guided framework. Experimental results on several popular datasets show that our MoD-NAS method has achieved at least comparable even 
+                    better PSNR performance than current state-of-the-art methods with fewer parameters, fewer flops, and less testing time.
+
+                    </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          
+                        </p>
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
+                        <p>
+                          
+                        </p>
+                        <img src="./img/vision_result_2.png" class="img-fluid" alt="">
+                        <p>
+                          
+                        </p>
+
+
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @ARTICLE{MoD-NAS-TIP2023,<br>
+                            &emsp;title={Searching Efficient Model-Guided Deep Network for Image Denoising},<br>
+                            &emsp;author={Ning, Qian and Dong, Weisheng and Li, Xin and Wu, Jinjian},<br>
+                            &emsp;journal={IEEE Transactions on Image Processing},<br>
+                            &emsp;year={2023},<br>
+                            &emsp;volume={32},<br>
+                            &emsp;number={},<br>
+                            &emsp;pages={668-681},<br>
+                            &emsp;doi={10.1109/TIP.2022.3231741}}<br>
+  
+
+  
+                        
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Qian Ning</strong>, Email: ningqian@stu.xidian.edu.cn <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+            <div class="blog-comments">
+                <h2>Comment</h2>
+                <div class="reply-form">
+                    <h4>Leave a Reply</h4>
+                    <p>Your email address will not be published. Required fields are marked * </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <input name="website" type="text" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                </div>
+
+            </div><!-- End blog comments -->
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2022</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>
