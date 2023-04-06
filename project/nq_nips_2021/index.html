@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Uncertainty-Driven Loss for Single Image Super-Resolution</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Uncertainty-Driven Loss for Single Image Super-Resolution</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Uncertainty-Driven Loss for Single Image Super-Resolution</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Qian Ning, Weisheng Dong, Xin Li, Jinjian Wu and Guangming Shi</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./HR/img_014.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.png" class="img-fluid" alt="">
+                <p>
+                  Figure 1. The overview of training SISR network with proposed L_UDL loss. The whole training process can divided into two steps; the first 
+                  step estimates the uncertainty θ precisely and the second step generates the final mean value y. In step1 shown in (a), the mean value y and 
+                  variance θ are pretrained by L_ESU loss. During step2, as shown in (b), the mean value y network is trained by L_UDL loss, while the network 
+                  of inferring variance y is fixed. Note that the mean value y network of step2 starts training from the pretrained network of step1. The 
+                  Nearest Upsampling denotes interpolation operator.
+ 
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;In low-level vision such as single image super-resolution (SISR), traditional MSE or L_1 loss function treats every pixel equally with 
+                    the assumption that the importance of all pixels is the same. However, it has been long recognized that texture and edge areas carry more 
+                    important visual information than smooth areas in photographic images. How to achieve such spatial adaptation in a principled manner has been 
+                    an open problem in both traditional model-based and modern learning-based approaches toward SISR. In this paper, we propose a new adaptive 
+                    weighted loss for SISR to train deep networks focusing on challenging situations such as textured and edge pixels with high uncertainty. 
+                    Specifically, we introduce variance estimation characterizing the uncertainty on a pixel-by-pixel basis into SISR solutions so the targeted 
+                    pixels in a high-resolution image (mean) and their corresponding uncertainty (variance) can be learned simultaneously. Moreover, uncertainty 
+                    estimation allows us to leverage conventional wisdom such as sparsity prior for regularizing SISR solutions. Ultimately, pixels with large 
+                    certainty (e.g., texture and edge pixels) will be prioritized for SISR according to their importance to visual quality. For the first time, 
+                    we demonstrate that such uncertainty-driven loss can achieve better results than MSE or L_1 loss for a wide range of network architectures. 
+                    Experimental results on three popular SISR networks show that our proposed uncertainty-driven loss has achieved better PSNR performance than 
+                    traditional loss functions without any increased computation during testing.
+                    </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/NeruIPS21-uncertainty.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/QianNing0/UDL">Code</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          
+                        </p>
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+
+                        <p>
+                          
+                        </p>
+                        <img src="./img/tabel_2.png" class="img-fluid" alt="">
+
+
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                      <p>
+                        
+                      </p>
+                      <img src="./img/vision_result.png" class="img-fluid" alt="">
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @inproceedings{ning2021uncertainty,<br>
+                            &emsp;title={Uncertainty-Driven Loss for Single Image Super-Resolution},<br>
+                            &emsp;author={ Ning Qian and Dong, WeiSheng and Li, Xin and Wu, Jinjian and Shi, Guangming},<br>
+                            &emsp;booktitle={Advances in Neural Information Processing Systems},<br>
+                            &emsp;year={2021}<br>
+                        }
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Qian Ning</strong>, Email: ningqian@stu.xidian.edu.cn <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+            <div class="blog-comments">
+                <h2>Comment</h2>
+                <div class="reply-form">
+                    <h4>Leave a Reply</h4>
+                    <p>Your email address will not be published. Required fields are marked * </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <input name="website" type="text" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                </div>
+
+            </div><!-- End blog comments -->
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2022</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Tao Huang, Weisheng Dong, Xin Yuan, Jinjian Wu and Guangming Shi</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./HR/img_014.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/imaging_schematic.png" class="img-fluid" alt="">
+                <p>
+                  Figure 1. (a) The imaging schematic of CASSI system. (b) A single shot measurement captured by [7] and 28 reconstructed spectral channels using our proposed method.
+
+ 
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;In coded aperture snapshot spectral imaging (CASSI) system, the real-world hyperspectral image (HSI) can be reconstructed from the 
+                    captured compressive image in a snapshot. Model-based HSI reconstruction methods employed hand-crafted priors to solve the reconstruction 
+                    problem, but most of which achieved limited success due to the poor representation capability of these hand-crafted priors. Deep learning 
+                    based methods learning the mappings between the compressive images and the HSIs directly achieved much better results. Yet, it is 
+                    nontrivial to design a powerful deep network heuristically for achieving satisfied results. In this paper, we propose a novel HSI 
+                    reconstruction method based on the Maximum a Posterior (MAP) estimation framework using learned Gaussian Scale Mixture (GSM) prior. 
+                    Different from existing GSM models using hand-crafted scale priors (e.g., the Jeffrey’s prior), we propose to learn the scale prior 
+                    through a deep convolutional neural network (DCNN). Furthermore, we also propose to estimate the local means of the GSM models by the DCNN. 
+                    All the parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive 
+                    experimental results on both synthetic and real datasets demonstrate that the proposed method outperforms existing state-of-the-art methods.
+                    </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/DGSM-SCI.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/TaoHuang95/DGSMP">Code</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          Table 1. The PSNR in dB (left entry in each cell) and SSIM (right entry in each cell) results of the test methods on 10 scenes.
+                        </p>
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+
+                        <p>
+                          Figure 2. Reconstructed images of Scene 2 (left) and Scene 9 (right) with 4 out of 28 spectral channels by the five deep learning-based 
+                          methods. Two regions in each scene are selected for analysing the spectra of the reconstructed results.
+                        </p>
+                        <img src="./img/vision_result.png" class="img-fluid" alt="">
+
+
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                      <p>
+                        Figure 3. Reconstructed images of two real scenes (Scene 1 and Scene 3) with 2 out of 28 spectral channels by the competing methods.
+                      </p>
+                      <img src="./img/vision_compare.png" class="img-fluid" alt="">
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @inproceedings{huang2021deep,<br>
+                            &emsp;title={Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging},<br>
+                            &emsp;author={Huang, Tao and Dong, WeiSheng and Yuan, Xin and Wu, Jinjian and Shi, Guangming},<br>
+                            &emsp;booktitle={IEEE Conference on Computer Vision and Pattern Recognition},<br>
+                            &emsp;year={2021}<br>
+                        }
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Tao Huang</strong>, Email: thuang_666@stu.xidian.edu.cn <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Xin Yuan</strong>, Email: xyuan@bell-labs.com <br>
+                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+            <div class="blog-comments">
+                <h2>Comment</h2>
+                <div class="reply-form">
+                    <h4>Leave a Reply</h4>
+                    <p>Your email address will not be published. Required fields are marked * </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <input name="website" type="text" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                </div>
+
+            </div><!-- End blog comments -->
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2022</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>
