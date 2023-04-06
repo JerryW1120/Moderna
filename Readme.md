@@ -176,8 +176,6 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 ### 前端展示界面
 使用python的[streamlit](https://streamlit.io/)库来搭建，但需要在3090机器上把服务跑起来，然后用frp把本地的页面映射至公网（frp参考[这篇知乎](https://zhuanlan.zhihu.com/p/615506680)的后半部分）
 
-*有些坑还没填，比如如何处理多并发时多个上传内容的存储*
-
 ### 后端神经网络演示代码
 需要神经网络的前向推理代码
 
@@ -217,23 +215,32 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
     ```
 - 可以让这个代码顺利运行起来的最小的anaconda环境清单（可以理解为上面.py文件最前面所有的import），同时需要标明python，torch和cuda版本，以便适配
 
+### 后续维护
+如果需要增加演示的内容，运行如下命令
+
+```shell
+vim /usr/bin/frpc2/frpc.ini
+```
+
+然后添加如下内容
+
+```txt
+[streamlit_name(谁的项目写谁的名字)]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 你本地想展示的东西的端口号
+remote_port = 你想映射到公网IP的端口号
+```
+
+添加好了之后按一下esc，再输入:wq保存，然后用如下命令重启一下frp
+
+```shell
+sudo supervisorctl reload
+```
+即可用IP+端口号（后续会用域名进行管理）访问相应的演示界面
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Thanks for downloading this template!
-
-Template Name: Moderna
+**感谢Bootstrap**
 Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
