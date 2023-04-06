@@ -188,6 +188,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 - 如下格式的.py文件
 
     ```python
+    import uuid
     class Net():
         # 你的神经网络代码
 
@@ -206,7 +207,9 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 
             output = our_model(input_file)
             output = output.detach().cpu().numpy().blahblah() # blahblah指的是后续的一系列处理，使其可以转化为cv2格式的图片，便于保存
-            cv2.imwrite('save_path', output)
+            uuid_name = str(uuid.uuid4()) + 'blahblah.png' # str(uuid.uuid4())是处理高并发所需，相当于生成一个唯一标识，这一行必须要
+            cv2.imwrite('save_path' + uuid_name, output)
+            return uuid_name
 
     # 要保证pridict(load_check(model_path), input_file可以成功运行)
 
