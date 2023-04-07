@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Model-Guided Deep Hyperspectral Image Super-resolution</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Model-Guided Deep Hyperspectral Image Super-resolution</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Model-Guided Deep Hyperspectral Image Super-resolution</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Weisheng Dong, Chen Zhou, Fangfang Wu, Jinjian Wu, Guangming Shi and Xin Li</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./HR/img_014.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.png" class="img-fluid" alt="">
+                <p>
+                  Figure 1. Architecture of the proposed model-guided deep convolutional network (MoG-DCN) for HSISR. (a) The overall architecture of the 
+                  proposed network; (b) the architecture of the reconstruction module; (c) the architecture of the degradation operators, and (d) the 
+                  architecture of the encoding and decoding blocks of the U-net denoiser
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;The trade-off between spatial and spectral resolution is one of the fundamental issues in hyperspectral images (HSI). Given challenges 
+                    with directly acquiring high-resolution hyperspectral images (HR-HSI), a compromised solution is to fuse a pair of images: one has 
+                    high-resolution (HR) in the spatial domain but low-resolution (LR) in spectral-domain and the other vice versa. Model-based image fusion 
+                    methods including pansharpening aim at reconstructing HR-HSI by solving manually designed objective functions. However, such hand-crafted 
+                    prior often leads to inevitable performance degradation due to a lack of end-to-end optimization. Although several deep learningbased methods 
+                    have been proposed for hyperspectral pansharpening, HR-HSI related domain knowledge has not been fully exploited, leaving room for further 
+                    improvement. In this paper, we propose an iterative Hyperspectral image super-resolution (HSISR) algorithm based on a deep HSI denoiser to 
+                    leverage both domain knowledge likelihood and deep image prior. By taking the observation matrix of HSI into account during the end-toend 
+                    optimization, we show how to unfold an iterative HSISR algorithm into a novel model-guided deep convolutional network (MoG-DCN). The 
+                    representation of the observation matrix by sub-networks also allows the unfolded deep HSISR network to work with different HSI situations, 
+                    which enhances the flexibility of MoG-DCN. Extensive experimental results are reported to demonstrate that the proposed MoG-DCN outperforms 
+                    several leading HSISR methods in terms of both implementation cost and visual qualities.
+
+                    </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/HSISR-TIP-v4.pdf">Code</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          CAVE dataset:<br>
+                          Table 1. The average PSNR, SAM, ERGAS, and SSIM results of the test methods on the CAVE dataset for Gaussian blur kernel and scaling factors 8 and 16
+                        </p>
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+                        <p>
+                          Harvard dataset:<br>
+                          Table 2. The average PSNR, SAM, ERGAS, and SSIM results of the test methods on the Harvard dataset for Gaussian blur kernel and scaling factors 8 and 16
+                        </p>
+                        <img src="./img/tabel_2.png" class="img-fluid" alt="">
+
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/vision_result.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Reconstructed images of World View-2.
+                        </p>
+
+
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @inproceedings{huang2021deep,<br>
+                            &emsp;author    = { Weisheng Dong, Chen Zhou, Fangfang Wu, Jinjian Wu, Guangming Shi, Xin Li },<br>
+                            &emsp;title     = { Model-Guided Deep Hyperspectral Image Super-resolution },<br>
+                            &emsp;booktitle = { IEEE Transactions on Image Processing },<br>
+                            &emsp;year      = {2021}<br>
+                        }
+  
+
+  
+                        
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Chen Zhou</strong>, Email: zhouchen_7@163.com <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Fangfang Wu</strong>, Email: 271076679@qq.com <br>
+                        <strong>Jinjian Wu</strong>, Email:  jinjian.wu@mail.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email:gmshi@xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@ieee.org <br>
+                    </p>
+                </div>
+            </article><!-- End blog entry -->
+
+            <div class="blog-comments">
+                <h2>Comment</h2>
+                <div class="reply-form">
+                    <h4>Leave a Reply</h4>
+                    <p>Your email address will not be published. Required fields are marked * </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <input name="website" type="text" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                </div>
+
+            </div><!-- End blog comments -->
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2022</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>
