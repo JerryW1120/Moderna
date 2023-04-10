@@ -9,7 +9,7 @@
 
 # html部分<a id="html">
 
-## index.html和index_zh.html的论文简介<a id="index_eng_zh">
+## index.html和index_zh.html的论文简介<a id="index_eng_zh">[]()
 两个html文件，但只需要准备一份
 
 你需要准备的内容：
@@ -53,7 +53,7 @@
     </div>
 ```
 
-## research.html和demo.html的论文卡片添加<a id="research_and_demo">
+## research.html和demo.html的论文卡片添加<a id="research_and_demo">[]()
 同样只需要准备一份
 
 你需要准备的内容如下：
@@ -62,7 +62,6 @@
 - 论文的网络结构图
 - 全部的作者(eg. Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi)
 - 发表的会议/期刊  年份(eg. ECCV 2022)
-- 一句话概括该论文
 - 一份论文的project page(具体示例可参考[这里](http://106.14.213.79/project/fzx_eccv2022/index.html))
 
 最后填充到html文件上是这样的
@@ -89,7 +88,7 @@
 </div>
 ```
 
-## publication.html的论文添加<a id="publication">
+## publication.html的论文添加<a id="publication">[]()
 你需要准备的内容如下：
 - 论文题目
 - 一句话概括该论文
@@ -117,7 +116,7 @@
 ```
 
 
-## team.html的成员添加<a id="team">
+## team.html的成员添加<a id="team">[]()
 你需要准备的内容如下：
 - 一张你的照片
 - 你的个人简介（如果想写的话）
@@ -148,7 +147,7 @@
 </div>
 ```
 
-# 演示demo部分<a id="demo">
+# 演示demo部分<a id="demo">[]()
 
 需要神经网络的前向推理代码
 
