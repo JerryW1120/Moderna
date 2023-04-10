@@ -7,7 +7,7 @@
 
 
 
-# html部分<a id="html">
+# html部分<a id="html">[]()
 
 ## index.html和index_zh.html的论文简介<a id="index_eng_zh">[]()
 两个html文件，但只需要准备一份
@@ -20,7 +20,7 @@
 - 一张论文中的网络结构图
 - 一份论文的pdf文件
 - 论文的GitHub仓库地址
-最后填充到html文件上是这样的（Demo那里在下面详细阐述）
+最后填充到html文件上是这样的（Demo那里在<a href="#demo">下面</a>详细阐述）
 
 
 ```HTML
