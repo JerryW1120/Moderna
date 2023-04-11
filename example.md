@@ -62,7 +62,7 @@
 - 论文的网络结构图
 - 全部的作者(eg. Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi)
 - 发表的会议/期刊  年份(eg. ECCV 2022)
-- 一份论文的project page(具体示例可参考[这里](http://106.14.213.79/project/fzx_eccv2022/index.html))
+- 一份论文的project page(具体示例可参考[这里](http://8.217.20.15/project/fzx_eccv2022/index.html))
 
 最后填充到html文件上是这样的
 

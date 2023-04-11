@@ -16,7 +16,7 @@
 ---
 
 首先这个东西分两个部分
-- 前端（阿里云公网服务器，IP为 106.14.213.79）
+- 前端（阿里云公网服务器，IP为 8.217.20.15）
 - 后端（在董老师办公室的3090服务器一台，系统为Ubuntu 20.04）
 
 主要可以实现：
@@ -45,31 +45,31 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
     - 其他文件夹：主要存放相关图片，可根据每篇论文的实际需求自定义建立不同的子文件夹
 
 ### 下面是每个有用的html
-- [contact.html](http://106.14.213.79/contact.html): 招生简章
+- [contact.html](http://8.217.20.15/contact.html): 招生简章
 
     ![图片]()还没弄好，弄好了再截图
 
-- [demo.html](http://106.14.213.79/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) <a href="#research_and_demo">后续维护看这里</a>
+- [demo.html](http://8.217.20.15/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) <a href="#research_and_demo">后续维护看这里</a>
 
     ![图片](assets/img/readme/demo.png)
 
-- [index_zh.html](http://106.14.213.79/index_zh.html): 实验室概览中文版 <a href="#index_eng_zh">后续维护看这里</a>
+- [index_zh.html](http://8.217.20.15/index_zh.html): 实验室概览中文版 <a href="#index_eng_zh">后续维护看这里</a>
 
     ![图片](assets/img/readme/index_zh.png)
 
-- [index.html](http://106.14.213.79/index.html): 实验室概览英文版 <a href="#index_eng_zh">后续维护看这里</a>
+- [index.html](http://8.217.20.15/index.html): 实验室概览英文版 <a href="#index_eng_zh">后续维护看这里</a>
 
     ![图片](assets/img/readme/index.png)
 
-- [publication.html](http://106.14.213.79/publication.html): 以干条的形式列出所有的论文，以年份分类 <a href="#publication">后续维护看这里</a>
+- [publication.html](http://8.217.20.15/publication.html): 以干条的形式列出所有的论文，以年份分类 <a href="#publication">后续维护看这里</a>
 
     ![图片](assets/img/readme/publication.png)
 
-- [research.html](http://106.14.213.79/research.html): 卡片集合，点开卡片会跳转到相应论文的project page界面 <a href="#research_and_demo">后续维护看这里</a>
+- [research.html](http://8.217.20.15/research.html): 卡片集合，点开卡片会跳转到相应论文的project page界面 <a href="#research_and_demo">后续维护看这里</a>
 
     ![图片](assets/img/readme/research.png)
 
-- [team.html](http://106.14.213.79/team.html): 实验室成员介绍 <a href="#team">后续维护看这里</a>
+- [team.html](http://8.217.20.15/team.html): 实验室成员介绍 <a href="#team">后续维护看这里</a>
 
     ![图片](assets/img/readme/team.png)
 
