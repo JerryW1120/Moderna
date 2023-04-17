@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</title>
+  <title>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
             <li><a class="" href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
             <li><a class="active" href="../../publication.html">Publication</a></li>
-            <li><a href="../../team.html">People</a></li>
+            <li><a href="../../team.html">Team</a></li>
             <li><a href="../../demo.html">Demo</a></li>
             <li><a href="../../contact.html">Join Us</a></li>
           </li>
@@ -75,7 +75,7 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</li>
+            <li>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</li>
           </ol>
         </div>
 
@@ -90,88 +90,93 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
+                    <a href="./index.html">Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhenxuan Fang, Weisheng Dong*, Xin Li, Jinjian Wu, Leida Li, and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Tao Huang, Weisheng Dong, Xin Yuan, Jinjian Wu and Guangming Shi</li></h5>
 
-                <div class="a">
+                <!-- <div class="a">
                     <div class="b" id="b">
                         <div><img src="./HR/img_014.png" alt="Before"></div>
                     </div>
                     <img src="./LR/img_014_LR.png" alt="After">
                     <input type="range" id="range" value="50">
-                </div>
+                </div> -->
 
-                <img src="./img/Network.jpg" class="img-fluid" alt="">
+                <img src="./img/imaging_schematic.png" class="img-fluid" alt="">
                 <p>
-                    Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
-                    (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
+                  Figure 1. (a) The imaging schematic of CASSI system. (b) A single shot measurement captured by [7] and 28 reconstructed spectral channels using our proposed method.
+
+ 
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
-                    Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
-                    To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
-                    Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
-                    Then we propose a novel SR network by unfolding the joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated kernel. 
-                    We have also developed a novel approach of estimating both the scale prior coefficient and the local means of the LSM model through a deep convolutional neural network (DCNN). 
-                    All parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive experiments on both synthetic and real-world images show that our method achieves state-of-the-art performance for the task of blind image SR.
+                    &emsp;In coded aperture snapshot spectral imaging (CASSI) system, the real-world hyperspectral image (HSI) can be reconstructed from the 
+                    captured compressive image in a snapshot. Model-based HSI reconstruction methods employed hand-crafted priors to solve the reconstruction 
+                    problem, but most of which achieved limited success due to the poor representation capability of these hand-crafted priors. Deep learning 
+                    based methods learning the mappings between the compressive images and the HSIs directly achieved much better results. Yet, it is 
+                    nontrivial to design a powerful deep network heuristically for achieving satisfied results. In this paper, we propose a novel HSI 
+                    reconstruction method based on the Maximum a Posterior (MAP) estimation framework using learned Gaussian Scale Mixture (GSM) prior. 
+                    Different from existing GSM models using hand-crafted scale priors (e.g., the Jeffrey’s prior), we propose to learn the scale prior 
+                    through a deep convolutional neural network (DCNN). Furthermore, we also propose to estimate the local means of the GSM models by the DCNN. 
+                    All the parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive 
+                    experimental results on both synthetic and real datasets demonstrate that the proposed method outperforms existing state-of-the-art methods.
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/DGSM-SCI.pdf">Paper</a>
                         </p>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
+                            <i class="bi bi-check"></i> <a href="https://github.com/TaoHuang95/DGSMP">Code</a>
                         </p>
-                        <p>
+                        <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
-                        </p>
+                        </p> -->
                     </ul>
                     
                     <h3>Experimental Results</h3>
                     <ul>
                         <p>
-                            Table 1. Quantitative comparison of the SOTA blind SR methods and the proposed method on various datasets and noise levels.
+                          Table 1. The PSNR in dB (left entry in each cell) and SSIM (right entry in each cell) results of the test methods on 10 scenes.
                         </p>
-                        <img src="./img/Quantitative_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+
+                        <p>
+                          Figure 2. Reconstructed images of Scene 2 (left) and Scene 9 (right) with 4 out of 28 spectral channels by the five deep learning-based 
+                          methods. Two regions in each scene are selected for analysing the spectra of the reconstructed results.
+                        </p>
+                        <img src="./img/vision_result.png" class="img-fluid" alt="">
+
+
                     </ul>
 
                     <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
-                        <p>
-                            Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
-                        </p>
-                        <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
-                        <p>
-                            Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
-                        </p>
+                      <p>
+                        Figure 3. Reconstructed images of two real scenes (Scene 1 and Scene 3) with 2 out of 28 spectral channels by the competing methods.
+                      </p>
+                      <img src="./img/vision_compare.png" class="img-fluid" alt="">
                     </ul>
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{fang2022uncertainty,<br>
-                            &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
-                            &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
-                            &emsp;booktitle={European Conference on Computer Vision},<br>
-                            &emsp;pages={144--161},<br>
-                            &emsp;year={2022},<br>
-                            &emsp;organization={Springer}<br>
+                        @inproceedings{huang2021deep,<br>
+                            &emsp;title={Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging},<br>
+                            &emsp;author={Huang, Tao and Dong, WeiSheng and Yuan, Xin and Wu, Jinjian and Shi, Guangming},<br>
+                            &emsp;booktitle={IEEE Conference on Computer Vision and Pattern Recognition},<br>
+                            &emsp;year={2021}<br>
                         }
                     </p>
                     
                     <h3>Concat</h3>
                     <p>
-                        <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
+                        <strong>Tao Huang</strong>, Email: thuang_666@stu.xidian.edu.cn <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
+                        <strong>Xin Yuan</strong>, Email: xyuan@bell-labs.com <br>
                         <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
                         <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
@@ -179,6 +184,7 @@
                 </div>
             </article><!-- End blog entry -->
 
+            
 
       </div>
     </section><!-- End Blog Single Section -->
@@ -197,7 +203,6 @@
               School of Artificial Intelligence <br>
               Xidian University <br>
               8 Taibai South Road, Xi 'an, China<br>
-              wsdong@mail.edu.cn
             </p>
           </div>
         </div>
@@ -206,10 +211,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy;VRL Lab@XDU, 2023  Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
       </div>
     </div>
-
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

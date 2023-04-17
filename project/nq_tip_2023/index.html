@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</title>
+  <title>Searching Efficient Model-Guided Deep Network for Image Denoising</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
             <li><a class="" href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
             <li><a class="active" href="../../publication.html">Publication</a></li>
-            <li><a href="../../team.html">People</a></li>
+            <li><a href="../../team.html">Team</a></li>
             <li><a href="../../demo.html">Demo</a></li>
             <li><a href="../../contact.html">Join Us</a></li>
           </li>
@@ -75,7 +75,7 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</li>
+            <li>Searching Efficient Model-Guided Deep Network for Image Denoising</li>
           </ol>
         </div>
 
@@ -90,95 +90,103 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
+                    <a href="./index.html">Searching Efficient Model-Guided Deep Network for Image Denoising</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhenxuan Fang, Weisheng Dong*, Xin Li, Jinjian Wu, Leida Li, and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Qian Ning, Weisheng Dong, Xin Li and Jinjian Wu</li></h5>
 
-                <div class="a">
+                <!-- <div class="a">
                     <div class="b" id="b">
                         <div><img src="./HR/img_014.png" alt="Before"></div>
                     </div>
                     <img src="./LR/img_014_LR.png" alt="After">
                     <input type="range" id="range" value="50">
-                </div>
+                </div> -->
 
-                <img src="./img/Network.jpg" class="img-fluid" alt="">
+                <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                    Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
-                    (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
+                  Figure 1. (a) The overall architecture of the proposed network; (b)-(d) a list of candidate operations to be searched for NL, DSL, and USL, 
+                  respectively; (e) network depth searching; (f) layer operations searching; (g) network width searching.
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
-                    Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
-                    To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
-                    Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
-                    Then we propose a novel SR network by unfolding the joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated kernel. 
-                    We have also developed a novel approach of estimating both the scale prior coefficient and the local means of the LSM model through a deep convolutional neural network (DCNN). 
-                    All parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive experiments on both synthetic and real-world images show that our method achieves state-of-the-art performance for the task of blind image SR.
+                    &emsp;Unlike the success of neural architecture search (NAS) in high-level vision tasks, it remains challenging to find computationally efficient and 
+                    memory-efficient solutions to low-level vision problems such as image restoration throughNAS. One of the fundamental barriers to differential NAS based 
+                    image restoration is the optimization gap between the super-network and the sub-architectures, causing instability during the searching process. In this 
+                    paper, we present a novel approach to fill this gap in image denoising application by connecting model-guided design (MoD) with NAS (MoDNAS). Specifically, 
+                    we propose to construct a new search space under a model-guided framework and develop more stable and efficient differential search strategies. MoD-NAS 
+                    employs a highly reusable width search strategy and a densely connected search block to automatically select the operations of each layer as well as 
+                    network width and depth via gradient descent. During the search process, the proposed MoD-NAS remains stable because of the smoother search space designed 
+                    under the model-guided framework. Experimental results on several popular datasets show that our MoD-NAS method has achieved at least comparable even 
+                    better PSNR performance than current state-of-the-art methods with fewer parameters, fewer flops, and less testing time.
+
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf">Paper</a>
                         </p>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a>
                         </p>
-                        <p>
+                        <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
-                        </p>
+                        </p> -->
                     </ul>
                     
                     <h3>Experimental Results</h3>
                     <ul>
                         <p>
-                            Table 1. Quantitative comparison of the SOTA blind SR methods and the proposed method on various datasets and noise levels.
+                          
                         </p>
-                        <img src="./img/Quantitative_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+
                     </ul>
 
                     <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
                         <p>
-                            Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
+                          
                         </p>
-                        <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
+                        <img src="./img/vision_result_2.png" class="img-fluid" alt="">
                         <p>
-                            Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
+                          
                         </p>
+
+
                     </ul>
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{fang2022uncertainty,<br>
-                            &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
-                            &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
-                            &emsp;booktitle={European Conference on Computer Vision},<br>
-                            &emsp;pages={144--161},<br>
-                            &emsp;year={2022},<br>
-                            &emsp;organization={Springer}<br>
-                        }
+                        @ARTICLE{MoD-NAS-TIP2023,<br>
+                            &emsp;title={Searching Efficient Model-Guided Deep Network for Image Denoising},<br>
+                            &emsp;author={Ning, Qian and Dong, Weisheng and Li, Xin and Wu, Jinjian},<br>
+                            &emsp;journal={IEEE Transactions on Image Processing},<br>
+                            &emsp;year={2023},<br>
+                            &emsp;volume={32},<br>
+                            &emsp;number={},<br>
+                            &emsp;pages={668-681},<br>
+                            &emsp;doi={10.1109/TIP.2022.3231741}}<br>
+  
+
+  
+                        
                     </p>
                     
                     <h3>Concat</h3>
                     <p>
-                        <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
+                        <strong>Qian Ning</strong>, Email: ningqian@stu.xidian.edu.cn <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
-                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
-                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
                   
                 </div>
             </article><!-- End blog entry -->
 
+            
 
       </div>
     </section><!-- End Blog Single Section -->
@@ -197,7 +205,6 @@
               School of Artificial Intelligence <br>
               Xidian University <br>
               8 Taibai South Road, Xi 'an, China<br>
-              wsdong@mail.edu.cn
             </p>
           </div>
         </div>
@@ -206,10 +213,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy;VRL Lab@XDU, 2023  Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
       </div>
     </div>
-
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

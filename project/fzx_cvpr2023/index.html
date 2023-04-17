@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</title>
+  <title>Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
             <li><a class="" href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
             <li><a class="active" href="../../publication.html">Publication</a></li>
-            <li><a href="../../team.html">People</a></li>
+            <li><a href="../../team.html">Team</a></li>
             <li><a href="../../demo.html">Demo</a></li>
             <li><a href="../../contact.html">Join Us</a></li>
           </li>
@@ -75,7 +75,7 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</li>
+            <li>Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring</li>
           </ol>
         </div>
 
@@ -90,88 +90,89 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
+                    <a href="./index.html">Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhenxuan Fang, Weisheng Dong*, Xin Li, Jinjian Wu, Leida Li, and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhenxuan Fang, Fangfang Wu, Weisheng Dong, Xin Li, Jinjian Wu, and Guangming Shi</li></h5>
 
-                <div class="a">
+                <!-- <div class="a">
                     <div class="b" id="b">
-                        <div><img src="./HR/img_014.png" alt="Before"></div>
+                        <div><img src="./img/network.png" alt="Before"></div>
                     </div>
                     <img src="./LR/img_014_LR.png" alt="After">
                     <input type="range" id="range" value="50">
-                </div>
+                </div> -->
 
-                <img src="./img/Network.jpg" class="img-fluid" alt="">
+                <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                    Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
-                    (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
+                  Figure 1. Overview of the proposed UFPNet for blind image deblurring. The architecture of (a) the flow-based uncertain kernel
+                  estimation network, (b) the encoder-decoder deblurring network with kernel attention module, (c) the kernel attention module (KAM).
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
-                    Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
-                    To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
-                    Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
-                    Then we propose a novel SR network by unfolding the joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated kernel. 
-                    We have also developed a novel approach of estimating both the scale prior coefficient and the local means of the LSM model through a deep convolutional neural network (DCNN). 
-                    All parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive experiments on both synthetic and real-world images show that our method achieves state-of-the-art performance for the task of blind image SR.
+                    &emsp;Many deep learning-based solutions to blind image deblurring estimate the blur representation and reconstruct the target image from 
+                    its blurry observation. However, these methods suffer from severe performance degradation in real-world scenarios because they ignore 
+                    important prior information about motion blur (e.g., real-world motion blur is diverse and spatially varying). Some methods have attempted 
+                    to explicitly estimate non-uniform blur kernels by CNNs, but accurate estimation is still challenging due to the lack of ground truth 
+                    about spatially varying blur kernels in real-world images. To address these issues, we propose to represent the field of motion blur 
+                    kernels in a latent space by normalizing flows, and design CNNs to predict the latent codes instead of motion kernels. To further 
+                    improve the accuracy and robustness of non-uniform kernel estimation, we introduce uncertainty learning into the process of estimating 
+                    latent codes and propose a multi-scale kernel attention module to better integrate image features with estimated kernels. Extensive 
+                    experimental results, especially on real-world blur datasets, demonstrate that our method achieves state-of-the-art results in terms 
+                    of both subjective and objective quality as well as excellent generalization performance for non-uniform image deblurring.
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Projects/UFPNet.files/Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior.pdf">Paper</a>
                         </p>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UFPDeblur">Code</a>
                         </p>
-                        <p>
+                        <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
-                        </p>
+                        </p> -->
                     </ul>
                     
                     <h3>Experimental Results</h3>
                     <ul>
                         <p>
-                            Table 1. Quantitative comparison of the SOTA blind SR methods and the proposed method on various datasets and noise levels.
+                            Table 1. The comparison results on the benchmark datasets, the models are trained only on the GoPro dataset.
                         </p>
-                        <img src="./img/Quantitative_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/Comparison_of_results.png" class="img-fluid" alt="">
                     </ul>
 
                     <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/Vision_comparison_1.png" class="img-fluid" alt="">
                         <p>
-                            Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
+                            Figure 2. Visual comparisons on the GoPro dataset. The estimated kernel at the indicated pixel is illustrated on the left-top.
                         </p>
-                        <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
+                        <img src="./img/Vision_comparison_2.png" class="img-fluid" alt="">
                         <p>
-                            Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
+                            Figure 3. Visual comparisons on the RealBlur-J dataset. The estimated kernel at the indicated pixel is illustrated on the left-top.
                         </p>
                     </ul>
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{fang2022uncertainty,<br>
-                            &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
-                            &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
-                            &emsp;booktitle={European Conference on Computer Vision},<br>
-                            &emsp;pages={144--161},<br>
-                            &emsp;year={2022},<br>
-                            &emsp;organization={Springer}<br>
+                        @inproceedings{fang2022self,<br>
+                            &emsp;title={Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring},<br>
+                            &emsp;author={Fang, Zhenxuan and Wu Fangfang and Dong, Weisheng and Li, Xin and Wu, Jinjian and Shi, Guangming},<br>
+                            &emsp;booktitle={ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br>
+                            &emsp;year={2023},<br>
                         }
                     </p>
                     
                     <h3>Concat</h3>
                     <p>
                         <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
+                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
                         <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
                         <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
                         <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
@@ -197,7 +198,6 @@
               School of Artificial Intelligence <br>
               Xidian University <br>
               8 Taibai South Road, Xi 'an, China<br>
-              wsdong@mail.edu.cn
             </p>
           </div>
         </div>
@@ -206,10 +206,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy;VRL Lab@XDU, 2023  Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
       </div>
     </div>
-
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

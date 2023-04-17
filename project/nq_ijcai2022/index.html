@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</title>
+  <title>Learning Degradation Uncertainty for Unsupervised Real-world Image Super-Resolution</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
             <li><a class="" href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
             <li><a class="active" href="../../publication.html">Publication</a></li>
-            <li><a href="../../team.html">People</a></li>
+            <li><a href="../../team.html">Team</a></li>
             <li><a href="../../demo.html">Demo</a></li>
             <li><a href="../../contact.html">Join Us</a></li>
           </li>
@@ -75,7 +75,7 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</li>
+            <li>Learning Degradation Uncertainty for Unsupervised Real-world Image Super-Resolution</li>
           </ol>
         </div>
 
@@ -90,95 +90,105 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty Learning in Kernel Estimation for Multi-Stage Blind Image Super-Resolution</a>
+                    <a href="./index.html">Learning Degradation Uncertainty for Unsupervised Real-world Image Super-Resolution</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhenxuan Fang, Weisheng Dong*, Xin Li, Jinjian Wu, Leida Li, and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Qian Ning, Jingzhu Tang, Fangfang Wu, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
 
-                <div class="a">
+                <!-- <div class="a">
                     <div class="b" id="b">
                         <div><img src="./HR/img_014.png" alt="Before"></div>
                     </div>
                     <img src="./LR/img_014_LR.png" alt="After">
                     <input type="range" id="range" value="50">
-                </div>
+                </div> -->
 
-                <img src="./img/Network.jpg" class="img-fluid" alt="">
+                <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                    Figure 1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain kernel estimation network, 
-                    (b) the layer A, which contains a convolution layer with the estimated kernel and a downsampling layer, (c) the multi-stage SR network.
+                  Figure 1. The framework of learning degradation uncertainty for unsupervised real image super-resolution. The whole training process can be divided into 
+                  two steps. The first step estimates the uncertainty of degradation θ (variance) of the learned LR images (means) in a downsampling network. In the second 
+                  step, an HR image is paired with multiple LR images, which are sampled from the learned LR image (mean) and corresponding degradation uncertainty (variance). 
+                  Those LR-HR pairs will be used to train the SR network.
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Conventional wisdom in blind super-resolution (SR) first estimates the unknown degradation from the low-resolution image and then exploits the degradation information for image reconstruction. 
-                    Such sequential approaches suffer from two fundamental weaknesses - i.e., the lack of robustness (the performance drops when the estimated degradation is inaccurate) and the lack of transparency (network architectures are heuristic without incorporating domain knowledge). 
-                    To address these issues, we propose a joint Maximum a Posteriori (MAP) approach for estimating the unknown kernel and high-resolution image simultaneously. 
-                    Our method first introduces uncertainty learning in the latent space when estimating the blur kernel, aiming at improving the robustness to the estimation error. 
-                    Then we propose a novel SR network by unfolding the joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated kernel. 
-                    We have also developed a novel approach of estimating both the scale prior coefficient and the local means of the LSM model through a deep convolutional neural network (DCNN). 
-                    All parameters of the MAP estimation algorithm and the DCNN parameters are jointly optimized through end-to-end training. Extensive experiments on both synthetic and real-world images show that our method achieves state-of-the-art performance for the task of blind image SR.
+                    &emsp;Acquiring degraded images with paired high-resolution (HR) images is often challenging, impeding the advance of image super-resolution in real-world 
+                    applications. By generating realistic low-resolution (LR) images with degradation similar to that in real-world scenarios, simulated paired LR-HR data can 
+                    be constructed for supervised training. However, most of the existing work ignores the degradation uncertainty of the generated realistic LR images, since 
+                    only one LR image has been generated given an HR image. To address this weakness, we propose learning the degradation uncertainty of generated LR images 
+                    and sampling multiple LR images from the learned LR image (mean) and degradation uncertainty (variance) and construct LR-HR pairs to train the 
+                    super-resolution (SR) networks. Specifically, uncertainty can be learned by minimizing the proposed loss based on Kullback-Leibler (KL) divergence. 
+                    Furthermore, the uncertainty in the feature domain is exploited by a novel perceptual loss; and we propose to calculate the adversarial loss from the 
+                    gradient information in the SR stage for stable training performance and better visual quality. Experimental results on popular real-world datasets show 
+                    that our proposed method has performed better than other unsupervised approaches.
+
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-19797-0_9.pdf">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/IJCAI-2022.pdf">Paper</a>
                         </p>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a>
+                            <i class="bi bi-check"></i> <a href="https://github.com/QianNing0/USR-DU">Code</a>
                         </p>
-                        <p>
+                        <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
-                        </p>
+                        </p> -->
                     </ul>
                     
                     <h3>Experimental Results</h3>
                     <ul>
                         <p>
-                            Table 1. Quantitative comparison of the SOTA blind SR methods and the proposed method on various datasets and noise levels.
+                          
                         </p>
-                        <img src="./img/Quantitative_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/tabel.png" class="img-fluid" alt="">
+
                     </ul>
 
                     <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visualization_Results.jpg" class="img-fluid" alt="">
+                        <img src="./img/vision_result.png" class="img-fluid" alt="">
                         <p>
-                            Figure 1. Visual comparison to other methods. The blur kernels are illustrated on the top left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4, respectively.
+                          
                         </p>
-                        <img src="./img/Real_Image_Result.png" class="img-fluid" alt="">
-                        <p>
-                            Figure 2. Visualization results of different methods on real-world images upscaled by ×4.
-                        </p>
+
+
+
                     </ul>
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{fang2022uncertainty,<br>
-                            &emsp;title={Uncertainty Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},<br>
-                            &emsp;author={Fang, Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},<br>
-                            &emsp;booktitle={European Conference on Computer Vision},<br>
-                            &emsp;pages={144--161},<br>
+                        @inproceedings{ijcai2022p176,<br>
+                            &emsp;title={Learning Degradation Uncertainty for Unsupervised Real-world Image Super-resolution},<br>
+                            &emsp;author={Ning, Qian and Tang, Jingzhu and Wu, Fangfang and Dong, Weisheng and Li, Xin and Shi, Guangming},<br>
+                            &emsp;booktitle={Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence, {IJCAI-22}},<br>
+                            &emsp;publisher={International Joint Conferences on Artificial Intelligence Organization},<br>
+                            &emsp;editor={Lud De Raedt},<br>
+                            &emsp;pages={1261--1267},<br>
                             &emsp;year={2022},<br>
-                            &emsp;organization={Springer}<br>
-                        }
+                            &emsp;month={7},<br>
+                            &emsp;note={Main Track},<br>
+                            &emsp;doi={10.24963/ijcai.2022/176}}<br>
                     </p>
                     
                     <h3>Concat</h3>
                     <p>
-                        <strong>Zhenxuan Fang</strong>, Email: zxfang@stu.xidian.edu.cn <br>
-                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Leida Li</strong>, Email: ldli@xidian.edu.cn <br>
-                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
-                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                      <strong>Qian Ning</strong>, Email: ningqian@stu.xidian.edu.cn <br>
+                      <strong>Jingzhu Tang</strong>, Email: tangjingzhu@stu.xidian.edu.cn <br>                       
+                      <strong>Fangfang Wu</strong>, Email: ffwu_xd@163.com <br>                     
+                      <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>                       
+                      <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                      <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+
                     </p>
                   
                 </div>
             </article><!-- End blog entry -->
 
+            
 
       </div>
     </section><!-- End Blog Single Section -->
@@ -197,7 +207,6 @@
               School of Artificial Intelligence <br>
               Xidian University <br>
               8 Taibai South Road, Xi 'an, China<br>
-              wsdong@mail.edu.cn
             </p>
           </div>
         </div>
@@ -206,10 +215,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy;VRL Lab@XDU, 2023  Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
       </div>
     </div>
-
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
