@@ -237,7 +237,16 @@ remote_port = 你想映射到公网IP的端口号
 ```shell
 sudo supervisorctl reload
 ```
-即可用IP+端口号（后续会用域名进行管理）访问相应的演示界面
+此时即可用IP+端口号（后续会用域名进行管理）访问相应的演示界面。
+
+但为安全起见，仍需要用子域名将IP+端口号隐藏起来。需要登录[Cloud Flare](https://dash.cloudflare.com/)，进入DNS模块中添加一条记录
+![图片](assets/img/readme/cloudflare.jpg)
+![图片](assets/img/readme/cloudflare_add.jpg)
+
+之后，再进入nginx WebUI里，在反向代理中添加一条IP+端口和子域名的映射关系（可根据已有类型直接克隆，只修改子域名和代理目标即可）
+![图片](assets/img/readme/nginx_webui_add.jpg)
+
+
 
 
 **感谢Bootstrap**
