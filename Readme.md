@@ -47,7 +47,7 @@ html文件使用`nignx`反向代理，具体步骤见[这篇知乎](https://zhua
 ### 下面是每个有用的html
 - [contact.html](http://8.217.20.15/contact.html): 招生简章
 
-    ![图片]()还没弄好，弄好了再截图
+    ![图片](assets/img/readme/join_us.jpg)
 
 - [demo.html](http://8.217.20.15/demo.html): 卡片集合，点开卡片会跳转到相应论文的实际运行界面(streamlit) <a href="#research_and_demo">后续维护看这里</a>
 
