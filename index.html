@@ -204,139 +204,111 @@
 
 
 
-            <!-- ECCV_2022_Fang -->
+            <!-- TPAMI_2023_Lu -->
             <div class="row" data-aos="fade-up">
                 <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Uncertainty learning in kernel estimation for multi-stage blind image super-resolution</h3>
-                    <h5>Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
-                    <h6>ECCV 2022</h6>
+                    <h3>Adaptive Search-and-Training for Robust and Efficient Network Pruning</h3>
+                    <h5>X. Lu, W. Dong*, X. Li, J. Wu, L Li, and G. Shi</h5>
+                    <h6>TPAMI 2023</h6>
                     <ul class="faq-list">
                         <br>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Fang_ECCV_2022"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Fang_ECCV_2022" class="collapse" data-bs-parent=".faq-list">
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Lu_TPAMI_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_Lu_TPAMI_2023" class="collapse" data-bs-parent=".faq-list">
                                 <p>
-                                    Conventional wisdom in blind super-resolution (SR) first estimates the unknown
-                                    degradation from the low-resolution image and then
-                                    exploits the degradation information for image reconstruction. Such sequential
-                                    approaches suffer from two fundamental weaknesses - i.e., the
-                                    lack of robustness (the performance drops when the estimated degradation
-                                    is inaccurate) and the lack of transparency (network architectures
-                                    are heuristic without incorporating domain knowledge). To address these
-                                    issues, we propose a joint Maximum a Posteriori (MAP) approach for
-                                    estimating the unknown kernel and high-resolution image simultaneously.
-                                    Our method first introduces uncertainty learning in the latent space when
-                                    estimating the blur kernel, aiming at improving the robustness to the
-                                    estimation error. Then we propose a novel SR network by unfolding the
-                                    joint MAP estimator with a learned Laplacian Scale Mixture (LSM) prior
-                                    and the estimated kernel. We have also developed a novel approach of
-                                    estimating both the scale prior coefficient and the local means of the
-                                    LSM model through a deep convolutional neural network (DCNN). All
-                                    parameters of the MAP estimation algorithm and the DCNN parameters
-                                    are jointly optimized through end-to-end training. Extensive experiments
-                                    on both synthetic and real-world images show that our method achieves
-                                    state-of-the-art performance for the task of blind image SR.
+                                    Both network pruning and neural architecture search (NAS) can be interpreted as techniques to automate the design and optimization of 
+                                    artificial neural networks. In this paper, we challenge the conventional wisdom of training before pruning by proposing a joint 
+                                    search-and-training approach to learn a compact network directly from scratch. Using pruning as a search strategy, we advocate three new 
+                                    insights for network engineering: 1) to formulate adaptive search as a cold start strategy to find a compact subnetwork on the coarse 
+                                    scale; and 2) to automatically learn the threshold for network pruning; 3) to offer flexibility to choose between efficiency and robustness. 
+                                    More specifically, we propose an adaptive search algorithm in the cold start by exploiting the randomness and flexibility of filter pruning. 
+                                    The weights associated with the network filters will be updated by ThreshNet, a flexible coarse-to-fine pruning method inspired by 
+                                    reinforcement learning. In addition, we introduce a robust pruning strategy leveraging the technique of knowledge distillation through a 
+                                    teacher-student network. Extensive experiments on ResNet and VGGNet have shown that our proposed method can achieve a better balance in terms 
+                                    of efficiency and accuracy and notable advantages over current state-of-the-art pruning methods in several popular datasets, including 
+                                    CIFAR10, CIFAR100, and ImageNet.
                                 </p>
                             </div>                               
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/fzx_eccv2022/img/network1.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://demo_fzx.vrl-lab.org">Demo</a></li>
+                    <img src="project\lxt_tpami2023\img\network.png" class="img-fluid" alt="" style="display: inline-block;">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/PAMI2023_final.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> <a href="https://github.com/Lxtccc/Adaptive-">Code</a></li>
+                    <li><i class="bi bi-check"></i> Demo</li>
                 </div>
                 <br>
                 <br>
             </div>
 
-            <!-- ECCV_2022_Yang -->
+            <!-- TIP_2023_Ning -->
             <div class="row" data-aos="fade-up">
                 <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Self-feature distillation with uncertainty modeling for degraded image recognition</h3>
-                    <h5>Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi</h5>
-                    <h6>ECCV 2022</h6>
+                    <h3>Searching Efficient Model-Guided Deep Network for Image Denoising</h3>
+                    <h5>Q. Ning, W. Dong*, X. Li, and J. Wu</h5>
+                    <h6>TIP 2023</h6>
                     <ul class="faq-list">
                         <br>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Yang_ECCV_2022"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Yang_ECCV_2022" class="collapse">
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Ning_TIP_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_Ning_TIP_2023" class="collapse">
                                 <p>
-                                    Despite the remarkable performance on high-quality (HQ)
-                                    data, the accuracy of deep image recognition models degrades rapidly
-                                    in the presence of low-quality (LQ) images. Both feature de-drifting and
-                                    quality agnostic models have been developed to make the features extracted
-                                    from degraded images closer to those of HQ images. In these
-                                    methods, the l2-norm is usually used as a constraint. It treats each pixel
-                                    in the feature equally and may result in relatively poor reconstruction
-                                    performance in some difficult regions. To address this issue, we propose a
-                                    novel self-feature distillation method with uncertainty modeling for better
-                                    producing HQ-like features from low-quality observations in this paper.
-                                    Specifically, in a standard recognition model, we use the HQ features to
-                                    distill the corresponding degraded ones and conduct uncertainty modeling
-                                    according to the diversity of degradation sources, increasing the
-                                    weights of feature regions that is difficult to recover in the distillation
-                                    loss. Experiments demonstrate that our method can extract HQ-like fea
-                                    tures better even when the inputs are degraded images, which makes the
-                                    model more robust than other approaches.
+                                    Unlike the success of neural architecture search (NAS) in high-level vision tasks, it remains challenging to find computationally efficient and 
+                                    memory-efficient solutions to low-level vision problems such as image restoration throughNAS. One of the fundamental barriers to differential NAS based 
+                                    image restoration is the optimization gap between the super-network and the sub-architectures, causing instability during the searching process. In this 
+                                    paper, we present a novel approach to fill this gap in image denoising application by connecting model-guided design (MoD) with NAS (MoDNAS). Specifically, 
+                                    we propose to construct a new search space under a model-guided framework and develop more stable and efficient differential search strategies. MoD-NAS 
+                                    employs a highly reusable width search strategy and a densely connected search block to automatically select the operations of each layer as well as 
+                                    network width and depth via gradient descent. During the search process, the proposed MoD-NAS remains stable because of the smoother search space designed 
+                                    under the model-guided framework. Experimental results on several popular datasets show that our MoD-NAS method has achieved at least comparable even 
+                                    better PSNR performance than current state-of-the-art methods with fewer parameters, fewer flops, and less testing time.
                                 </p>
                             </div>                               
                         </li>       
                     </ul>
                 </div>
                 <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/yz_eccv2022/img/network.png" class="img-fluid" alt="">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Self-Feature%20Distillation_ECCV2022.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
+                    <img src="project\nq_tip_2023\img\network.png" class="img-fluid" alt="">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a></li>
                     <li><i class="bi bi-check"></i> Demo</li>
                 </div>
                 <br>
                 <br>
             </div>           
 
-            <!--  IJCAI_2022_Ning -->
+            <!--  CVPR_2023_Fang -->
             <div class="row" data-aos="fade-up">
                 <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Learning degradation Uncertainty for unsupervised real-world image super-resolution</h3>
-                    <h5> Q. Ning, J. Tang, F. Wu, W. Dong*, X. Li, and G. Shi</h5>
-                    <h6>IJCAI 2022</h6>
+                    <h3>Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring</h3>
+                    <h5> Z. Fang, F. Wu*, W. Dong, X. Li, J. Wu, and G. Shi</h5>
+                    <h6>CVPR 2023</h6>
                     <ul class="faq-list">
                         <br>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Ning_IJCAI_2022"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Ning_IJCAI_2022" class="collapse">
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Fang_CVPR_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_Fang_CVPR_2023" class="collapse">
                                 <p>
-                                    Acquiring degraded images with paired highresolution (HR) images is often 
-                                    challenging, impeding the advance of image super-resolution in
-                                    real-world applications. By generating realistic
-                                    low-resolution (LR) images with degradation similar to that in real-world scenarios, 
-                                    simulated paired LR-HR data can be constructed for supervised
-                                    training. However, most of the existing work ignores the degradation 
-                                    uncertainty of the generated realistic LR images, since only one LR image
-                                    has been generated given an HR image. To address
-                                    this weakness, we propose learning the degradation
-                                    uncertainty of generated LR images and sampling
-                                    multiple LR images from the learned LR image
-                                    (mean) and degradation uncertainty (variance) and
-                                    construct LR-HR pairs to train the super-resolution
-                                    (SR) networks. Specifically, uncertainty can be
-                                    learned by minimizing the proposed loss based on
-                                    Kullback-Leibler (KL) divergence. Furthermore,
-                                    the uncertainty in the feature domain is exploited
-                                    by a novel perceptual loss; and we propose to calculate the adversarial loss 
-                                    from the gradient information in the SR stage for stable training performance 
-                                    and better visual quality. Experimental results on popular real-world datasets 
-                                    show that our proposed method has performed better than other unsupervised approaches.
+                                    Many deep learning-based solutions to blind image deblurring estimate the blur representation and reconstruct the target image from 
+                                    its blurry observation. However, these methods suffer from severe performance degradation in real-world scenarios because they ignore 
+                                    important prior information about motion blur (e.g., real-world motion blur is diverse and spatially varying). Some methods have attempted 
+                                    to explicitly estimate non-uniform blur kernels by CNNs, but accurate estimation is still challenging due to the lack of ground truth 
+                                    about spatially varying blur kernels in real-world images. To address these issues, we propose to represent the field of motion blur 
+                                    kernels in a latent space by normalizing flows, and design CNNs to predict the latent codes instead of motion kernels. To further 
+                                    improve the accuracy and robustness of non-uniform kernel estimation, we introduce uncertainty learning into the process of estimating 
+                                    latent codes and propose a multi-scale kernel attention module to better integrate image features with estimated kernels. Extensive 
+                                    experimental results, especially on real-world blur datasets, demonstrate that our method achieves state-of-the-art results in terms 
+                                    of both subjective and objective quality as well as excellent generalization performance for non-uniform image deblurring.
                                 </p>
                             </div>                               
                         </li>                      
                     </ul>
                 </div>
                 <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/nq_ijcai2022/img/network.png" class="img-fluid" alt="">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/IJCAI-2022.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
+                    <img src="project\fzx_cvpr2023\img\network.png" class="img-fluid" alt="">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Projects/UFPNet.files/Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UFPDeblur">Code</a></li>
                     <li><i class="bi bi-check"></i> Demo</li>
                 </div>
                 <br>
@@ -344,40 +316,29 @@
             </div>
 
                 
-            <!-- CVPR_2021_Huang -->
+            <!-- CVPR_2023_Yang -->
             <div class="row" data-aos="fade-up">
                 <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging</h3>
-                    <h5>T. Huang, W. Dong*, X. Yuan*, J. Wu, and G. Shi</h5>
-                    <h6>CVPR 2021</h6>
+                    <h3>Vector Quantization with Self-attention for Quality-independent Representation Learning</h3>
+                    <h5>Z. Yang, W. Dong*, X. Li, Y. Sun, M. Huang and G. Shi</h5>
+                    <h6>CVPR 2023</h6>
                     <ul class="faq-list">
                     <div>
                         <br>
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Huang_CVPR_2021"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Huang_CVPR_2021" class="collapse">
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Yang_CVPR_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_Yang_CVPR_2023" class="collapse">
                                 <p>
-                                    In coded aperture snapshot spectral imaging (CASSI)
-                                    system, the real-world hyperspectral image (HSI) can be reconstructed 
-                                    from the captured compressive image in a snapshot. Model-based HSI reconstruction methods employed
-                                    hand-crafted priors to solve the reconstruction problem, but
-                                    most of which achieved limited success due to the poor 
-                                    representation capability of these hand-crafted priors. Deep
-                                    learning based methods learning the mappings between the
-                                    compressive images and the HSIs directly achieved much
-                                    better results. Yet, it is nontrivial to design a powerful deep
-                                    network heuristically for achieving satisfied results. In this
-                                    paper, we propose a novel HSI reconstruction method based
-                                    on the Maximum a Posterior (MAP) estimation framework
-                                    using learned Gaussian Scale Mixture (GSM) prior. Different 
-                                    from existing GSM models using hand-crafted scale
-                                    priors (e.g., the Jeffrey’s prior), we propose to learn the
-                                    scale prior through a deep convolutional neural network
-                                    (DCNN). Furthermore, we also propose to estimate the local means 
-                                    of the GSM models by the DCNN. All the parameters of the MAP estimation algorithm and the DCNN
-                                    parameters are jointly optimized through end-to-end training. 
-                                    Extensive experimental results on both synthetic and
-                                    real datasets demonstrate that the proposed method outperforms existing state-of-the-art methods. 
+                                    Recently, the robustness of deep neural networks has drawn extensive attention due to the potential distribution shift between 
+                                    training and testing data (e.g., deep models trained on high-quality images are sensitive to corruption during testing). Many researchers 
+                                    attempt to make the model learn invariant representations from multiple corrupted data through data augmentation or image-pair-based 
+                                    feature distillation to improve the robustness. Inspired by sparse representation in image restoration, we opt to address this issue by 
+                                    learning image-quality-independent feature representation in a simple plug-and-play manner, that is, to introduce discrete vector 
+                                    quantization (VQ) to remove redundancy in recognition models. Specifically, we first add a codebook module to the network to quantize deep 
+                                    features. Then we concatenate them and design a self-attention module to enhance the representation. During training, we enforce the 
+                                    quantization of features from clean and corrupted images in the same discrete embedding space so that an invariant {\em quality-independent} 
+                                    feature representation can be learned to improve the recognition robustness of low-quality images. Qualitative and quantitative experimental results show 
+                                    that our method achieved this goal effectively, leading to a new state-of-the-art result of 43.1 $\%$ mCE on ImageNet-C with ResNet50 as the backbone.
                                 </p>
                             </div>                               
                         </li>  
@@ -385,9 +346,9 @@
                     </ul>
                 </div>
                 <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/ht_cvpr2021/img/network.png" class="img-fluid" alt="">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Huang_Deep_Gaussian_Scale_Mixture_Prior_for_Spectral_Compressive_Imaging_CVPR_2021_paper.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
+                    <img src="project\yz_cvpr2023\img\network.jpg" class="img-fluid" alt="">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/VQSA.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> <a href="https://github.com/yangzhou321/VQSA">Code</a></li>
                     <li><i class="bi bi-check"></i> Demo</li>
                 </div>
                 <br>
