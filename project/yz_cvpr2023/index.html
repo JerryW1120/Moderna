@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Vector Quantization with Self-Attention for Quality-Independent Representation Learning</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Vector Quantization with Self-Attention for Quality-Independent Representation Learning</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Zhou Yang, Weisheng Dong, Xin Li, Mengluan Huang, Yulin Sun and Guangming Shi</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./img/network.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.jpg" class="img-fluid" alt="">
+                <p>
+                  Figure 1. The overall architecture of our proposed method. The mini-batch of input contains both clean and corrupted images. Features extracted from the backbone network are quantized by the codebook module. Then z and \hat(z) are concatenated and pooled. Subsequently, after being enhanced by the SA module, the features are input into the head network to get the final output results.
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;Recently, the robustness of deep neural networks has drawn extensive attention due to the potential distribution shift between 
+                    training and testing data (e.g., deep models trained on high-quality images are sensitive to corruption during testing). Many researchers 
+                    attempt to make the model learn invariant representations from multiple corrupted data through data augmentation or image-pair-based 
+                    feature distillation to improve the robustness. Inspired by sparse representation in image restoration, we opt to address this issue by 
+                    learning image-quality-independent feature representation in a simple plug-and-play manner, that is, to introduce discrete vector 
+                    quantization (VQ) to remove redundancy in recognition models. Specifically, we first add a codebook module to the network to quantize deep 
+                    features. Then we concatenate them and design a self-attention module to enhance the representation. During training, we enforce the 
+                    quantization of features from clean and corrupted images in the same discrete embedding space so that an invariant {\em quality-independent} 
+                    feature representation can be learned to improve the recognition robustness of low-quality images. Qualitative and quantitative experimental results show 
+                    that our method achieved this goal effectively, leading to a new state-of-the-art result of 43.1 $\%$ mCE on ImageNet-C with ResNet50 as the backbone.
+                    </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Projects/VQ4LQimg.files/paper.pdf">Paper</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/yangzhou321/VQSA">Code</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          Figure 1. The detailed top-1 accuracy results of the different methods for each corruption type in benchmark dataset ImageNet-C.
+                        </p>
+                        <img src="./img/tabel_1.png" class="img-fluid" alt="">
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/dist_cmp.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Class-wise feature distribution. Symbols with similar colors have the same labels. Marks with large color differences represent 
+                          different labels of image features. Dot marks denote clean features, while triangle marks indicate degraded ones.
+                        </p>
+                        <img src="./img/grad_cam.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3. The Grad-CAM maps of different models on defocus blur images. (a) The original clean images. (b) The maps of vanilla ResNet50 model on clean images. 
+                          (c) and (d) show the maps of QualNet50 and our proposed method on defocus blur images with severity level 3. The results show that our method still can 
+                          focus on the salient object area without being seriously affected by corruption.
+
+                        </p>
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @inproceedings{yang2023vector,<br>
+                            &emsp;title={Vector Quantization with Self-Attention for Quality-Independent Representation Learning},<br>
+                            &emsp;author={Yang, Zhou and Dong, Weisheng and Li, Xin and Huang, Menguan and Sun, Yulin and Shi, Guangming},<br>
+                            &emsp;booktitle={  Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br>
+                            &emsp;year={2023},<br>
+                        }
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Zhou Yang</strong>, Email: yang_zhou@stu.xidian.edu.cn <br>
+                        <strong>Mengluan Huang</strong>, Email: mlhuang@stu.xidian.edu.cn <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Yulin Sun</strong>, Email: daitusun@gmail.com <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>
