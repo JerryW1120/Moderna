@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</title>
+  <title>Low-Light Image Enhancement with Multi-stage Residue Quantization and Brightness-aware Attention</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -75,7 +75,7 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</li>
+            <li>Low-Light Image Enhancement with Multi-stage Residue Quantization and Brightness-aware Attention</li>
           </ol>
         </div>
 
@@ -90,7 +90,7 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</a>
+                    <a href="./index.html">Low-Light Image Enhancement with Multi-stage Residue Quantization and Brightness-aware Attention</a>
                 </h1>
 
                 <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Qian Ning, Fangfang Wu, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
@@ -105,40 +105,44 @@
 
                 <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                  Figure 1: (a)The overall framework of the proposed MemGAN network for real-world blind face restoration; (b)The inner
-                  structure of the decoder block of proposed MemGAN in (a).
+                  Figure 1. Architecture of the proposed network RQ-LLIE for low-light image enhancement (LLIE). Left: The architecture of the overall network.
+                  Right (a): The structure of the Basic block in the left figure. Right (b): The structure of the Brightness-aware attention in the left figure.
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Blind face restoration aims to recover high-quality face images from
-                    low-quality ones with complex and unknown degradation. Existing
-                    approaches have achieved promising performance by leveraging
-                    pre-trained dictionaries or generative priors. However, these methods may fail to exploit the full potential of degraded inputs and facial
-                    identity features due to complex degradation. To address this issue,
-                    we propose a novel method that explores the correlation of degraded
-                    spatial identity features by learning a general representation using
-                    memory network. Specifically, our approach enhances degraded
-                    features with more identity by leveraging similar facial features retrieved from memory network. We also propose a fusion approach
-                    that fuses memorized spatial features with GAN prior features via
-                    affine transformation and blending fusion to improve fidelity and
-                    realism. Additionally, the memory network is updated online in an
-                    unsupervised manner along with other modules, which obviates
-                    the requirement for pre-training. Experimental results on synthetic
-                    and popular real-world datasets demonstrate the effectiveness of
-                    our proposed method, which achieves at least comparable and often
-                    better performance than other state-of-the-art approaches.
+                    &emsp;Low-light image enhancement (LLIE) aims to recover il-
+                    lumination and improve the visibility of low-light images.
+                    Conventional LLIE methods often produce poor results be-
+                    cause they neglect the effect of noise interference. Deep
+                    learning-based LLIE methods focus on learning a map-
+                    ping function between low-light images and normal-light
+                    images that outperforms conventional LLIE methods. How-
+                    ever, most deep learning-based LLIE methods cannot yet
+                    fully exploit the guidance of auxiliary priors provided by
+                    normal-light images in the training dataset. In this paper,
+                    we propose a brightness-aware network with normal-light 
+                    priors based on brightness-aware attention and residual-
+                    quantized codebook. To achieve a more natural and re-
+                    alistic enhancement, we design a query module to obtain
+                    more reliable normal-light features and fuse them with low-
+                    light features by a fusion branch. In addition, we propose
+                    a brightness-aware attention module to further improve the
+                    robustness of the network to the brightness. Extensive ex-
+                    perimental results on both real-captured and synthetic data
+                    show that our method outperforms existing state-of-the-art
+                    methods.
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Face_restoration_ACMMM2023.pdf">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Liu_Low-Light_Image_Enhancement_with_Multi-Stage_Residue_Quantization_and_Brightness-Aware_Attention_ICCV_2023_paper.pdf">Paper</a>
                         </p>
-                        <!-- <p>
-                            <i class="bi bi-check"></i> <a href="https://github.com/Lxtccc/Adaptive-">Code</a>
-                        </p> -->
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/LiuYunlong99/RQ-LLIE">Code</a>
+                        </p>
                         <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
                         </p> -->
@@ -147,15 +151,12 @@
                     <h3>Experimental Results</h3>
                     <ul>
                         <p>
-                          Table 1: Average FID, PSNR, SSIM, and LPIPS results on
-                          CelebA-Test dataset [22]. The best results are shown in bold
-                          and the second-best results are shown in underline.                          
+                          Table 1. Quantitative comparison on the LOLv1 dataset.
                         </p>
                         <img src="./img/table_1.png" class="img-fluid" alt="">
 
                         <p>
-                          Table 2: Average FID (the lower, the better) on three realworld datasets. The best results are shown in bold and the
-                          second-best results are shown in underline.
+                          Table 2. Quantitative comparison on the LOLv2-Real and LOLv2-Synthetic dataset. 
                         </p>
                         <img src="./img/table_2.png" class="img-fluid" alt="">
 
@@ -163,36 +164,41 @@
 
                     <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visual quality comparison of CelebA-Test.png" class="img-fluid" alt="">
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
                         <p>
-                          Figure 1: Visual quality comparison of CelebA-Test. Zoom in for better view.
+                          Figure 1: Visual quality comparisons of different low-light image enhancement methods on the LOLv1 dataset.
                         </p>
-                        <img src="./img/Visual quality comparison of three real-world datasets.png" class="img-fluid" alt="">
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
                         <p>
-                          Figure 2: Visual quality comparison of three real-world datasets. The first four rows show the comparisons from LFW [12]; the
-                          fifth row shows the comparisons from CelebChild [32]; the sixth row shows the comparisons from WebPhoto [32]. Zoom in for
-                          better view.
+                          Figure 2: Visual quality comparisons of different low-light image enhancement methods on the LOLv2-Real dataset.
+                        </p>
+                        <img src="./img/fig_3.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3: Visual quality comparisons of different low-light image enhancement methods on the LOLv2-Synthetic dataset.
                         </p>
                     </ul>
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{ning2023exploring,<br>
-                          &emsp;title={Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration},<br>
-                          &emsp;author={Ning, Qian and Wu, Fangfang and Dong, Weisheng and Li, Xin and Shi, Guangming},<br>
-                          &emsp;booktitle={Proceedings of the 31st ACM International Conference on Multimedia},<br>
-                          &emsp;pages={37--45},<br>
-                          &emsp;year={2023}<br>
+                        @InProceedings{Liu_2023_ICCV,<br>
+                          &emsp;author    = {Liu, Yunlong and Huang, Tao and Dong, Weisheng and Wu, Fangfang and Li, Xin and Shi, Guangming},<br>
+                          &emsp;title     = {Low-Light Image Enhancement with Multi-Stage Residue Quantization and Brightness-Aware Attention},<br>
+                          &emsp;booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},<br>
+                          &emsp;month     = {October},<br>
+                          &emsp;year      = {2023},<br>
+                          &emsp;pages     = {12140-12149}<br>
                         }
+
                     </p>
                     
                     <h3>Concat</h3>
                     <p>
-                        <strong>Qian Ning</strong>, Email: ningqian@stu.xidian.edu.cn <br>
-                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn <br>
+                        <strong>Yunlong Liu</strong>, Email: liuyunlong@stu.xidian.edu.cn <br>
+                        <strong>Tao Huang</strong>, Email: thuang_666@stu.xidian.edu.cn <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xli48@albany.edu <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi xidian@163.com <br>
                     </p>
                   
                 </div>
