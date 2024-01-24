@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Spatially Varying Prior Learning for Blind
+    Hyperspectral Image Fusion</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Spatially Varying Prior Learning for Blind
+              Hyperspectral Image Fusion</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Spatially Varying Prior Learning for Blind
+                      Hyperspectral Image Fusion</a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Junwei Xu, Fangfang Wu, Xin Li, Weisheng Dong, Tao Huang and Guangming Shi</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./img/network.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.png" class="img-fluid" alt="">
+                <p>
+                  Fig. 1. Architecture of the proposed network for HIF. (a) The overall network architecture, (b) the Prior-learning Module, (c) the Reconstruction Module,
+                  (d) observation model to learn the spatial blur kernels, (e) the observation model to learn the spectral response matrix, and (f) the ResBlock used in Observation
+                  Module in the spatial domain.
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;In recent years, researchers have become more
+                    interested in hyperspectral image fusion (HIF) as a potential
+                    alternative to expensive high-resolution hyperspectral imaging
+                    systems, which aims to recover a high-resolution hyperspectral
+                    image (HR-HSI) from two images obtained from low-resolution
+                    hyperspectral (LR-HSI) and high-spatial-resolution multispectral
+                    (HR-MSI). It is generally assumed that degeneration in both
+                    the spatial and spectral domains is known in traditional model-
+                    based methods or that there existed paired HR-LR training data
+                    in deep learning-based methods. However, such an assumption
+                    is often invalid in practice. Furthermore, most existing works,
+                    either introducing hand-crafted priors or treating HIF as a black-
+                    box problem, cannot take full advantage of the physical model.
+                    To address those issues, we propose a deep blind HIF method by
+                    unfolding model-based maximum a posterior (MAP) estimation
+                    into a network implementation in this paper. Our method works
+                    with a Laplace distribution (LD) prior that does not need
+                    paired training data. Moreover, we have developed an observation
+                    module to directly learn degeneration in the spatial domain
+                    from LR-HSI data, addressing the challenge of spatially-varying
+                    degradation. We also propose to learn the uncertainty (mean and
+                    variance) of LD models using a novel Swin-Transformer-based
+                    denoiser and to estimate the variance of degraded images from
+                    residual errors (rather than treating them as global scalars). All
+                    parameters of the MAP estimation algorithm and the observation
+                    module can be jointly optimized through end-to-end training.
+                    Extensive experiments on both synthetic and real datasets show
+                    that the proposed method outperforms existing competing meth-
+                    ods in terms of both objective evaluation indexes and visual
+                    qualities.
+                  </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Spatially_Varying_Prior_Learning_for_Blind_Hyperspectral_Image_Fusion.pdf">Paper</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/yangzhou321/VQSA">Code</a>
+                        </p> -->
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          Table 1. AVERAGE PSNR, SAM, ERGAS, AND SSIM RESULTS OF THE TEST METHODS ON THE CAVE DATASET AND THE HARVARD DATASET
+                        </p>
+                        <img src="./img/table_1.png" class="img-fluid" alt="">
+                        <p>
+                          Table 2. AVERAGE QUANTITATIVE RESULTS OF THE PROPOSED METHODS WITH DIFFERENT NUMBER OF STAGES IN THE
+                          CAVE AND HARVARD DATASET AND SCALING FACTOR 8(DC DENOTES DENSE CONNECTION)
+                        </p>
+                        <img src="./img/table_2.png" class="img-fluid" alt="">
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 1. Qualitative results of several unsupervised HIF methods performed on photo_and_ f ace in the CAVE dataset at 480nm, 560nm, and 670nm with
+                          scaling factor s = 8. Top three rows: resulting HR-HSI imagesat 480nm, 560nm and 670nm; bottom row: heat map of error images by competing methods.
+                          (a). The ground truth image; (b).HySure [18] (PSNR = 35.66dB / SSIM = 0.944); (c).CUCaNet [19] [19] (PSNR = 40.58dB/SSIM = 0.987); (d).DBSR [11]
+                          (PSNR = 39.79dB / SSIM = 0.978); (e).UAL [13] (PSNR = 42.33dB/SSIM = 0.989); (f). Ours ( PSNR = 42.93dB/SSIM = 0.992).
+
+                        </p>
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Qualitative results of several unsupervised HIF methods perform on stu f f ed_toys in the CAVE dataset at 480nm, 560nm, and 670nm with
+                          scaling factor s = 8. Top three rows: resulting HR-HSI imagesat 480nm, 560nm and 670nm; bottom row: heat map of error images by competing methods.
+                          (a) Ground truth image; (b) HySure [18](PSNR = 33.56dB/SSIM = 0.914); (c) CUCaNet [19] (PSNR = 41.31dB/SSIM = 0.990); (d) DBSR [11] (PSNR =
+                          38.93dB/SSIM = 0.979); (e) UAL [13](PSNR = 39.89dB/SSIM = 0.986); (f) Ours(PSNR = 44.38dB/SSIM = 0.994).
+                        </p>
+                        <img src="./img/fig_3.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3. Qualitative results of several unsupervised HIF methods performed on imge6 in the Harvard dataset at 480nm, 560nm, and 670nm with scaling factor
+                          s = 8. Top three rows: resulting HR-HSI images at 480nm, 560nm, and 670nm; bottom row: heat map of error images by competing methods. (a) Ground
+                          truth image; (b) HySure [18] (PSNR = 34.68dB / SSIM = 0.953); (c) CUCaNet [19] (PSNR = 38.67dB/SSIM = 0.981); (d) DBSR [11] (PSNR = 37.66dB/
+                          SSIM = 0.975); (e) UAL [13] (PSNR = 41.67dB/SSIM = 0.991); (f) Ours (PSNR = 41.99dB/SSIM = 0.994).
+                        </p>
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                        @article{xu2023spatially,<br>
+                          &emsp;title={Spatially varying prior learning for blind hyperspectral image fusion},<br>
+                          &emsp;author={Xu, Junwei and Wu, Fangfang and Li, Xin and Dong, Weisheng and Huang, Tao and Shi, Guangming},<br>
+                          &emsp;journal={IEEE Transactions on Image Processing},<br>
+                          &emsp;year={2023},<br>
+                          &emsp;publisher={IEEE}<br>
+                        }
+                      
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Junwei Xu</strong>, Email: jwxu@stu.xidian.edu.cn <br>
+                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Tao Huang</strong>, Email: thuang_666@stu.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>
