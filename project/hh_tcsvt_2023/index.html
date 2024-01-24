@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty-Driven Knowledge Distillation for
-    Language Model Compression</title>
+  <title>Deep Gaussian Scale Mixture Prior for
+    Image Reconstruction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -76,8 +76,8 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty-Driven Knowledge Distillation for
-              Language Model Compression </li>
+            <li>Deep Gaussian Scale Mixture Prior for
+              Image Reconstruction </li>
           </ol>
         </div>
 
@@ -92,11 +92,11 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty-Driven Knowledge Distillation for
-                      Language Model Compression</a>
+                    <a href="./index.html">Deep Gaussian Scale Mixture Prior for
+                      Image Reconstruction</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i>Tianyu Huang, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i>Han Huang, Li Shen, Chaoyang He, Weisheng Dong, Wei Liu</li></h5>
 
                 <!-- <div class="a">
                     <div class="b" id="b">
@@ -108,49 +108,45 @@
 
                 <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                  Fig. 1. Workflow of our model compression scheme. (a) N-to-1 compression compresses the stacked N consecutive layers of the transformer module into one
-                  transformer module. (b) Uncertainty-driven distillation architecture (when N = 2) includes copying and freezing the parameters of the odd-numbered multi-head
-                  attention (MHA) layer as well as imposing MSE constraints on the feed-forward network (FFN) of the even-numbered layer. We propose an FFN loss function and
-                  uncertainty estimate module (UEM) to improve knowledge distillation in pretrained language model compression.
-
- 
+                  Fig. 1. The searched network and cell structures. The connections from each cell to the last convolution layer is omitted for clarity
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Despite the remarkable performance on various Nat-
-                    ural Language Processing (NLP) tasks, the parametric complexity
-                    of pretrained language models has remained a major obstacle due
-                    to limited computational resources in many practical applications.
-                    Techniques such as knowledge distillation, network pruning, and
-                    quantization have been developed for language model compression.
-                    However, it has remained challenging to achieve an optimal tradeoff
-                    between model size and inference accuracy. To address this issue,
-                    we propose a novel and efficient uncertainty-driven knowledge
-                    distillation compression method for transformer-based pretrained
-                    language models. Specifically, we design a method of parame-
-                    ter retention and feedforward network parameter distillation to
-                    compress N-stacked transformer modules into one module in the
-                    fine-tuning stage. A key innovation of our approach is to add the un-
-                    certainty estimation module (UEM) into the student network such
-                    that it can guide the student network’s feature reconstruction in
-                    the latent space (similar to the teacher’s). Across multiple datasets
-                    in the natural language inference tasks of GLUE, we have achieved
-                    more than 95% accuracy of the original BERT, while only using
-                    about 50% of the parameters.
-
- 
+                    &emsp; Single Image Super-Resolution (SISR) tasks have
+                    achieved significant performance with deep neural networks.
+                    However, the large number of parameters in CNN-based met-
+                    hods for SISR tasks require heavy computations. Although
+                    several efficient SISR models have been recently proposed,
+                    most are handcrafted and thus lack flexibility. In this work,
+                    we propose a novel differentiable Neural Architecture Search
+                    (NAS) approach on both the cell-level and network-level to search
+                    for lightweight SISR models. Specifically, the cell-level search
+                    space is designed based on an information distillation mechanism,
+                    focusing on the combinations of lightweight operations and
+                    aiming to build a more lightweight and accurate SR structure.
+                    The network-level search space is designed to consider the feature
+                    connections among the cells and aims to find which information
+                    flow benefits the cell most to boost the performance. Unlike the
+                    existing Reinforcement Learning (RL) or Evolutionary Algorithm
+                    (EA) based NAS methods for SISR tasks, our search pipeline
+                    is fully differentiable, and the lightweight SISR models can be
+                    efficiently searched on both the cell-level and network-level jointly
+                    on a single GPU. Experiments show that our methods can achieve
+                    state-of-the-art performance on the benchmark datasets in terms
+                    of PSNR, SSIM, and model complexity with merely 68G Multi-
+                    Adds for ×2 and 18G Multi-Adds for ×4 SR tasks.
 
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf?pdf=button">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9992250">Paper</a>
                         </p>
                         <!-- <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a>
+                            <i class="bi bi-check"></i> <a href="https://github.com/TaoHuang95/DGSM">Code</a>
                         </p> -->
                         <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
@@ -159,62 +155,63 @@
                     
                     <h3>Experimental Results</h3>
                     <ul>
-                        <p>
-                          Fig. 1. Distribution of sigma values.
-                        </p>
-                        <img src="./img/fig_1.png" class="img-fluid" alt="">
-                        <p>
-                          Fig. 2. Parameter analysis
-                        </p>
-                        <img src="./img/fig_2.png" class="img-fluid" alt="">
-                        <p>
-                          Table 1. PERFORMANCE ON DIFFERENT DATASETS
+
+                      <p>
+                          Table 1. IMAGE SUPER-RESOLUTION RESULTS WITH SCALE FACTORS OF 2, 3, 4 ON BENCHMARK DATASETS
                         </p>
                         <img src="./img/table_1.png " class="img-fluid" alt="">
                         <p>
-                          Table 2. EXPERIMENTAL R ESULTS OF DIFFERENT C OMPRESS R ATE N
+                          Table 2. EFFICIENCY COMPARISON ON DIV2K
+                          VALIDATION SET FOR X4 UPSCALING.
                         </p>
                         <img src="./img/table_2.png " class="img-fluid" alt="">
 
                     </ul>
 
-                    <!-- <h3>Result Visualization</h3>
+                    <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
-                        
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
                         <p>
-                          
+                          Figure 1. Visual comparisons among SOTA lightweight models in ×2 image super-resolution. The test image patches are from Set14 and Urban100. Note
+                          that the results of FALSR-B are based on our test with the pre-trained model which is released by the authors. The results of CARN-M and PAN are
+                          directly taken from the authors’ release. Our method has better reconstruction performance on image details, such as thin stripes on the clothes and edges of
+                          windows.
+                        </p>
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Visual comparisons among SOTA lightweight models in ×4 image super-resolution. The test image patches are from Set14 and Urban100. Note that
+                          the results of RFDN are based on our test with the pre-trained model which is officially released by the authors. Our method shows better reconstruction
+                          performance and less deformation on image details such as texts and stripes.
                         </p>
 
 
-                    </ul> -->
+
+                    </ul>
 
                     <h3>Citation</h3>
                     <p>
 
-                      @article{huang2023uncertainty,<br>
-                        &emsp;title={Uncertainty-Driven Knowledge Distillation for Language Model Compression},<br>
-                        &emsp;author={Huang, Tianyu and Dong, Weisheng and Wu, Fangfang and Li, Xin and Shi, Guangming},<br>
-                        &emsp;journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},<br>
+                      @ARTICLE{9992250,<br>
+                        &emsp;author={Huang, Han and Shen, Li and He, Chaoyang and Dong, Weisheng and Liu, Wei},<br>
+                        &emsp;journal={IEEE Transactions on Circuits and Systems for Video Technology}, <br>
+                        &emsp;title={Differentiable Neural Architecture Search for Extremely Lightweight Image Super-Resolution},<br> 
                         &emsp;year={2023},<br>
-                        &emsp;publisher={IEEE}<br>
+                        &emsp;volume={33},<br>
+                        &emsp;number={6},<br>
+                        &emsp;pages={2672-2682},<br>
+                        &emsp;doi={10.1109/TCSVT.2022.3230824}<br>
                       }
-                      
+
                     </p>
                     
                     <h3>Concat</h3>
                     <p> 
-                        <strong>Tianyu Huang </strong>, Email: 19171213910@stu.xidian.edu.cn; <br>
+                        <strong>Li Shen</strong>, Email: mathshenli@gmail.com  <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn  <br>
-                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
                   
                 </div>
             </article><!-- End blog entry -->
-
-            
 
       </div>
     </section><!-- End Blog Single Section -->

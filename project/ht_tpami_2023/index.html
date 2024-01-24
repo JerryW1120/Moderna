@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty-Driven Knowledge Distillation for
-    Language Model Compression</title>
+  <title>Deep Gaussian Scale Mixture Prior for
+    Image Reconstruction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -76,8 +76,8 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty-Driven Knowledge Distillation for
-              Language Model Compression </li>
+            <li>Deep Gaussian Scale Mixture Prior for
+              Image Reconstruction </li>
           </ol>
         </div>
 
@@ -92,8 +92,8 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty-Driven Knowledge Distillation for
-                      Language Model Compression</a>
+                    <a href="./index.html">Deep Gaussian Scale Mixture Prior for
+                      Image Reconstruction</a>
                 </h1>
 
                 <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i>Tianyu Huang, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
@@ -108,10 +108,9 @@
 
                 <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                  Fig. 1. Workflow of our model compression scheme. (a) N-to-1 compression compresses the stacked N consecutive layers of the transformer module into one
-                  transformer module. (b) Uncertainty-driven distillation architecture (when N = 2) includes copying and freezing the parameters of the odd-numbered multi-head
-                  attention (MHA) layer as well as imposing MSE constraints on the feed-forward network (FFN) of the even-numbered layer. We propose an FFN loss function and
-                  uncertainty estimate module (UEM) to improve knowledge distillation in pretrained language model compression.
+                  Fig. 1. Architecture of the proposed network DGSM for spectral compressive imaging (SCI) and single image super-resolution (SISR). The architectures of
+                  (a) the overall network, (b) the measurement matrix for SCI (left) and SISR (right), (c) the transposed version of the measurement matrix for SCI (left) and SISR
+                  (right).
 
  
                 </p>
@@ -119,26 +118,28 @@
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Despite the remarkable performance on various Nat-
-                    ural Language Processing (NLP) tasks, the parametric complexity
-                    of pretrained language models has remained a major obstacle due
-                    to limited computational resources in many practical applications.
-                    Techniques such as knowledge distillation, network pruning, and
-                    quantization have been developed for language model compression.
-                    However, it has remained challenging to achieve an optimal tradeoff
-                    between model size and inference accuracy. To address this issue,
-                    we propose a novel and efficient uncertainty-driven knowledge
-                    distillation compression method for transformer-based pretrained
-                    language models. Specifically, we design a method of parame-
-                    ter retention and feedforward network parameter distillation to
-                    compress N-stacked transformer modules into one module in the
-                    fine-tuning stage. A key innovation of our approach is to add the un-
-                    certainty estimation module (UEM) into the student network such
-                    that it can guide the student network’s feature reconstruction in
-                    the latent space (similar to the teacher’s). Across multiple datasets
-                    in the natural language inference tasks of GLUE, we have achieved
-                    more than 95% accuracy of the original BERT, while only using
-                    about 50% of the parameters.
+                    &emsp;Image reconstruction from partial observations has
+                    attracted increasing attention. Conventional image reconstruction
+                    methods with hand-crafted priors often fail to recover fine image
+                    details due to the poor representation capability of the hand-crafted
+                    priors. Deep learning methods attack this problem by directly
+                    learning mapping functions between the observations and the
+                    targeted images can achieve much better results. However, most
+                    powerful deep networks lack transparency and are nontrivial to
+                    design heuristically. This paper proposes a novel image reconstruc-
+                    tion method based on the Maximum a Posterior (MAP) estimation
+                    framework using learned Gaussian Scale Mixture (GSM) prior.
+                    Unlike existing unfolding methods that only estimate the image
+                    means (i.e., the denoising prior) but neglected the variances, we
+                    propose characterizing images by the GSM models with learned
+                    means and variances through a deep network. Furthermore, to
+                    learn the long-range dependencies of images, we develop an en-
+                    hanced variant based on the Swin Transformer for learning GSM
+                    models. All parameters of the MAP estimator and the deep network
+                    are jointly optimized through end-to-end training. Extensive sim-
+                    ulation and real data experimental results on spectral compressive
+                    imaging and image super-resolution demonstrate that the proposed
+                    method outperforms existing state-of-the-art methods.
 
  
 
@@ -147,11 +148,11 @@
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf?pdf=button">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Deep_Gaussian_Scale_Mixture_Prior_for_Image_Reconstruction.pdf">Paper</a>
                         </p>
-                        <!-- <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a>
-                        </p> -->
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/TaoHuang95/DGSM">Code</a>
+                        </p>
                         <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
                         </p> -->
@@ -159,62 +160,66 @@
                     
                     <h3>Experimental Results</h3>
                     <ul>
-                        <p>
-                          Fig. 1. Distribution of sigma values.
-                        </p>
-                        <img src="./img/fig_1.png" class="img-fluid" alt="">
-                        <p>
-                          Fig. 2. Parameter analysis
-                        </p>
-                        <img src="./img/fig_2.png" class="img-fluid" alt="">
-                        <p>
-                          Table 1. PERFORMANCE ON DIFFERENT DATASETS
+
+                      <p>
+                          Table 1. The PSNR in dB (top entry in each cell) and SSIM (bottom entry in each cell) results of the test methods on 10 scenes. The best performance is
+                          shown in bold and the second best performance is shown in underline.
                         </p>
                         <img src="./img/table_1.png " class="img-fluid" alt="">
                         <p>
-                          Table 2. EXPERIMENTAL R ESULTS OF DIFFERENT C OMPRESS R ATE N
+                          Table 2. Average PSNR and SSIM results for bicubic downsampling degradation on five benchmark datasets. The best performance is shown in bold and
+                          the second best performance is shown in underline.
                         </p>
                         <img src="./img/table_2.png " class="img-fluid" alt="">
 
                     </ul>
 
-                    <!-- <h3>Result Visualization</h3>
+                    <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
-                        
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
                         <p>
-                          
+                          Figure 1. Reconstructed images of Scene 5 (a) and Scene 10 (b) with 4 out of 28 spectral channels by the eight deep learning-based methods. The
+                          spectral curves (bottom-left) correspond to the selected green box of the RGB image. Zoom in for better view.
+                        </p>
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Visual quality comparisons of different SISR methods for three sample images in the Urban100 dataset (bicubic-downsampling, ×3)
+                        </p>
+                        <img src="./img/fig_3.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3. Reconstructed images of two real scenes (Scene 1 and Scene 4) with 3 out of 28 spectral channels by the competing methods. Zoom in
+                          for better view.
+                        </p>
+                        <img src="./img/fig_4.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 4. Visual comparison of real-world image SR (×4) methods on real-world images. Zoom in for better view.
                         </p>
 
 
-                    </ul> -->
+                    </ul>
 
                     <h3>Citation</h3>
                     <p>
-
-                      @article{huang2023uncertainty,<br>
-                        &emsp;title={Uncertainty-Driven Knowledge Distillation for Language Model Compression},<br>
-                        &emsp;author={Huang, Tianyu and Dong, Weisheng and Wu, Fangfang and Li, Xin and Shi, Guangming},<br>
-                        &emsp;journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},<br>
+                      @article{huang2023deep,<br>
+                        &emsp;title={Deep Gaussian Scale Mixture Prior for Image Reconstruction},<br>
+                        &emsp;author={Huang, Tao and Yuan, Xin and Dong, Weisheng and Wu, Jinjian and Shi, Guangming},<br>
+                        &emsp;journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},<br>
                         &emsp;year={2023},<br>
                         &emsp;publisher={IEEE}<br>
                       }
-                      
                     </p>
                     
                     <h3>Concat</h3>
                     <p> 
-                        <strong>Tianyu Huang </strong>, Email: 19171213910@stu.xidian.edu.cn; <br>
+                        <strong>Tao Huang </strong>, Email: thuang_666@stu.xidian.edu.cn <br>
+                        <strong>Xin Yuan</strong>, Email: xyuan@westlake.edu.cn  <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn  <br>
+                        <strong>Jinjian Wu</strong>, Email: jinjian.wu@mail.xidian.edu.cn <br>
                         <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
                   
                 </div>
             </article><!-- End blog entry -->
-
-            
 
       </div>
     </section><!-- End Blog Single Section -->

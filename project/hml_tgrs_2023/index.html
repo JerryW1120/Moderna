@@ -5,8 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uncertainty-Driven Knowledge Distillation for
-    Language Model Compression</title>
+  <title>Supervised Contrastive Learning Based on Fusion
+    of Global and Local Features for Remote
+    Sensing Image Retrieval</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -76,8 +77,8 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Uncertainty-Driven Knowledge Distillation for
-              Language Model Compression </li>
+            <li>Deep Gaussian Scale Mixture Prior for
+              Image Reconstruction </li>
           </ol>
         </div>
 
@@ -92,11 +93,12 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Uncertainty-Driven Knowledge Distillation for
-                      Language Model Compression</a>
+                    <a href="./index.html">Supervised Contrastive Learning Based on Fusion
+                      of Global and Local Features for Remote
+                      Sensing Image Retrieval</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i>Tianyu Huang, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i>Mengluan Huang, Le Dong, Weisheng Dong, Guangming Shi</li></h5>
 
                 <!-- <div class="a">
                     <div class="b" id="b">
@@ -108,10 +110,9 @@
 
                 <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                  Fig. 1. Workflow of our model compression scheme. (a) N-to-1 compression compresses the stacked N consecutive layers of the transformer module into one
-                  transformer module. (b) Uncertainty-driven distillation architecture (when N = 2) includes copying and freezing the parameters of the odd-numbered multi-head
-                  attention (MHA) layer as well as imposing MSE constraints on the feed-forward network (FFN) of the even-numbered layer. We propose an FFN loss function and
-                  uncertainty estimate module (UEM) to improve knowledge distillation in pretrained language model compression.
+                  Fig. 1. Architecture of the proposed network DGSM for spectral compressive imaging (SCI) and single image super-resolution (SISR). The architectures of
+                  (a) the overall network, (b) the measurement matrix for SCI (left) and SISR (right), (c) the transposed version of the measurement matrix for SCI (left) and SISR
+                  (right).
 
  
                 </p>
@@ -119,26 +120,30 @@
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Despite the remarkable performance on various Nat-
-                    ural Language Processing (NLP) tasks, the parametric complexity
-                    of pretrained language models has remained a major obstacle due
-                    to limited computational resources in many practical applications.
-                    Techniques such as knowledge distillation, network pruning, and
-                    quantization have been developed for language model compression.
-                    However, it has remained challenging to achieve an optimal tradeoff
-                    between model size and inference accuracy. To address this issue,
-                    we propose a novel and efficient uncertainty-driven knowledge
-                    distillation compression method for transformer-based pretrained
-                    language models. Specifically, we design a method of parame-
-                    ter retention and feedforward network parameter distillation to
-                    compress N-stacked transformer modules into one module in the
-                    fine-tuning stage. A key innovation of our approach is to add the un-
-                    certainty estimation module (UEM) into the student network such
-                    that it can guide the student network’s feature reconstruction in
-                    the latent space (similar to the teacher’s). Across multiple datasets
-                    in the natural language inference tasks of GLUE, we have achieved
-                    more than 95% accuracy of the original BERT, while only using
-                    about 50% of the parameters.
+                    &emsp;With the rapid development of remote sensing
+                    sensor technology, the number of remote sensing images (RSIs)
+                    has exploded. How to effectively retrieve and manage this massive
+                    data have become an urgent problem. At present, content-based
+                    image retrieval (CBIR) methods have become a mainstream
+                    method due to their excellent performance. However, most of
+                    the existing retrieval methods only consider the global features
+                    of images, which lacks the ability to discriminate images with the
+                    same semantic information but different visual representations.
+                    To alleviate this issue, supervised contrastive learning based on
+                    the fusion of global and local features method is proposed in
+                    this article, named SCFR. First, a fusion module is designed
+                    to combine global and local features to enhance the ability
+                    of image expression. Second, supervised contrastive learning
+                    is introduced into the retrieval task to effectively improve the
+                    feature distribution, so that the positive sample pairs are close
+                    to each other, and the negative sample pairs are far away
+                    from each other in the feature space. Furthermore, to make
+                    the distribution of features of the same class more compact,
+                    the center contrastive loss is added to the constraints and
+                    combines the class centers that change iteratively with the
+                    network. Experimental results on three RSI datasets show that
+                    our proposed method has a more effective retrieval performance
+                    than the state-of-the-art methods.
 
  
 
@@ -147,11 +152,11 @@
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf?pdf=button">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10127603">Paper</a>
                         </p>
-                        <!-- <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a>
-                        </p> -->
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/xdplay17/SCFR">Code</a>
+                        </p>
                         <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
                         </p> -->
@@ -159,62 +164,62 @@
                     
                     <h3>Experimental Results</h3>
                     <ul>
-                        <p>
-                          Fig. 1. Distribution of sigma values.
-                        </p>
-                        <img src="./img/fig_1.png" class="img-fluid" alt="">
-                        <p>
-                          Fig. 2. Parameter analysis
-                        </p>
-                        <img src="./img/fig_2.png" class="img-fluid" alt="">
-                        <p>
-                          Table 1. PERFORMANCE ON DIFFERENT DATASETS
+
+                      <p>
+                          Table 1. MAP VALUE UNDER DIFFERENT BITS ON DIFFERENT DATASETS.
                         </p>
                         <img src="./img/table_1.png " class="img-fluid" alt="">
-                        <p>
-                          Table 2. EXPERIMENTAL R ESULTS OF DIFFERENT C OMPRESS R ATE N
-                        </p>
-                        <img src="./img/table_2.png " class="img-fluid" alt="">
 
                     </ul>
 
-                    <!-- <h3>Result Visualization</h3>
+                    <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
-                        
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
                         <p>
-                          
+                          Figure 1. Examples of UCMD dataset.
+                        </p>
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Examples of AID dataset.
+                        </p>
+                        <img src="./img/fig_3.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3. Examples of NWPU dataset.
+                        </p>
+                        <img src="./img/fig_4.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 4. Query example with the top-10 retrieved images and Precision@50 on the UCMD dataset.
                         </p>
 
 
-                    </ul> -->
+                    </ul>
 
                     <h3>Citation</h3>
                     <p>
 
-                      @article{huang2023uncertainty,<br>
-                        &emsp;title={Uncertainty-Driven Knowledge Distillation for Language Model Compression},<br>
-                        &emsp;author={Huang, Tianyu and Dong, Weisheng and Wu, Fangfang and Li, Xin and Shi, Guangming},<br>
-                        &emsp;journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},<br>
+                      @ARTICLE{10127603,<br>
+                        &emsp;author={Huang, Mengluan and Dong, Le and Dong, Weisheng and Shi, Guangming},<br>
+                        &emsp;journal={IEEE Transactions on Geoscience and Remote Sensing}, <br>
+                        &emsp;title={Supervised Contrastive Learning Based on Fusion of Global and Local Features for Remote Sensing Image Retrieval},<br> 
                         &emsp;year={2023},<br>
-                        &emsp;publisher={IEEE}<br>
+                        &emsp;volume={61},<br>
+                        &emsp;number={},<br>
+                        &emsp;pages={1-13},<br>
+                        &emsp;doi={10.1109/TGRS.2023.3275644}<br>
                       }
-                      
+
                     </p>
                     
                     <h3>Concat</h3>
                     <p> 
-                        <strong>Tianyu Huang </strong>, Email: 19171213910@stu.xidian.edu.cn; <br>
+                        <strong>Mengluan Huang </strong>, Email: lhuang@stu.xidian.edu.cn <br>
+                        <strong> Le Dong </strong>, Email: dongle@xidian.edu.cn  <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
-                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
-                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn  <br>
                         <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
                   
                 </div>
             </article><!-- End blog entry -->
-
-            
 
       </div>
     </section><!-- End Blog Single Section -->
