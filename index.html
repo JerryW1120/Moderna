@@ -253,6 +253,147 @@
                 <br>
             </div>
 
+            <!-- ICCV_2023_Liu -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-7 pt-4" data-aos="fade-up">
+                    <h3>Low-Light Image Enhancement with Multi-stage Residue Quantization and Brightness-aware Attention</h3>
+                    <h5>Y. Liu, T. Huang, W. Dong*, X. Li, and G. Shi</h5>
+                    <h6>ICCV 2023</h6>
+                    <ul class="faq-list">
+                        <br>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_ICCV_2023_Liu"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_ICCV_2023_Liu" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Low-light image enhancement (LLIE) aims to recover illumination and improve the visibility of low-light images. Conventional LLIE methods often produce poor results because they neglect the effect 
+                                    of noise interference. Deep learning-based LLIE methods focus on learning a mapping function between low-light images and normal-light images that outperforms conventional LLIE methods. However, 
+                                    most deep learning-based LLIE methods cannot yet fully exploit the guidance of auxiliary priors provided by normal-light images in the training dataset. In this paper, we propose a brightness-aware 
+                                    network with normal-light priors based on brightness-aware attention and residual quantized codebook. To achieve a more natural and realistic enhancement, we design a query module to obtain more 
+                                    reliable normal-light features and fuse them with lowlight features by a fusion branch. In addition, we propose a brightness-aware attention module to further retain the color consistency between 
+                                    the enhanced results and the normal-light images. Extensive experimental results on both real-captured and synthetic data show that our method outperforms existing state-of-the-art methods.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                    <img src="project/lyl_iccv_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Liu_Low-Light_Image_Enhancement_with_Multi-Stage_Residue_Quantization_and_Brightness-Aware_Attention_ICCV_2023_paper.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> <a href="https://github.com/LiuYunlong99/RQ-LLIE">Code</a></li>
+                    <li><i class="bi bi-check"></i> Demo</li>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <!-- TIP_2023_Xu -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-7 pt-4" data-aos="fade-up">
+                    <h3>Spatially varying prior learning for blind hyperspectral image fusion</h3>
+                    <h5>J. Xu, F. Wu, X. Li, W. Dong, T. Huang, and G. Shi</h5>
+                    <h6>TIP 2023</h6>
+                    <ul class="faq-list">
+                        <br>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_TIP_2023_Xu"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_TIP_2023_Xu" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    In recent years, researchers have become more
+                                    interested in hyperspectral image fusion (HIF) as a potential
+                                    alternative to expensive high-resolution hyperspectral imaging
+                                    systems, which aims to recover a high-resolution hyperspectral
+                                    image (HR-HSI) from two images obtained from low-resolution
+                                    hyperspectral (LR-HSI) and high-spatial-resolution multispectral
+                                    (HR-MSI). It is generally assumed that degeneration in both
+                                    the spatial and spectral domains is known in traditional model-
+                                    based methods or that there existed paired HR-LR training data
+                                    in deep learning-based methods. However, such an assumption
+                                    is often invalid in practice. Furthermore, most existing works,
+                                    either introducing hand-crafted priors or treating HIF as a black-
+                                    box problem, cannot take full advantage of the physical model.
+                                    To address those issues, we propose a deep blind HIF method by
+                                    unfolding model-based maximum a posterior (MAP) estimation
+                                    into a network implementation in this paper. Our method works
+                                    with a Laplace distribution (LD) prior that does not need
+                                    paired training data. Moreover, we have developed an observation
+                                    module to directly learn degeneration in the spatial domain
+                                    from LR-HSI data, addressing the challenge of spatially-varying
+                                    degradation. We also propose to learn the uncertainty (mean and
+                                    variance) of LD models using a novel Swin-Transformer-based
+                                    denoiser and to estimate the variance of degraded images from
+                                    residual errors (rather than treating them as global scalars). All
+                                    parameters of the MAP estimation algorithm and the observation
+                                    module can be jointly optimized through end-to-end training.
+                                    Extensive experiments on both synthetic and real datasets show
+                                    that the proposed method outperforms existing competing meth-
+                                    ods in terms of both objective evaluation indexes and visual
+                                    qualities.                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                    <img src="project/xjw_tip_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Spatially_Varying_Prior_Learning_for_Blind_Hyperspectral_Image_Fusion.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> Code</li>
+                    <li><i class="bi bi-check"></i> Demo</li>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <!-- TASLP_2023_Huang -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-7 pt-4" data-aos="fade-up">
+                    <h3>Uncertainty-driven knowledge distillation for language model compression</h3>
+                    <h5>T. Huang, W. Dong*, F. Wu, X. Li, and G. Shi</h5>
+                    <h6>TASLP 2023</h6>
+                    <ul class="faq-list">
+                        <br>
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_TASLP_2023_Huang"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="abstract_TASLP_2023_Huang" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Despite the remarkable performance on various Nat-
+                                    ural Language Processing (NLP) tasks, the parametric complexity
+                                    of pretrained language models has remained a major obstacle due
+                                    to limited computational resources in many practical applications.
+                                    Techniques such as knowledge distillation, network pruning, and
+                                    quantization have been developed for language model compression.
+                                    However, it has remained challenging to achieve an optimal tradeoff
+                                    between model size and inference accuracy. To address this issue,
+                                    we propose a novel and efficient uncertainty-driven knowledge
+                                    distillation compression method for transformer-based pretrained
+                                    language models. Specifically, we design a method of parame-
+                                    ter retention and feedforward network parameter distillation to
+                                    compress N-stacked transformer modules into one module in the
+                                    fine-tuning stage. A key innovation of our approach is to add the un-
+                                    certainty estimation module (UEM) into the student network such
+                                    that it can guide the student network’s feature reconstruction in
+                                    the latent space (similar to the teacher’s). Across multiple datasets
+                                    in the natural language inference tasks of GLUE, we have achieved
+                                    more than 95% accuracy of the original BERT, while only using
+                                    about 50% of the parameters.
+                                </p>
+                            </div>                               
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
+                    <img src="project/hty_taslp_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
+                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf">Paper</a></li>
+                    <li><i class="bi bi-check"></i> Code</li>
+                    <li><i class="bi bi-check"></i> Demo</li>
+                </div>
+                <br>
+                <br>
+            </div>
+
+
+
+
+
+            
             <!-- TPAMI_2023_Lu -->
             <div class="row" data-aos="fade-up">
                 <div class="col-md-7 pt-4" data-aos="fade-up">

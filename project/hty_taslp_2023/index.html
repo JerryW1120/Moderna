@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</title>
+  <title>Uncertainty-Driven Knowledge Distillation for
+    Language Model Compression</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -75,7 +76,8 @@
           <ol>
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../../research.html">Research</a></li>
-            <li>Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</li>
+            <li>Uncertainty-Driven Knowledge Distillation for
+              Language Model Compression </li>
           </ol>
         </div>
 
@@ -90,10 +92,11 @@
             <article class="entry entry-single">
 
                 <h1 class="entry-title">
-                    <a href="./index.html">Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</a>
+                    <a href="./index.html">Uncertainty-Driven Knowledge Distillation for
+                      Language Model Compression</a>
                 </h1>
 
-                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Qian Ning, Fangfang Wu, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Xiaotong Lu, Han Huang, Weisheng Dong, Xin Li and Guangming Shi</li></h5>
 
                 <!-- <div class="a">
                     <div class="b" id="b">
@@ -105,39 +108,49 @@
 
                 <img src="./img/network.png" class="img-fluid" alt="">
                 <p>
-                  Figure 1: (a)The overall framework of the proposed MemGAN network for real-world blind face restoration; (b)The inner
-                  structure of the decoder block of proposed MemGAN in (a).
+                  Fig. 1. Workflow of our model compression scheme. (a) N-to-1 compression compresses the stacked N consecutive layers of the transformer module into one
+                  transformer module. (b) Uncertainty-driven distillation architecture (when N = 2) includes copying and freezing the parameters of the odd-numbered multi-head
+                  attention (MHA) layer as well as imposing MSE constraints on the feed-forward network (FFN) of the even-numbered layer. We propose an FFN loss function and
+                  uncertainty estimate module (UEM) to improve knowledge distillation in pretrained language model compression.
+
+ 
                 </p>
 
                 <div class="entry-content">
                     <h3>Abstract</h3>
                     <p>
-                    &emsp;Blind face restoration aims to recover high-quality face images from
-                    low-quality ones with complex and unknown degradation. Existing
-                    approaches have achieved promising performance by leveraging
-                    pre-trained dictionaries or generative priors. However, these methods may fail to exploit the full potential of degraded inputs and facial
-                    identity features due to complex degradation. To address this issue,
-                    we propose a novel method that explores the correlation of degraded
-                    spatial identity features by learning a general representation using
-                    memory network. Specifically, our approach enhances degraded
-                    features with more identity by leveraging similar facial features retrieved from memory network. We also propose a fusion approach
-                    that fuses memorized spatial features with GAN prior features via
-                    affine transformation and blending fusion to improve fidelity and
-                    realism. Additionally, the memory network is updated online in an
-                    unsupervised manner along with other modules, which obviates
-                    the requirement for pre-training. Experimental results on synthetic
-                    and popular real-world datasets demonstrate the effectiveness of
-                    our proposed method, which achieves at least comparable and often
-                    better performance than other state-of-the-art approaches.
+                    &emsp;Despite the remarkable performance on various Nat-
+                    ural Language Processing (NLP) tasks, the parametric complexity
+                    of pretrained language models has remained a major obstacle due
+                    to limited computational resources in many practical applications.
+                    Techniques such as knowledge distillation, network pruning, and
+                    quantization have been developed for language model compression.
+                    However, it has remained challenging to achieve an optimal tradeoff
+                    between model size and inference accuracy. To address this issue,
+                    we propose a novel and efficient uncertainty-driven knowledge
+                    distillation compression method for transformer-based pretrained
+                    language models. Specifically, we design a method of parame-
+                    ter retention and feedforward network parameter distillation to
+                    compress N-stacked transformer modules into one module in the
+                    fine-tuning stage. A key innovation of our approach is to add the un-
+                    certainty estimation module (UEM) into the student network such
+                    that it can guide the student network’s feature reconstruction in
+                    the latent space (similar to the teacher’s). Across multiple datasets
+                    in the natural language inference tasks of GLUE, we have achieved
+                    more than 95% accuracy of the original BERT, while only using
+                    about 50% of the parameters.
+
+ 
+
                     </p>
 
                     <h3>Paper & Code & Demo</h3>
                     <ul>
                         <p>
-                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Face_restoration_ACMMM2023.pdf">Paper</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf?pdf=button">Paper</a>
                         </p>
                         <!-- <p>
-                            <i class="bi bi-check"></i> <a href="https://github.com/Lxtccc/Adaptive-">Code</a>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a>
                         </p> -->
                         <!-- <p>
                             <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
@@ -147,57 +160,61 @@
                     <h3>Experimental Results</h3>
                     <ul>
                         <p>
-                          Table 1: Average FID, PSNR, SSIM, and LPIPS results on
-                          CelebA-Test dataset [22]. The best results are shown in bold
-                          and the second-best results are shown in underline.                          
+                          Fig. 1. Distribution of sigma values.
                         </p>
-                        <img src="./img/table_1.png" class="img-fluid" alt="">
-
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
                         <p>
-                          Table 2: Average FID (the lower, the better) on three realworld datasets. The best results are shown in bold and the
-                          second-best results are shown in underline.
+                          Fig. 2. Parameter analysis
                         </p>
-                        <img src="./img/table_2.png" class="img-fluid" alt="">
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
+                        <p>
+                          Table 1. PERFORMANCE ON DIFFERENT DATASETS
+                        </p>
+                        <img src="./img/table_1.png " class="img-fluid" alt="">
+                        <p>
+                          Table 2. EXPERIMENTAL R ESULTS OF DIFFERENT C OMPRESS R ATE N
+                        </p>
+                        <img src="./img/table_2.png " class="img-fluid" alt="">
 
                     </ul>
 
-                    <h3>Result Visualization</h3>
+                    <!-- <h3>Result Visualization</h3>
                     <ul>
-                        <img src="./img/Visual quality comparison of CelebA-Test.png" class="img-fluid" alt="">
+                        <img src="./img/vision_result_1.png" class="img-fluid" alt="">
+                        
                         <p>
-                          Figure 1: Visual quality comparison of CelebA-Test. Zoom in for better view.
+                          
                         </p>
-                        <img src="./img/Visual quality comparison of three real-world datasets.png" class="img-fluid" alt="">
-                        <p>
-                          Figure 2: Visual quality comparison of three real-world datasets. The first four rows show the comparisons from LFW [12]; the
-                          fifth row shows the comparisons from CelebChild [32]; the sixth row shows the comparisons from WebPhoto [32]. Zoom in for
-                          better view.
-                        </p>
-                    </ul>
+
+
+                    </ul> -->
 
                     <h3>Citation</h3>
                     <p>
-                        @inproceedings{ning2023exploring,<br>
-                          &emsp;title={Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration},<br>
-                          &emsp;author={Ning, Qian and Wu, Fangfang and Dong, Weisheng and Li, Xin and Shi, Guangming},<br>
-                          &emsp;booktitle={Proceedings of the 31st ACM International Conference on Multimedia},<br>
-                          &emsp;pages={37--45},<br>
-                          &emsp;year={2023}<br>
-                        }
+
+                      @article{huang2023uncertainty,<br>
+                        &emsp;title={Uncertainty-Driven Knowledge Distillation for Language Model Compression},<br>
+                        &emsp;author={Huang, Tianyu and Dong, Weisheng and Wu, Fangfang and Li, Xin and Shi, Guangming},<br>
+                        &emsp;journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},<br>
+                        &emsp;year={2023},<br>
+                        &emsp;publisher={IEEE}<br>
+                      }
+                      
                     </p>
                     
                     <h3>Concat</h3>
-                    <p>
-                        <strong>Qian Ning</strong>, Email: ningqian@stu.xidian.edu.cn <br>
-                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn <br>
+                    <p> 
+                        <strong>Tianyu Huang </strong>, Email: 19171213910@stu.xidian.edu.cn; <br>
                         <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
                         <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn  <br>
                         <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
                     </p>
                   
                 </div>
             </article><!-- End blog entry -->
 
+            
 
       </div>
     </section><!-- End Blog Single Section -->
