@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Deep Unfolding Network for Efficient
+    Mixed Video Noise Removal</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <link href="../../assets/css/image_slider.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.10.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="../../index.html"><span>VRL Lab</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="" href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li><a class="active" href="../../publication.html">Publication</a></li>
+            <li><a href="../../team.html">Team</a></li>
+            <li><a href="../../demo.html">Demo</a></li>
+            <li><a href="../../contact.html">Join Us</a></li>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../research.html">Research</a></li>
+            <li>Deep Unfolding Network for Efficient
+              Mixed Video Noise Removal</title>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <h2>Project</h2>
+            <article class="entry entry-single">
+
+                <h1 class="entry-title">
+                    <a href="./index.html">Deep Unfolding Network for Efficient
+                      Mixed Video Noise Removal</title>
+                    </a>
+                </h1>
+
+                <h5><li class="d-flex align-items-center"><i class="bi bi-person"></i> Chaohua Wang, Weisheng Dong, Xin Li, Fangfang Wu, Jinjian Wu and Guangming Shi</li></h5>
+
+                <!-- <div class="a">
+                    <div class="b" id="b">
+                        <div><img src="./img/network.png" alt="Before"></div>
+                    </div>
+                    <img src="./LR/img_014_LR.png" alt="After">
+                    <input type="range" id="range" value="50">
+                </div> -->
+
+                <img src="./img/network.png" class="img-fluid" alt="">
+                <p>
+                  Figure 1. The overall architecture of the proposed deep unfolding network.
+                </p>
+
+                <div class="entry-content">
+                    <h3>Abstract</h3>
+                    <p>
+                    &emsp;Existing image and video denoising algorithms have
+                    focused on removing homogeneous Gaussian noise. However, this
+                    assumption with noise modeling is often too simplistic for the
+                    characteristics of real-world noise. Moreover, the design of net-
+                    work architectures in most deep learning-based video denoising
+                    methods is heuristic, ignoring valuable domain knowledge. In this
+                    paper, we propose a model-guided deep unfolding network for
+                    the more challenging and realistic mixed noise video denoising
+                    problem, named DU-MVDnet. First, we develop a novel observa-
+                    tion model/likelihood function based on the correlations among
+                    adjacent degraded frames. In the framework of Bayesian deep
+                    learning, we introduce a deep image denoiser prior and obtain
+                    an iterative optimization algorithm based on the maximum a
+                    posterior (MAP) estimation. To facilitate end-to-end optimization,
+                    the iterative algorithm is transformed into a deep convolutional
+                    neural network (DCNN)-based implementation. Furthermore,
+                    recognizing the limitations of traditional motion estimation and
+                    compensation methods, we propose an efficient multistage recur-
+                    sive fusion strategy to exploit temporal dependencies. Specifically,
+                    we divide video frames into several overlapping groups and
+                    progressively integrate these frames into one frame. Toward
+                    this objective, we implement a multiframe adaptive aggregation
+                    operation to integrate feature maps of intragroup with those of
+                    intergroup frames. Extensive experimental results on different
+                    video test datasets have demonstrated that the proposed model-
+                    guided deep network outperforms current state-of-the-art video
+                    denoising algorithms such as FastDVDnet and MAP-VDNet.
+                  </p>
+
+                    <h3>Paper & Code & Demo</h3>
+                    <ul>
+                        <p>
+                            <i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Deep_Unfolding_Network_for_Efficient_Mixed_Video_Noise_Removal_TCSVT2023.pdf">Paper</a>
+                        </p>
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/fengzhuziA/TFmodel">Code</a>
+                        </p> -->
+                        <!-- <p>
+                            <i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UncertaintySR">Demo</a>
+                        </p> -->
+                    </ul>
+                    
+                    <h3>Experimental Results</h3>
+                    <ul>
+                        <p>
+                          TABLE I: Average PSNR/SSIM results of mixed video noise removal (AWGN + SPIN, AWGN + RVIN and AWGN + SPIN
+                          + RVIN) in DTMC-HD and Vimeo datasets at different noise levels (boldface highlights the best).
+                        </p>
+                        <img src="./img/table_1.png" class="img-fluid" alt="">
+                    </ul>
+
+                    <h3>Result Visualization</h3>
+                    <ul>
+                        <img src="./img/fig_1.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 1. Denoising results for a noisy frame of Sunflower video of the DTMC-HD test set with mixed noise level of σ =
+                          20, s = 40%. (a) Noisy frame; denoised by (b) V-BM4D∗ [30] (30.49 dB, 0.8658), (c) DeamNet [21] (35.24 dB, 0.9224), (d)
+                          FastDVDnet [40] (34.71 dB, 0.9207), (e) MAP-VDNet [69] (34.90 dB, 0.9224), (f) DU-MVDnet (36.16 dB, 0.9323) and (g)
+                          DU-MVDnet-B (34.08 dB, 0.9267); (h) Original frame.
+
+                        </p>
+                        <img src="./img/fig_2.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 2. Denoising results for a noisy frame from the Vimeo test set with a mixed noise level of σ = 30, r = 40%. (a) Noisy
+                          frame; denoised by (b) V-BM4D∗ [30] (22.47 dB, 0.6847), (c) DeamNet [21] (28.37 dB, 0.8503), (d) FastDVDnet [40] (29.18
+                          dB, 0.8729), (e) MAP-VDNet [69] (30.08 dB, 0.8922), (f) DU-MVDnet (30.43 dB, 0.9015) and (g) DU-MVDnet-B (29.97
+                          dB, 0.8914); (h) Original frame.
+                        </p>
+                        <img src="./img/fig_3.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 3. Denoising results for a noisy frame from the Vimeo test set with the mixed noise level of σ = 15, s = 30%, r = 15%.
+                          (a) Noisy frame; denoised by (b) V-BM4D∗ [30] (30.67 dB, 0.8800), (c) DeamNet [21] (36.93 dB, 0.9600), (d) FastDVDnet
+                          [40] (36.26 dB, 0.9558), (e) MAP-VDNet [69] (37.37 dB, 0.9634), (f) DU-MVDnet (38.21 dB, 0.9688) and (g) DU-MVDnet-B
+                          (37.56 dB, 0.9652); (h) Original frame.
+                        </p>
+                        <img src="./img/fig_4.png" class="img-fluid" alt="">
+                        <p>
+                          Figure 4. Denoising results for a compressed and noisy frame from the Vimeo test set with the mixed and compressed noise
+                          level of σ = 10, r = 20%, QP = 32. (a) Original frame; frame enhanced by (b) FastDVDnet [40] (39.88 dB, 0.9590), (c)
+                          MAP-VDNet [69] (40.98 dB, 0.9636) and (d) DU-MVDnet (41.57 dB, 0.9670).
+                        </p>
+                    </ul>
+
+                    <h3>Citation</h3>
+                    <p>
+                      @ARTICLE{10050095,<br>
+                        &emsp;author={Sun, Lu and Wang, Yichen and Wu, Fangfang and Li, Xin and Dong, Weisheng and Shi, Guangming},<br>
+                        &emsp;journal={IEEE Transactions on Circuits and Systems for Video Technology}, <br>
+                        &emsp;title={Deep Unfolding Network for Efficient Mixed Video Noise Removal}, <br>
+                        &emsp;year={2023},<br>
+                        &emsp;volume={33},<br>
+                        &emsp;number={9},<br>
+                        &emsp;pages={4715-4727},<br>
+                        &emsp;doi={10.1109/TCSVT.2023.3244187}<br>
+                      }
+                      
+                    </p>
+                    
+                    <h3>Concat</h3>
+                    <p>
+                        <strong>Lu Sun</strong>, Email: unlu@stu.xidian.edu.cn <br>
+                        <strong>Yichen Wang,</strong>, Email: yichenwang@stu.xidian.edu.cn <br>
+                        <strong>Fangfang Wu</strong>, Email: wufangfang@xidian.edu.cn <br>
+                        <strong>Xin Li</strong>, Email: xin.li@mail.wvu.edu <br>
+                        <strong>Weisheng Dong</strong>, Email: wsdong@mail.xidian.edu.cn <br>
+                        <strong>Guangming Shi</strong>, Email: gmshi@xidian.edu.cn <br>
+                    </p>
+                  
+                </div>
+            </article><!-- End blog entry -->
+
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              School of Artificial Intelligence <br>
+              Xidian University <br>
+              8 Taibai South Road, Xi 'an, China<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<span>VRL Lab@XDU, 2023</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/image_slider.js"></script>
+
+</body>
+
+</html>
