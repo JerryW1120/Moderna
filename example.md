@@ -128,7 +128,7 @@
 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
     <div class="member">
         <div class="member-img">
-            <img src="成员照片，示例assets/img/team/wsdong_s.jpg" class="img-fluid" alt="">
+            <img src="成员照片，示例assets/img/team/wsdong.jpg" class="img-fluid" alt="">
             <!-- 下面这些注释先行保留，如果有成员有个人主页，可将其取消注释，并放置相应的链接 -->
     <!--                <div class="social">-->
     <!--                  <a href=""><i class="bi bi-twitter"></i></a>-->
