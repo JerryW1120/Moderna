@@ -14,7 +14,8 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+          rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -44,19 +45,40 @@
     <div class="container d-flex justify-content-between align-items-center">
 
         <div class="logo">
-            <h1 class="text-light"><a href="index.html"><span>VRL lab</span></a></h1>
+            <!--            <h1 class="text-light">-->
+            <!--                <a href="index.html">-->
+            <!--                    <span>-->
+            <!--                        <img src="assets/img/Xidian.jpg" class="img-fluid"-->
+            <!--                             style="object-fit: cover; height: 300px; width: 100%;" alt="">-->
+            <!--                    </span>-->
+            <!--                </a>-->
+            <!--            </h1>-->
             <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            <a href="index_zh.html">
+                <img src="assets/img/XiaoHui.jpg" style="height: 100px">
+                <img src="assets/img/Xidian.jpg" style="height: 100px">
+            </a>
         </div>
 
         <nav id="navbar" class="navbar">
-            <ul>
+            <!-- <ul>
                 <li><a class="" href="index.html">Eng</a></li>
                 <li><a href="research.html">最新研究</a></li>
                 <li><a href="publication.html">文章发表</a></li>
                 <li><a href="team.html">实验团队</a></li>
                 <li><a href="demo.html">成果演示</a></li>
                 <li><a href="contact.html">联系我们</a></li>
+            </ul> -->
+            <ul>
+                <!-- <li><a class="" href="index.html">Eng</a></li> -->
+                <li><a href="team.html">团队信息</a></li>
+                <li><a href="publication.html">视觉表征</a></li>
+                <li><a href="publication.html">具身智能</a></li>
+                <li><a href="publication.html">自动驾驶</a></li>
+                <!--                <li><a href="team.html">学术研究</a></li>-->
+                <li><a href="demo.html">科研项目</a></li>
+                <li><a href="contact.html">产学合作</a></li>
+                <li><a href="contact.html">加入我们</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -70,22 +92,31 @@
 
         <!-- Slide 1 -->
         <div class="carousel-item active">
-            <div class="carousel-container">
+            <!-- <div class="carousel-container">
                 <h2 class="animate__animated animate__fadeInDown">视觉表征与学习实验室</h2>
                 <p class="animate__animated animate__fadeInUp">致力于计算机视觉的图像去噪、图像超分辨和图像识别等各项研究。</p>
+                <a href="research.html" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>
+
+            </div> -->
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">视觉表征与学习实验室</h2>
+                <p class="mb-0 text-justify">视觉表征与学习实验室始建于2018年1月1日，主要从事深度学习中的计算机视觉研究。现有教职人员2名，博士研究生和硕士研究生共30多名。
+                    <br/><br/>
+                <p class="mb-0 text-justify"> 实验室的主要研究方向包括底层视觉、图像和视频理解、图像和视频去噪、图像和视频超分辨、3D场景理解和重构和图像识别和检测等。点击查看各项<a
+                        href="./research.html">工作</a>的内容介绍和<a href="publication.html">论文</a>。 <br/><br/></p>
                 <a href="research.html" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>
 
             </div>
         </div>
 
-<!--        &lt;!&ndash; Slide 2 &ndash;&gt;-->
-<!--        <div class="carousel-item">-->
-<!--            <div class="carousel-container">-->
-<!--                <h2 class="animate__animated animate__fadeInDown"> <span>Visual Representation and Learning  Lab</span></h2>-->
-<!--                <p class="animate__animated animate__fadeInUp">Dedicated to research on image denoising, image superresolution, and image recognition in computer vision.</p>-->
-<!--                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        &lt;!&ndash; Slide 2 &ndash;&gt;-->
+        <!--        <div class="carousel-item">-->
+        <!--            <div class="carousel-container">-->
+        <!--                <h2 class="animate__animated animate__fadeInDown"> <span>Visual Representation and Learning  Lab</span></h2>-->
+        <!--                <p class="animate__animated animate__fadeInUp">Dedicated to research on image denoising, image superresolution, and image recognition in computer vision.</p>-->
+        <!--                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
@@ -101,78 +132,137 @@
 <main id="main">
 
     <!-- about Section -->
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-        <div class="container-fluid px-0" data-aos="fade-up">
-            <div class="row">
-                <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">
-                    <div class="row h-100 align-items-center">
-                        <div class="col px-5 px-lg-8 px-xl-10">
-                            <!--                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">About</h3>-->
-                            <h2 class="my-3 fw-medium text-secondary text-uppercase text-center text-lg-left ">关于我们</h2>
-                            <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left">视觉表征与学习实验室</h2>
-                            <p class="mb-0 text-justify">视觉表征与学习实验室始建于2018年1月1日，主要从事深度学习中的计算机视觉研究。现有教职人员2名，博士研究生和硕士研究生共30多名。 <br /><br />
-<!--                            </p>-->
-                            <p class="mb-0 text-justify"> VRL实验室的主要研究方向包括底层视觉、图像和视频理解、图像和视频去噪、图像和视频超分辨、3D场景理解和重构和图像识别和检测等。点击查看各项<a href="./research.html">工作</a>的内容介绍和<a href="publication.html">论文</a>。 <br /><br />
-                            </p>
-                            <p class="mb-0 text-justify"> 欢迎任何对我们研究内容和方向感兴趣的学生和学者通过下列邮箱与我们联系：wsdong@mail.xidian.edu.cn</a>。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 py-8">
-                    <img src="./assets/img/test.jpg" class="img-fluid" alt="">
-                    <!--            <div class="bg-container" style="background-image: url(./assets/img/favicon.png);"></div>-->
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">-->
+    <!--        <div class="container-fluid px-0" data-aos="fade-up">-->
+    <!--            <div class="row">-->
+    <!--                <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">-->
+    <!--                    <div class="row h-100 align-items-center">-->
+    <!--                        <div class="col px-5 px-lg-8 px-xl-10">-->
+    <!--                            &lt;!&ndash;                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">About</h3>&ndash;&gt;-->
+    <!--                            <h2 class="my-3 fw-medium text-secondary text-uppercase text-center text-lg-left ">关于我们</h2>-->
+    <!--                            <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left">视觉表征与学习实验室</h2>-->
+    <!--                            <p class="mb-0 text-justify">视觉表征与学习实验室始建于2018年1月1日，主要从事深度学习中的计算机视觉研究。现有教职人员2名，博士研究生和硕士研究生共30多名。 <br /><br />-->
+    <!--&lt;!&ndash;                            </p>&ndash;&gt;-->
+    <!--                            <p class="mb-0 text-justify"> VRL实验室的主要研究方向包括底层视觉、图像和视频理解、图像和视频去噪、图像和视频超分辨、3D场景理解和重构和图像识别和检测等。点击查看各项<a href="./research.html">工作</a>的内容介绍和<a href="publication.html">论文</a>。 <br /><br />-->
+    <!--                            </p>-->
+    <!--                            <p class="mb-0 text-justify"> 欢迎任何对我们研究内容和方向感兴趣的学生和学者通过下列邮箱与我们联系：wsdong@mail.xidian.edu.cn</a>。-->
+    <!--                            </p>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="col-md-6 py-8">-->
+    <!--                    <img src="./assets/img/test.jpg" class="img-fluid" alt="">-->
+    <!--                    &lt;!&ndash;            <div class="bg-container" style="background-image: url(./assets/img/favicon.png);"></div>&ndash;&gt;-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
     <!-- End about Section -->
 
     <!-- ======= Services Section ======= -->
     <section class="services">
         <div class="container">
             <div class="section-title">
-                <h2>研究方向</h2>
-                <p>以下是我们实验室主要的研究方向</p>
+                <h2>团队信息</h2>
             </div>
             <br>
             <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
                     <div class="icon-box icon-box-pink">
-                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                        <h4 class="title">深度学习和稀疏表示 </a></h4>
-<!--                        <p class="description">Deep Learning and Sparse Representation</p>-->
+                        <div class="member-img">
+                            <img src="assets/img/team/dongweisheng.png" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                        <h4 class="title" style="margin-top: 10px; text-align: center;">董伟生</h4>
+                        <p style="text-align: center;">人工智能学院教授，博导，副院长，国家级人才</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-box icon-box-cyan">
-                        <div class="icon"><i class="bx bx-file"></i></div>
-                        <h4 class="title">图像和视频的表示与处理</a></h4>
-<!--                        <p class="description">Image and Video Representation and Processing</p>-->
+                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box icon-box-pink">
+                        <div class="member-img">
+                            <img src="assets/img/team/fengmingtao.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                        <h4 class="title" style="margin-top: 10px; text-align: center;">冯明涛</h4>
+                        <p style="text-align: center;"> 副教授、硕导</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box icon-box-green">
-                        <div class="icon"><i class="bx bx-tachometer"></i></div>
-                        <h4 class="title">计算机视觉和模式识别</a></h4>
-<!--                        <p class="description">Computer Vision and Pattern Recognition</p>-->
+                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box icon-box-pink">
+                        <div class="member-img">
+                            <img src="assets/img/team/dongle.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                        <h4 class="title" style="margin-top: 10px; text-align: center;">董乐</h4>
+                        <p style="text-align: center;">华山准聘副教授</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box icon-box-blue">
-                        <div class="icon"><i class="bx bx-world"></i></div>
-                        <h4 class="title">遥感图像的理解与学习</a></h4>
-<!--                        <p class="description"> Remote Sensing Images Understanding and Learning</p>-->
+                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box icon-box-pink">
+                        <div class="member-img">
+                            <img src="assets/img/team/dahuangtao.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                        <h4 class="title" style="margin-top: 10px; text-align: center;">黄韬</h4>
+                        <p style="text-align: center;">副研究员</p>
                     </div>
                 </div>
-
             </div>
-
+            <div class="row">
+                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box icon-box-pink">
+                        <div class="member-img">
+                            <img src="assets/img/team/wangzhenyu.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                        <h4 class="title" style="margin-top: 10px; text-align: center;">汪振宇</h4>
+                        <p style="text-align: center;">博士后</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box icon-box-pink">
+                        <div class="member-img">
+                            <img src="assets/img/team/zhuyufan.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                        <h4 class="title" style="margin-top: 10px; text-align: center;">朱宇凡</h4>
+                        <p style="text-align: center;">博士后</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section><!-- End Services Section -->
+
+    <!--                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">-->
+    <!--                    <div class="icon-box icon-box-pink">-->
+    <!--                        <div class="icon"><i class="bx bxl-dribbble"></i></div>-->
+    <!--                        <h4 class="title">深度学习和稀疏表示 </a></h4>-->
+    <!--&lt;!&ndash;                        <p class="description">Deep Learning and Sparse Representation</p>&ndash;&gt;-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                    <div class="icon-box icon-box-cyan">-->
+    <!--                        <div class="icon"><i class="bx bx-file"></i></div>-->
+    <!--                        <h4 class="title">图像和视频的表示与处理</a></h4>-->
+    <!--&lt;!&ndash;                        <p class="description">Image and Video Representation and Processing</p>&ndash;&gt;-->
+    <!--                    </div>-->
+    <!--                </div>-->
+
+    <!--                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">-->
+    <!--                    <div class="icon-box icon-box-green">-->
+    <!--                        <div class="icon"><i class="bx bx-tachometer"></i></div>-->
+    <!--                        <h4 class="title">计算机视觉和模式识别</a></h4>-->
+    <!--&lt;!&ndash;                        <p class="description">Computer Vision and Pattern Recognition</p>&ndash;&gt;-->
+    <!--                    </div>-->
+    <!--                </div>-->
+
+    <!--                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">-->
+    <!--                    <div class="icon-box icon-box-blue">-->
+    <!--                        <div class="icon"><i class="bx bx-world"></i></div>-->
+    <!--                        <h4 class="title">遥感图像的理解与学习</a></h4>-->
+    <!--&lt;!&ndash;                        <p class="description"> Remote Sensing Images Understanding and Learning</p>&ndash;&gt;-->
+    <!--                    </div>-->
+    <!--                </div>-->
 
 
     <!-- ======= Features Section ======= -->
@@ -180,9 +270,9 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>最新工作</h2>
-                <p>下面是我们实验室的一些最新研究进展</p>
-                <p>部分工作已开源代码，欢迎您阅读，和我们讨论、交流！</p>
+                <h2 style="font-weight: bold; color: #d12948; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">News !</h2>
+                <!--                <p>下面是我们实验室的一些最新研究进展</p>-->
+                <!--                <p>部分工作已开源代码，欢迎您阅读，和我们讨论、交流！</p>-->
             </div>
 
             <!--        新增论文部分-->
@@ -204,342 +294,70 @@
             <!--        </div>-->
 
             <!-- ACMMM_2023_Ning -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration</h3>
-                    <h5>Q. Ning, F. Wu*, W. Dong, X. Li, and G. Shi</h5>
-                    <h6>ACMMM 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Ning_ACMMM_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Ning_ACMMM_2023" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Blind face restoration aims to recover high-quality face images from
-                                    low-quality ones with complex and unknown degradation. Existing
-                                    approaches have achieved promising performance by leveraging
-                                    pre-trained dictionaries or generative priors. However, these methods may fail to exploit the full potential of degraded inputs and facial
-                                    identity features due to complex degradation. To address this issue,
-                                    we propose a novel method that explores the correlation of degraded
-                                    spatial identity features by learning a general representation using
-                                    memory network. Specifically, our approach enhances degraded
-                                    features with more identity by leveraging similar facial features retrieved from memory network. We also propose a fusion approach
-                                    that fuses memorized spatial features with GAN prior features via
-                                    affine transformation and blending fusion to improve fidelity and
-                                    realism. Additionally, the memory network is updated online in an
-                                    unsupervised manner along with other modules, which obviates
-                                    the requirement for pre-training. Experimental results on synthetic
-                                    and popular real-world datasets demonstrate the effectiveness of
-                                    our proposed method, which achieves at least comparable and often
-                                    better performance than other state-of-the-art approaches.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="row" data-aos="fade-up" style="display: flex; align-items: center;">
+                <!-- 文本内容 -->
+                <div class="col-md-7 pt-4" data-aos="fade-up" style="position: relative;">
+                    <!-- 时间标记 -->
+                    <div class="date-label"
+                         style="color: red; font-style: italic; font-weight: bolder; font-size: 14px; margin-bottom: -1px;">
+                        2023年10月2日
+                    </div>
+                    <!-- 正文 -->
+                    <span class="content-text"
+                          style="line-height: 1.8; font-size: 18px; color: #333; display: block; text-indent: 2em;">
+            恭喜 本团队研究成果
+            <span style="font-weight: bold; color: #000;">《Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration》</span>
+            成功发表在
+            <span style="font-weight: bold; color: #000;">ACMMM 2023</span>！第一作者为
+            <span style="font-weight: bold;">博士生宁倩（通讯作者：董伟生）</span>
+        </span>
+                    <!-- 查看详情链接 -->
+                    <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Spatially_Varying_Prior_Learning_for_Blind_Hyperspectral_Image_Fusion.pdf"
+                       class="detail-link"
+                       style="color: #1f537e; text-decoration: none; font-style: italic; display: block; text-align: right; margin-top: 10px;">
+                        查看详情&emsp;&emsp;
+                    </a>
                 </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/nq_acmmm_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Face_restoration_ACMMM2023.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
-                    <li><i class="bi bi-check"></i> Demo</li>
+                <!-- 图片内容 -->
+                <div class="col-md-5 pt-4" data-aos="fade-up"
+                     style="display: flex; justify-content: center; align-items: center;">
+                    <img src="project/nq_acmmm_2023/img/network.png" class="img-fluid" alt="Network Image"
+                         style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 </div>
-                <br>
-                <br>
             </div>
 
-            <!-- ICCV_2023_Liu -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Low-Light Image Enhancement with Multi-stage Residue Quantization and Brightness-aware Attention</h3>
-                    <h5>Y. Liu, T. Huang, W. Dong*, X. Li, and G. Shi</h5>
-                    <h6>ICCV 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_ICCV_2023_Liu"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_ICCV_2023_Liu" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Low-light image enhancement (LLIE) aims to recover illumination and improve the visibility of low-light images. Conventional LLIE methods often produce poor results because they neglect the effect 
-                                    of noise interference. Deep learning-based LLIE methods focus on learning a mapping function between low-light images and normal-light images that outperforms conventional LLIE methods. However, 
-                                    most deep learning-based LLIE methods cannot yet fully exploit the guidance of auxiliary priors provided by normal-light images in the training dataset. In this paper, we propose a brightness-aware 
-                                    network with normal-light priors based on brightness-aware attention and residual quantized codebook. To achieve a more natural and realistic enhancement, we design a query module to obtain more 
-                                    reliable normal-light features and fuse them with lowlight features by a fusion branch. In addition, we propose a brightness-aware attention module to further retain the color consistency between 
-                                    the enhanced results and the normal-light images. Extensive experimental results on both real-captured and synthetic data show that our method outperforms existing state-of-the-art methods.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="row" data-aos="fade-up" style="display: flex; align-items: center; margin-top: -2px;">
+                <!-- 文本内容 -->
+                <div class="col-md-7 pt-4" data-aos="fade-up" style="position: relative;">
+                    <!-- 时间标记 -->
+                    <div class="date-label"
+                         style="color: red; font-style: italic; font-weight: bolder; font-size: 14px; margin-bottom: -1px;">
+                        2023年9月15日
+                    </div>
+                    <!-- 正文 -->
+                    <span class="content-text"
+                          style="line-height: 1.8; font-size: 18px; color: #333; display: block; text-indent: 2em;">
+            恭喜 本团队研究成果
+            <span style="font-weight: bold; color: #000;">《Exploring Correlations in Degraded Spatial Identity Features for Blind Face Restoration》</span>
+            成功发表在
+            <span style="font-weight: bold; color: #000;">ICCV 2023</span>！第一作者为
+            <span style="font-weight: bold;">博士生刘文龙（通讯作者：董伟生）</span>
+        </span>
+                    <!-- 查看详情链接 -->
+                    <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Liu_Low-Light_Image_Enhancement_with_Multi-Stage_Residue_Quantization_and_Brightness-Aware_Attention_ICCV_2023_paper.pdf"
+                       class="detail-link"
+                       style="color: #01101e; text-decoration: none; font-style: italic; display: block; text-align: right; margin-top: 10px;">
+                        查看详情&emsp;&emsp;
+                    </a>
                 </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/lyl_iccv_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Liu_Low-Light_Image_Enhancement_with_Multi-Stage_Residue_Quantization_and_Brightness-Aware_Attention_ICCV_2023_paper.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/LiuYunlong99/RQ-LLIE">Code</a></li>
-                    <li><i class="bi bi-check"></i> Demo</li>
+                <!-- 图片内容 -->
+                <div class="col-md-5 pt-4" data-aos="fade-up"
+                     style="display: flex; justify-content: center; align-items: center;">
+                    <img src="project/lyl_iccv_2023/img/network.png" class="img-fluid" alt="Network Image"
+                         style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 </div>
-                <br>
-                <br>
             </div>
-
-            <!-- TIP_2023_Xu -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Spatially varying prior learning for blind hyperspectral image fusion</h3>
-                    <h5>J. Xu, F. Wu, X. Li, W. Dong, T. Huang, and G. Shi</h5>
-                    <h6>TIP 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_TIP_2023_Xu"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_TIP_2023_Xu" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    In recent years, researchers have become more
-                                    interested in hyperspectral image fusion (HIF) as a potential
-                                    alternative to expensive high-resolution hyperspectral imaging
-                                    systems, which aims to recover a high-resolution hyperspectral
-                                    image (HR-HSI) from two images obtained from low-resolution
-                                    hyperspectral (LR-HSI) and high-spatial-resolution multispectral
-                                    (HR-MSI). It is generally assumed that degeneration in both
-                                    the spatial and spectral domains is known in traditional model-
-                                    based methods or that there existed paired HR-LR training data
-                                    in deep learning-based methods. However, such an assumption
-                                    is often invalid in practice. Furthermore, most existing works,
-                                    either introducing hand-crafted priors or treating HIF as a black-
-                                    box problem, cannot take full advantage of the physical model.
-                                    To address those issues, we propose a deep blind HIF method by
-                                    unfolding model-based maximum a posterior (MAP) estimation
-                                    into a network implementation in this paper. Our method works
-                                    with a Laplace distribution (LD) prior that does not need
-                                    paired training data. Moreover, we have developed an observation
-                                    module to directly learn degeneration in the spatial domain
-                                    from LR-HSI data, addressing the challenge of spatially-varying
-                                    degradation. We also propose to learn the uncertainty (mean and
-                                    variance) of LD models using a novel Swin-Transformer-based
-                                    denoiser and to estimate the variance of degraded images from
-                                    residual errors (rather than treating them as global scalars). All
-                                    parameters of the MAP estimation algorithm and the observation
-                                    module can be jointly optimized through end-to-end training.
-                                    Extensive experiments on both synthetic and real datasets show
-                                    that the proposed method outperforms existing competing meth-
-                                    ods in terms of both objective evaluation indexes and visual
-                                    qualities.                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/xjw_tip_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Spatially_Varying_Prior_Learning_for_Blind_Hyperspectral_Image_Fusion.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
-                    <li><i class="bi bi-check"></i> Demo</li>
-                </div>
-                <br>
-                <br>
-            </div>
-
-            <!-- TASLP_2023_Huang -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Uncertainty-driven knowledge distillation for language model compression</h3>
-                    <h5>T. Huang, W. Dong*, F. Wu, X. Li, and G. Shi</h5>
-                    <h6>TASLP 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_TASLP_2023_Huang"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_TASLP_2023_Huang" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Despite the remarkable performance on various Nat-
-                                    ural Language Processing (NLP) tasks, the parametric complexity
-                                    of pretrained language models has remained a major obstacle due
-                                    to limited computational resources in many practical applications.
-                                    Techniques such as knowledge distillation, network pruning, and
-                                    quantization have been developed for language model compression.
-                                    However, it has remained challenging to achieve an optimal tradeoff
-                                    between model size and inference accuracy. To address this issue,
-                                    we propose a novel and efficient uncertainty-driven knowledge
-                                    distillation compression method for transformer-based pretrained
-                                    language models. Specifically, we design a method of parame-
-                                    ter retention and feedforward network parameter distillation to
-                                    compress N-stacked transformer modules into one module in the
-                                    fine-tuning stage. A key innovation of our approach is to add the un-
-                                    certainty estimation module (UEM) into the student network such
-                                    that it can guide the student network’s feature reconstruction in
-                                    the latent space (similar to the teacher’s). Across multiple datasets
-                                    in the natural language inference tasks of GLUE, we have achieved
-                                    more than 95% accuracy of the original BERT, while only using
-                                    about 50% of the parameters.
-                                </p>
-                            </div>                               
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project/hty_taslp_2023/img/network.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> Code</li>
-                    <li><i class="bi bi-check"></i> Demo</li>
-                </div>
-                <br>
-                <br>
-            </div>
-
-
-
-
-            
-
-            <!-- ECCV_2022_Fang -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Adaptive Search-and-Training for Robust and Efficient Network Pruning</h3>
-                    <h5>X. Lu, W. Dong*, X. Li, J. Wu, L Li, and G. Shi</h5>
-                    <h6>TPAMI 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Lu_TPAMI_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Lu_TPAMI_2023" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Both network pruning and neural architecture search (NAS) can be interpreted as techniques to automate the design and optimization of 
-                                    artificial neural networks. In this paper, we challenge the conventional wisdom of training before pruning by proposing a joint 
-                                    search-and-training approach to learn a compact network directly from scratch. Using pruning as a search strategy, we advocate three new 
-                                    insights for network engineering: 1) to formulate adaptive search as a cold start strategy to find a compact subnetwork on the coarse 
-                                    scale; and 2) to automatically learn the threshold for network pruning; 3) to offer flexibility to choose between efficiency and robustness. 
-                                    More specifically, we propose an adaptive search algorithm in the cold start by exploiting the randomness and flexibility of filter pruning. 
-                                    The weights associated with the network filters will be updated by ThreshNet, a flexible coarse-to-fine pruning method inspired by 
-                                    reinforcement learning. In addition, we introduce a robust pruning strategy leveraging the technique of knowledge distillation through a 
-                                    teacher-student network. Extensive experiments on ResNet and VGGNet have shown that our proposed method can achieve a better balance in terms 
-                                    of efficiency and accuracy and notable advantages over current state-of-the-art pruning methods in several popular datasets, including 
-                                    CIFAR10, CIFAR100, and ImageNet.
-                                </p>
-                            </div>                               
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project\lxt_tpami2023\img\network.png" class="img-fluid" alt="" style="display: inline-block;">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/PAMI2023_final.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/Lxtccc/Adaptive-">Code</a></li>
-                    <li><i class="bi bi-check"></i> Demo</li>
-                </div>
-                <br>
-                <br>
-            </div>
-
-            <!-- TIP_2023_Ning -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Searching Efficient Model-Guided Deep Network for Image Denoising</h3>
-                    <h5>Q. Ning, W. Dong*, X. Li, and J. Wu</h5>
-                    <h6>TIP 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Ning_TIP_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Ning_TIP_2023" class="collapse">
-                                <p>
-                                    Unlike the success of neural architecture search (NAS) in high-level vision tasks, it remains challenging to find computationally efficient and 
-                                    memory-efficient solutions to low-level vision problems such as image restoration throughNAS. One of the fundamental barriers to differential NAS based 
-                                    image restoration is the optimization gap between the super-network and the sub-architectures, causing instability during the searching process. In this 
-                                    paper, we present a novel approach to fill this gap in image denoising application by connecting model-guided design (MoD) with NAS (MoDNAS). Specifically, 
-                                    we propose to construct a new search space under a model-guided framework and develop more stable and efficient differential search strategies. MoD-NAS 
-                                    employs a highly reusable width search strategy and a densely connected search block to automatically select the operations of each layer as well as 
-                                    network width and depth via gradient descent. During the search process, the proposed MoD-NAS remains stable because of the smoother search space designed 
-                                    under the model-guided framework. Experimental results on several popular datasets show that our MoD-NAS method has achieved at least comparable even 
-                                    better PSNR performance than current state-of-the-art methods with fewer parameters, fewer flops, and less testing time.
-                                </p>
-                            </div>                               
-                        </li>       
-                    </ul>
-                </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project\nq_tip_2023\img\network.png" class="img-fluid" alt="">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip">Code</a></li>
-                    <li><i class="bi bi-check"></i> Demo</li>
-                </div>
-                <br>
-                <br>
-            </div>           
-
-            <!--  CVPR_2023_Fang -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring</h3>
-                    <h5> Z. Fang, F. Wu*, W. Dong, X. Li, J. Wu, and G. Shi</h5>
-                    <h6>CVPR 2023</h6>
-                    <ul class="faq-list">
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Fang_CVPR_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Fang_CVPR_2023" class="collapse">
-                                <p>
-                                    Many deep learning-based solutions to blind image deblurring estimate the blur representation and reconstruct the target image from 
-                                    its blurry observation. However, these methods suffer from severe performance degradation in real-world scenarios because they ignore 
-                                    important prior information about motion blur (e.g., real-world motion blur is diverse and spatially varying). Some methods have attempted 
-                                    to explicitly estimate non-uniform blur kernels by CNNs, but accurate estimation is still challenging due to the lack of ground truth 
-                                    about spatially varying blur kernels in real-world images. To address these issues, we propose to represent the field of motion blur 
-                                    kernels in a latent space by normalizing flows, and design CNNs to predict the latent codes instead of motion kernels. To further 
-                                    improve the accuracy and robustness of non-uniform kernel estimation, we introduce uncertainty learning into the process of estimating 
-                                    latent codes and propose a multi-scale kernel attention module to better integrate image features with estimated kernels. Extensive 
-                                    experimental results, especially on real-world blur datasets, demonstrate that our method achieves state-of-the-art results in terms 
-                                    of both subjective and objective quality as well as excellent generalization performance for non-uniform image deblurring.
-                                </p>
-                            </div>                               
-                        </li>                      
-                    </ul>
-                </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project\fzx_cvpr2023\img\network.png" class="img-fluid" alt="">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Projects/UFPNet.files/Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/Fangzhenxuan/UFPDeblur">Code</a></li>
-                    <li><i class="bi bi-check"></i> Demo</li>
-                </div>
-                <br>
-                <br>
-            </div>
-
-                
-            <!-- CVPR_2023_Yang -->
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-7 pt-4" data-aos="fade-up">
-                    <h3>Vector Quantization with Self-attention for Quality-independent Representation Learning</h3>
-                    <h5>Z. Yang, W. Dong*, X. Li, Y. Sun, M. Huang and G. Shi</h5>
-                    <h6>CVPR 2023</h6>
-                    <ul class="faq-list">
-                    <div>
-                        <br>
-                        <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#abstract_Yang_CVPR_2023"> <h5>Abstract</h5> <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="abstract_Yang_CVPR_2023" class="collapse">
-                                <p>
-                                    Recently, the robustness of deep neural networks has drawn extensive attention due to the potential distribution shift between 
-                                    training and testing data (e.g., deep models trained on high-quality images are sensitive to corruption during testing). Many researchers 
-                                    attempt to make the model learn invariant representations from multiple corrupted data through data augmentation or image-pair-based 
-                                    feature distillation to improve the robustness. Inspired by sparse representation in image restoration, we opt to address this issue by 
-                                    learning image-quality-independent feature representation in a simple plug-and-play manner, that is, to introduce discrete vector 
-                                    quantization (VQ) to remove redundancy in recognition models. Specifically, we first add a codebook module to the network to quantize deep 
-                                    features. Then we concatenate them and design a self-attention module to enhance the representation. During training, we enforce the 
-                                    quantization of features from clean and corrupted images in the same discrete embedding space so that an invariant {\em quality-independent} 
-                                    feature representation can be learned to improve the recognition robustness of low-quality images. Qualitative and quantitative experimental results show 
-                                    that our method achieved this goal effectively, leading to a new state-of-the-art result of 43.1 $\%$ mCE on ImageNet-C with ResNet50 as the backbone.
-                                </p>
-                            </div>                               
-                        </li>  
-                    </div>                        
-                    </ul>
-                </div>
-                <div class="col-md-5 pt-4" data-aos="fade-up" style="display: table;">
-                    <img src="project\yz_cvpr2023\img\network.jpg" class="img-fluid" alt="">
-                    <li><i class="bi bi-check"></i> <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/VQSA.pdf">Paper</a></li>
-                    <li><i class="bi bi-check"></i> <a href="https://github.com/yangzhou321/VQSA">Code</a></li>
-                    <li><i class="bi bi-check"></i> Demo</li>
-                </div>
-                <br>
-                <br>
-            </div>
-    
-                 
+        </div>
     </section><!-- End Features Section -->
 
 </main><!-- End #main -->
@@ -563,14 +381,15 @@
     </div>
 
     <div class="container">
-    	<div class="copyright">
-        &copy;VRL Lab@XDU, 2023  Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
-    	</div>
+        <div class="copyright">
+            &copy;VRL Lab@XDU, 2023 Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
+        </div>
     </div>
 </footer><!-- End Footer -->
 
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
