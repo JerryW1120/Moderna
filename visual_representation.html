@@ -36,6 +36,51 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
+    <style>
+        .container {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /*.container h2 {*/
+        /*    font-size: 24px;*/
+        /*    color: #222;*/
+        /*    margin-bottom: 15px;*/
+        /*}*/
+
+        .container p {
+            margin-bottom: 15px;
+        }
+
+        .container ul {
+            padding-left: 20px;
+        }
+
+        .container li {
+            /*margin-bottom: 10px;*/
+            /*font-weight: bold;*/
+        }
+
+        .container h3 {
+            border-bottom: 2px solid #4caf50;
+            display: inline-block;
+            padding-bottom: 0px;
+        }
+
+        .member-video video {
+            border-radius: 7px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .member-video video {
+                height: auto;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -91,14 +136,15 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a href="team.html" style="font-weight: bold; font-size: large">团队信息</a></li>
-                <li><a href="publication.html">视觉表征</a></li>
-                <li><a href="publication.html">具身智能</a></li>
-                <li><a href="publication.html">自动驾驶</a></li>
+                <!-- <li><a class="" href="index.html">Eng</a></li> -->
+                <li><a href="team.html">团队成员</a></li>
+                <li style="font-weight: bold"><a href="visual_representation.html">视觉表征</a></li>
+                <!--                <li><a href="publication.html">具身智能</a></li>-->
+                <li><a href="automatic_drive.html">自动驾驶</a></li>
                 <!--                <li><a href="team.html">学术研究</a></li>-->
-                <li><a href="demo.html">科研项目</a></li>
-                <li><a href="contact.html">产学合作</a></li>
-                <li><a href="contact.html">加入我们</a></li>
+                <li><a href="publication.html">科研成果</a></li>
+                <li><a href="">产学合作</a></li>
+                <li><a href="contact.html">联系我们</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -113,10 +159,10 @@
 
             <div class="d-flex justify-content-between align-items-center">
                 <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Publication</li>
+                    <li><a href="index_zh.html">主页</a></li>
+                    <li>视觉表征</li>
                 </ol>
-                <h2>Publication</h2>
+                <h2>视觉表征</h2>
 
             </div>
 
@@ -141,855 +187,95 @@
     <!-- ======= Papers Section ======= -->
     <section id="section-1" class="pb-0">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 order-lg-1">
-                    <div class="pb-6 pt-6 py-lg-3" data-toggle="sticky" data-sticky-offset-top="100">
-                        <h2 class="mb-4 text-uppercase text-600">Years</h2>
-                        <ul class="mb-5 mb-lg-6 pl-4 text-600">
-                            <li class="read-more"><a href="#2023" class="text-600">2023</a></li>
-                            <li class="read-more"><a href="#2022" class="text-600">2022</a></li>
-                            <li class="read-more"><a href="#2021" class="text-600">2021</a></li>
-                            <li class="read-more"><a href="#2020" class="text-600">2020</a></li>
-                            <li class="read-more"><a href="#2019" class="text-600">2019</a></li>
-                            <li class="read-more"><a href="#2018" class="text-600">2018 & before</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-8 order-lg-2 pb-6 pb-lg-0 pt-lg-3">
-                    <div class="mb-8">
-                        <h2 class="mb-4 text-uppercase" id="2023">2023</h2>
-                        <ol>
-
-                            <li>
-                                <a href="">Exploring Correlations in Degraded Spatial Identity Features for Blind Face
-                                    Restoration</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We propose a novel method that explores the correlation of degraded
-                    spatial identity features by learning a general representation using
-                    memory network.</I> <br/>
-                    Q. Ning, F. Wu*, W. Dong, X. Li, and G. Shi<br/>
-                    ACM Multimedia, 2023 <strong>(ACMMM)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Face_restoration_ACMMM2023.pdf?pdf=button"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/nq_acmmm_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="">Low-Light image enhancement with multi-stage residue quantization and
-                                    brightness-aware attention</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We propose a brightness-aware network with normal-light priors based on brightness-aware attention and residual quantized codebook.
-                  </I> <br/>
-                    Y. Liu, T. Huang, W. Dong*, X. Li, and G. Shi<br/>
-                    IEEE ICCV, 2023 <strong>(ICCV)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Liu_Low-Light_Image_Enhancement_with_Multi-Stage_Residue_Quantization_and_Brightness-Aware_Attention_ICCV_2023_paper.pdf?pdf=button"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/lyl_iccv_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/LiuYunlong99/RQ-LLIE" target="_blank"><span
-                                    class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="">Spatially Varying Prior Learning for Blind
-                                    Hyperspectral Image Fusion</a>
-                                <br/>
-                                <span class="text-600">
-                  <I> we propose a deep blind HIF method by
-                    unfolding model-based maximum a posterior (MAP) estimation
-                    into a network implementation.
-                  </I> <br/>
-                    J. Xu, F. Wu, X. Li, W. Dong, T. Huang, and G. Shi<br/>
-                    IEEE Trans. on Image Processing, 2023 <strong>(TIP)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Spatially_Varying_Prior_Learning_for_Blind_Hyperspectral_Image_Fusion.pdf?pdf=button"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/xjw_tip_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="">Uncertainty-Driven Knowledge Distillation for
-                                    Language Model Compression</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We propose a novel and efficient uncertainty-driven knowledge
-                    distillation compression method for transformer-based pretrained
-                    language model.</I> <br/>
-                    T. Huang, W. Dong*, F. Wu, X. Li, and G. Shi<br/>
-                    IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2023 <strong>(TASLP)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Uncertainty-Driven_Knowledge_Distillation_for_Language_Model_Compression.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/hty_taslp_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-
-                            <li>
-                                <a href="">Memory based temporal fusion network for video deblurring</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We proposed a memory-based temporal fusion network (TFN) to capture local spatial-temporal relationships across the input sequence for video deblurring.</I> <br/>
-                  C. Wang, W. Dong*, X. Li, F. Wu, J. Wu, and G. Shi<br/>
-                  International Journal of Computer Vision, 2023 <strong>(IJCV)</strong><br/>
-                </span>
-                                [<a href="https://link.springer.com/content/pdf/10.1007/s11263-023-01793-y.pdf?pdf=button"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/wch_ijcv_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/fengzhuziA/TFmodel" target="_blank"><span
-                                    class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="">Deep Gaussian Scale Mixture Prior for Image Reconstruction</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>This paper proposes a novel image reconstruction method based on the Maximum a Posterior (MAP) estimation
-                    framework using learned Gaussian Scale Mixture (GSM) prior.</I> <br/>
-                  T. Huang, X. Yuan, W. Dong*, J. Wu, and G. Shi<br/>
-                 IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023 <strong>(TPAMI)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Deep_Gaussian_Scale_Mixture_Prior_for_Image_Reconstruction.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/ht_tpami_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/TaoHuang95/DGSM" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="./project/yz_cvpr2023/index.html">Vector Quantization with Self-attention for
-                                    Quality-independent Representation Learning</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We opt to learn invariant representations by learning image-quality-independent feature representation in a simple plug-and-play manner.</I><br/>
-                  Z. Yang, W. Dong*, X. Li, Y. Sun, M. Huang and G. Shi<br/>
-                  Conference on Computer Vision and Pattern Recognition, 2023 <strong>(CVPR)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/VQSA.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/yz_cvpr2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/yangzhou321/VQSA" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="./project/fzx_cvpr2023/index.html">Self-supervised Non-uniform Kernel
-                                    Estimation with Flow-based Motion Prior for Blind Image Deblurring</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We propose to represent the motion blur kernels in a latent space by a normalizing flow, and estimate the blur kernels in a self-supervised manner.</I><br/>
-                  Z. Fang, F. Wu*, W. Dong, X. Li, J. Wu, and G. Shi<br/>
-                  Conference on Computer Vision and Pattern Recognition, 2023 <strong>(CVPR)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Projects/UFPNet.files/Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/fzx_cvpr2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/Fangzhenxuan/UFPDeblur" target="_blank"><span
-                                    class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="./project/lxt_tpami2023/index.html">Adaptive Search-and-Training for Robust and
-                                    Efficient Network Pruning</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We challenge the conventional wisdom of training before pruning by proposing a joint search-and-training approach to learn a compact network directly from scratch.</I> <br/>
-                 X. Lu, W. Dong*, X. Li, J. Wu, L Li, and G. Shi<br/>
-                 IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023 <strong>(TPAMI)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/PAMI2023_final.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/lxt_tpami2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/Lxtccc/Adaptive-" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a href="" target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="_blank">Deep unfolding network for efficient mixed video noise removal</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We introduce a deep image denoiser prior and obtain an iterative optimization algorithm based on the maximum a posterior (MAP) estimation.</I><br/>
-                  L. Sun, Y. Wang, F. Wu, X. Li, W. Dong, and G. Shi<br/>
-                  IEEE Transactions on Circuits and System for Video Technology, 2023 <strong>(T-CSVT)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Deep_Unfolding_Network_for_Efficient_Mixed_Video_Noise_Removal_TCSVT2023.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/sl_tcsvt_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a target="_blank"><span class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="./project/nq_tip_2023/index.html">Searching Efficient Model-Guided Deep Network
-                                    for Image Denoising</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We present a novel approach to fill this gap in image denoising application by connecting model-guided design (MoD) with NAS (MoD-NAS).</I> <br/>
-                 Q. Ning, W. Dong*, X. Li, and J. Wu<br/>
-                 IEEE Transactions on Image Processing, 2023 <strong>(TIP)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/nq_tip_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Mod-NAS.zip"
-                                    target="_blank"><span class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="./project/hh_tcsvt_2023/index.html">Differentiable Neural Architecture Search
-                                    for Extremely Lightweight Image Super-Resolution</a>
-                                <br/>
-                                <span class="text-600">
-                  <I>We propose a novel differentiable Neural Architecture Search
-                    (NAS) approach on both the cell-level and network-level to search
-                    for lightweight SISR models. </I> <br/>
-                 H. Huang, L. Shen, C. He, W. Dong and W. Liu<br/>
-                 IEEE Transactions on Circuits and System for Video Technology, 2023 <strong>(TCSVT)</strong><br/>
-                </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Searching_Efficient_Model-Guided_Deep_Network_for_Image_Denoising_TIP-2023.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/hh_tcsvt_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a target="_blank"><span class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-                            <li>
-                                <a href="./project/hml_tgrs_2023/index.html">Supervised Contrastive Learning Based on
-                                    Fusion
-                                    of Global and Local Features for Remote
-                                    Sensing Image Retrieval</a>
-
-                                <br/>
-                                <span class="text-600">
-                <I>Supervised contrastive learning based on
-                  the fusion of global and local features method is proposed in
-                  this article, named SCFR. </I> <br/>
-               M. Huang, L. Dong, W. Dong and G. Shi<br/>
-               IEEE Trans. Geosci. Remote. Sens, 2023 <strong>(TGRS)</strong><br/>
-              </span>
-                                [<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10127603"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="./project/hml_tgrs_2023/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="https://github.com/xdplay17/SCFR" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                            <li>
-                                <a href="_blank">Bayesian deep learning for image reconstruction: from structured
-                                    sparsity to uncertainty estimation</a>
-                                <br/>
-                                <span class="text-600">
-                <I>We construct a new class of uncertainty-driven loss (UDL) functions for deep unfolded networks. </I><br/>
-                W. Dong, J. Wu, L. Li, G. Shi, and X. Li<br/>
-                IEEE Signal Processing Magazine, 2023 <strong>(SPM)</strong><br/>
-              </span>
-                                [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Bayesian_DL_SPM-2022.pdf"
-                                    target="_blank"><span class="text-muted">Paper</span></a>]
-                                [<a href="_blank" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                [<a href="_blank" target="_blank"><span class="text-muted">code</span></a>]
-                                [<a target="_blank"><span class="text-muted">demo</span></a>]
-                            </li>
-                            <br/>
-
-                        </ol>
-
-                        <div class="mb-8">
-                            <h2 class="mb-4 text-uppercase" id="2022">2022</h2>
-                            <ol>
-                                <li>
-                                    <a href="./project/fzx_eccv2022/index.html">Uncertainty learning in kernel
-                                        estimation for multi-stage blind image super-resolution</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>A novel kernel estimation method was proposed with uncertainty learning, achieving SOTA blind image SR results.</I> <br/>
-                   Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi  <br/>
-                   European Conference on Computer Vision, 2022 <strong>(ECCV)</strong><br/>
-                  </span>
-                                    [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="./project/fzx_eccv2022/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/Fangzhenxuan/UncertaintySR" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a href="https://demo_fzx.vrl-lab.org" target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Self-Feature%20Distillation_ECCV2022.pdf">Self-feature
-                                        distillation with uncertainty modeling for degraded image recognition</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>A weighted feature distillation loss with uncertainty learning was proposed for degraded image recognition.</I> <br/>
-                   Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi  <br/>
-                   European Conference on Computer Vision, 2022 <strong>(ECCV)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Self-Feature%20Distillation_ECCV2022.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="./projects/yz_eccv_2022/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="_blank">Bayesian based re-parameterization for DNN model pruning</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We present a novel perspective of re-parametric
-                      pruning by Bayesian estimation.</I><br/>
-                    X. Lu, T. Xi, B. Li, G. Zhang, and W. Dong<br/>
-                    ACM Multimedia, 2022 <strong>(ACMM)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/bayesian_based_re_parameteriza.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="./project/nq_ijcai2022/index.html">Learning Degradation Uncertainty for
-                                        Unsupervised Real-world Image Super-Resolution</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a novel approach called USR-DU for unsupervised real-world image SR with learned degradation uncertainty.</I><br/>
-                    Q. Ning, J. Tang, F. Wu, W. Dong*<br/>
-                    International Joint Conferences on Artificial Intelligence, 2022 <strong>(IJCAI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/IJCAI-2022.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="./project/nq_ijcai2022/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/QianNing0/USR-DU" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="">Deep hyperspectral image fusion network with iterative spatio-spectral
-                                        regularization</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a novel regularization strategy to fully
-                      exploit the spatio-spectral dependency by a spatially adaptive 3D
-                      filter.</I><br/>
-                    T. Huang, W. Dong*, J. Wu, L. Li, X. Li, and Guangming Shi<br/>
-                    IEEE Transactions on Computational Imaging, 2022 <strong>(TCI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TCI-2022-Deep_Hyperspectral_Image_Fusion.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/TaoHuang95/DHIF-Net" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="">Robust depth completion with uncertainty-driven loss functions</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We introduce uncertainty-driven loss functions to improve the
-                      robustness of depth completion and handle the uncertainty in
-                      depth completion.</I><br/>
-                    Y. Zhu, W. Dong*, X Li, J. Wu, L. Li, and G. Shi<br/>
-                    Association for the Advancement of Artificial Intelligence, 2022 <strong>(AAAI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/depth-AAAI2022.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-
-                            </ol>
-
-                            <h2 class="mb-4 text-uppercase" id="2021">2021</h2>
-                            <ol>
-                                <li>
-                                    <a href="./project/sl_ijcv_2021/index.html">Deep Maximum a Posterior Estimator for
-                                        Video Denoising</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We present a novel deep maximum a posterior (MAP)-based video denoising method, with adaptive temporal fusion and deep image prior.</I><br/>
-                    L. Sun, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi<br/>
-                    International Journal of Computer Vision, 2021 <strong>(IJCV)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/IJCV_VD_final.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="./project/sl_ijcv_2021/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/sunlustar/MAP-VDNet" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="./project/dws_tip_2021/index.html">Model-Guided Deep Hyperspectral Image
-                                        Super-resolution</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose to connect these two lines of research by presenting a Model-guided DCN (MoG-DCN) approach to HSISR.</I><br/>
-                    W. Dong, C. Zhou, F. Wu, J. Wu, G. Shi, and X. Li<br/>
-                    IEEE Transactions on Image Processing, 2021 <strong>(TIP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/HSISR-TIP-v4.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="./project/dws_tip_2021/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="./project/ht_2021_cvpr/index.html">Deep Gaussian Scale Mixture Prior for
-                                        Spectral Compressive Imaging</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose an interpretable HSI reconstruction method with learned Gaussian Scale Mixture (GSM) prior.</I><br/>
-                    T. Huang, W. Dong*, X. Yuan*, J. Wu, and G. Shi<br/>
-                    Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/DGSM-SCI.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="./project/ht_2021_cvpr/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/TaoHuang95/DGSMP" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-                                <br/>
-
-                                <li>
-                                    <a href="">Uncertainty-driven loss for single image super-resolution</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a new adaptive weighted
-                      loss for SISR to train deep networks focusing on challenging situations such
-                      as textured and edge pixels with high uncertainty.</I><br/>
-                    Q. Ning, W. Dong*, X. Li, J. Wu, and G. Shi<br/>
-                    Conference and Workshop on Neural Information Processing Systems,2021 <strong>(NeurIPS)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/NeruIPS21-uncertainty.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/QianNing0/UDL" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a target=""><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Bayesian correlation filter learning with Gaussian scale mixture model
-                                        for visual tracking</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a principled
-                      Bayesian correlation filter learning method using Gaussian scale
-                      mixture (GSM) model.</I><br/>
-                    Y. Cao, G. Shi, T. Zhang, W. Dong*, J. Wu, X. Xie, and X. Li<br/>
-                    IEEE Transactions on Circuit and Systems for Video Technology,2021 <strong>(T-CSVT)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/BCF_CSVT_2021.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target=""><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Accurate and lightweight image super-resolution with model-guided deep
-                                        unfolding network</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We present and advocate an explainable approach toward SISR
-                      named model-guided deep unfolding network (MoG-DUN).</I><br/>
-                    Q. Ning, W. Dong*, G. Shi, L. Li and X. Li<br/>
-                    IEEE Journal of Selected Topics on Signal Processing,2021 <strong>(J-STSP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/JSTSP_SR_2021.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/MoG-DUN-JSTSP2020.zip"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target=""><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                            </ol>
-
-                            <h2 class="mb-4 text-uppercase" id="2020">2020</h2>
-                            <ol>
-
-                                <li>
-                                    <a href="./project/lxt_ijcai_2020/index.html">Beyond network pruning: a joint
-                                        search-and-training approach</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a coarse-to-fine tuning strategy to iteratively sample and update compact sub-network to approximate the target network.</I><br/>
-                    X. Lu, H. Huang, W. Dong*, G. Shi, and X. Li<br/>
-                    International Joint Conferences on Artificial Intelligence, 2020 <strong>(IJCAI)</strong><br/>
-                  </span>
-                                    [<a href="https://www.ijcai.org/Proceedings/2020/0358.pdf" target="_blank"><span
-                                        class="text-muted">Paper</span></a>]
-                                    [<a href="./project/lxt_ijcai_2020/index.html" target="_blank"><span
-                                        class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Accelerating convolutional neural network via structured Gaussian scale
-                                        mixture models: a joint grouping and pruning approach</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a hybrid network compression technique for exploiting the prior knowledge of network
-                      parameters by Gaussian scale mixture (GSM) models.</I><br/>
-                    T. Huang, W. Dong*, J. Liu, F. Wu, G. Shi, and X. Li<br/>
-                    IEEE Journal of Selected Topics on Signal Processing, 2020 <strong>(J-STSP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Net_comp_JSTSP2020.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/GSM_Pruning.zip"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Spatial-temporal Gaussian scale mixture modeling for foreground
-                                        estimation</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We proposed a novel spatial-temporal Gaussian scale mixture (STGSM) model for foreground estimation.</I><br/>
-                    Q. Ning, W. Dong*, F. Wu, J. Wu, J. Lin, and G. Shi<br/>
-                    Association for the Advancement of Artificial Intelligence, 2020 <strong>(AAAI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/AAAI-NingQ.3320.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                            </ol>
-
-                            <h2 class="mb-4 text-uppercase" id="2019">2019</h2>
-                            <ol>
-                                <li>
-                                    <a href="">Deep spatial-spectral representation learning for hyperspectral image
-                                        denoising</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We present a novel,
-                      deep-learning framework for 3-D HSI denoising.</I><br/>
-                    W. Dong, H. Wang, F. Wu, G. Shi, and X. Li<br/>
-                    IEEE Transactions on Computational Imaging , 2019 <strong>(TCI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TCI-2019.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/DENOISE_NG_ST.tar.gz"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Denoising Prior Driven Deep Neural Network for Image Restoration</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I> We first propose a denoising-based IR
-                      algorithm, whose iterative steps can be computed efficiently. Then, the iterative process is unfolded into a deep neural network, which is
-                      composed of multiple denoisers modules interleaved with back-projection (BP) modules that ensure the observation consistencies. </I><br/>
-                    Weisheng Dong*, P. Wang, W. Yin, G. Shi, F. Wu, and X. Lu<br/>
-                    IEEE Transactions on Pattern Analysis and Machine Intelligence , 2019 <strong>(TPAMI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TPAMI-2019.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://github.com/WeishengDong/DPDNN" target="_blank"><span
-                                        class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                            </ol>
-
-                            <h2 class="mb-4 text-uppercase" id="2018">2018 & Before</h2>
-                            <ol>
-                                <li>
-                                    <a href="">Image Super-resolution with Parametric Sparse Model Learning</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose to take a
-                      hybrid approach toward image SR by combining those two lines
-                      of ideas-that is, a parametric sparse prior of HR images is learned
-                      from the training set as well as the input LR image.</I><br/>
-                    Y. Li, Weisheng Dong*, X. Xie, G. Shi, J. Wu, and X. Li<br/>
-                    IEEE Transactions on Image Processing , 2018 <strong>(TCI)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TIP-2018-SR.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Robust Foreground Estimation via Structured Gaussian Scale Mixture
-                                        Modeling</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose to model the sparse component
-                      with a Gaussian scale mixture (GSM) model.</I><br/>
-                    G. Shi, T. Huang, Weisheng Dong*, J. Wu, and X. Xie<br/>
-                    IEEE Transactions on Image Processing , 2018 <strong>(TIP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TIP-2018-foreground%20estimation.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/SGSM-BS.rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Robust tensor approximation with Laplacian scale mixture modeling for
-                                        multiframe image and video denoising</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a novel robust tensor
-                      approximation (RTA) framework with the Laplacian Scale Mixture (LSM) modeling for three-dimensional (3-D) data and beyond</I><br/>
-                    Weisheng Dong, T. Huang, G. Shi, Y. Ma, and X. Li<br/>
-                    IEEE Journal of Selected Topics on Signal Processing , 2018 <strong>(J-STSP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/JSTSP-2018-Video_denoising.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Multiframe_image_and_video_denoising(1).rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Mixed noise removal via Laplacian scale mixture modeling and nonlocal
-                                        low-rank approximation</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose an
-                      effective mixture noise removal method based on Laplacian scale
-                      mixture (LSM) modeling and nonlocal low-rank regularization.</I><br/>
-                    Tao Huang, Weisheng Dong*, Xuemei Xie, Guangming Shi, and Xiang Bai<br/>
-                    IEEE Transactions on Image Processing , 2017 <strong>(TIP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/LSM_NLR_Denoising_TIP17.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/LSM-NLR_Codes.rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Color-guided depth recovery via joint local structural and nonlocal
-                                        low-rank regularization</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I> We propose a unified variational approach via
-                      joint local and nonlocal regularization.</I><br/>
-                    Weisheng Dong, Guangming Shi, Xin Li, K. Peng, J. Wu, and Z. Guo<br/>
-                    IEEE Transactions on Multimedia , 2017 <strong>(TMM)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/TMM-2017-depth.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/Depth-SR-Code.rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Learning parametric sparse models for image super-resolution</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose to combine those two lines of
-                      ideas for image super-resolution.</I><br/>
-                    Y. Li, W. Dong*, X. Xie, G. Shi, X. Li, and D. Xu<br/>
-                    Conference and Workshop on Neural Information Processing Systems , 2016 <strong>(NeurIPS)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/NIPS2016.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Hyperspectral Image Super-Resolution via Non-Negative Structured Sparse
-                                        Representation</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a new hyperspectral image super-resolution method
-                      from a low-resolution (LR) image and a HR reference image of
-                      the same scene.</I><br/>
-                    Weisheng Dong, Fazuo Fu, Guangming Shi, and Xun Cao, Jinjian Wu, Guangyu Li, and Xin Li<br/>
-                    IEEE Transactions On Image Processing , 2016 <strong>(TIP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/NSSR_HSI_TIP16.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/NSSR_HSI_SR.rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Image Restoration via Simultaneous Sparse Coding: Where Structured
-                                        Sparsity Meets Gaussian Scale Mixture</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a structured sparse coding framework.</I><br/>
-                    W. Dong, G. Shi, Y. Ma, and X. Li<br/>
-                    International Journal of Computer Vision , 2015 <strong>(IJCV)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/IJCV2015_Dong.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/SSC_GSM_Denoising.rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Low-rank tensor approximation with Laplacian scale mixture modeling for
-                                        multiframe image denoising</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose a novel
-                      low-rank tensor approximation framework with Laplacian
-                      Scale Mixture (LSM) modeling for multi-frame image denoising.</I><br/>
-                    Weisheng Dong, Guangyu Li, Guangming Shi, Xin Li, and Yi Ma<br/>
-                    International Conference on Computer Vision , 2015 <strong>(ICCV)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/ICCV15_denoising.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Learning parametric distributions for image super-resolution: where patch
-                                        matching meets sparse coding</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I>We propose to develop a hybrid approach toward SR by combining those two
-                      lines of ideas.</I><br/>
-                    Yongbo Li, Weisheng Dong*,  Guangming Shi, and Xuemei Xie<br/>
-                    International Conference on Computer Vision , 2015 <strong>(ICCV)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/ICCV15_SR.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                                <li>
-                                    <a href="">Compressive sensing via nonlocal low-rank regularization</a>
-                                    <br/>
-                                    <span class="text-600">
-                    <I> We propose a nonlocal low-rank regularization (NLR)
-                      approach toward exploiting structured sparsity and explore its
-                      application into CS of both photographic and MRI images.</I><br/>
-                    W. Dong, G. Shi, X. Li, Y. Ma, and F. Huang<br/>
-                    IEEE Transactions on Image Processing , 2014 <strong>(TIP)</strong><br/>
-                  </span>
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/NLR-CS-TIP.pdf"
-                                        target="_blank"><span class="text-muted">Paper</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/NLR_Exps.htm"
-                                        target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    [<a href="https://see.xidian.edu.cn/faculty/wsdong/Code_release/NLR_codes.rar"
-                                        target="_blank"><span class="text-muted">code</span></a>]
-                                    [<a target="_blank"><span class="text-muted">demo</span></a>]
-                                </li>
-
-                                <br/>
-
-                            </ol>
+            <h3>视觉表征</h3>
+            <br>
+            <p>
+                &emsp;&emsp;视觉表征与学习实验室致力于解决如何表征图像先验知识、刻画图像降质过程，并建立从低维到高维的精确非线性映射这一关键科学问题。
+                针对这一挑战，实验室提出了基于深度网络的图像先验与降质过程表征方法，构建了结合知识驱动与深度学习的图像增强模型，同时研发了基于模型不确定性估计的深度模型稳健学习方法，大幅提升了模型的泛化能力与鲁棒性。
+            </p>
+            <p>
+                &emsp;&emsp;截至目前，实验室在国际顶级期刊与会议（如TPAMI、IJCV、IEEE-TIP、CVPR、NeurIPS等）上发表论文60余篇，总计发表论文100余篇。
+                实验室开发的图像去噪与增强算法已成功应用于荣耀手机等智能设备中，推动了图像处理技术的实际应用与产业落地。
+            </p>
+
+            <ol>
+                <li style="font-weight: bold;">基于图像先验学习及模型引导深度网络的深度超分辨算法&emsp;&emsp;<a
+                        href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/Deep_Gaussian_Scale_Mixture_Prior_for_Image_Reconstruction.pdf">[Paper]</a>&emsp;
+                    <a href="https://github.com/TaoHuang95/DGSMP">[Code]</a>
+                </li>
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <div class="member-img">
+                            <img src="assets/img/visual_representation/huangtaoTPAMI.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
                         </div>
                     </div>
-
-
+                    <div class="col-md-1 col-lg-1 d-flex align-items-stretch" data-aos="fade-up">
+                    </div>
+                    <div class="col-md-5 col-lg-5 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <div class="member-video">
+                            <video controls style="object-fit: cover; height: 300px; width: 500px;">
+                                <source src="assets/img/visual_representation/huangtaoTPAMI.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <br>
+                <li style="font-weight: bold;">一种非均匀模糊核估计及去模糊网络 &emsp;&emsp;
+                    <a href="https://see.xidian.edu.cn/faculty/wsdong/Projects/UFPNet.files/Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior.pdf">[Paper]</a>&emsp;<a
+                            href="https://github.com/Fangzhenxuan/UFPDeblur">[Code]</a>
+                </li>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <div class="member-img">
+                            <img src="assets/img/visual_representation/fangzhenxuanCVPR.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-lg-1 d-flex align-items-stretch" data-aos="fade-up">
+                    </div>
+                    <div class="col-md-5 col-lg-5 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; height: 300px; width: 500px;">
+                        <div class="member-video">
+                            <video controls style="object-fit: cover; height: 300px; width: 500px;">
+                                <source src="assets/img/visual_representation/fangzhenxuanCVPR.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li style="font-weight: bold;">一种基于生成式图像先验学习图像增强方法&emsp;&emsp;<a
+                        href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/Liu_Low-Light_Image_Enhancement_with_Multi-Stage_Residue_Quantization_and_Brightness-Aware_Attention_ICCV_2023_paper.pdf">[Paper]</a>&emsp;<a
+                        href="https://github.com/LiuYunlong99/RQ-LLIE">[Code]</a></li>
+                <div class="row" style="display: flex; justify-content: center; ">
+                    <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <div class="member-img">
+                            <img src="assets/img/visual_representation/liuyunlongICCV.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-lg-1 d-flex align-items-stretch" data-aos="fade-up">
+                    </div>
+                    <div class="col-md-5 col-lg-5 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <div class="member-video">
+                            <video controls style="object-fit: cover; height: 300px; width: 500px;">
+                                <source src="assets/img/visual_representation/liuyunlongICCV.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </ol>
         </div>
+
     </section>
 </main><!-- End #main -->
 
@@ -1027,7 +313,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 footer-contact">
                     <h4>联系我们</h4>
-                    <p>
+                    <p style="color: white;">
                         西安电子科技大学 人工智能学院<br>
                         陕西省西安市雁塔区电子城街道太白南路2号<br>
                         wsdong@mail.xidian.edu.cn

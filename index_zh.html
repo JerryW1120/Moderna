@@ -36,6 +36,14 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
+    <style>
+        .container {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -71,14 +79,14 @@
             </ul> -->
             <ul>
                 <!-- <li><a class="" href="index.html">Eng</a></li> -->
-                <li><a href="team.html">团队信息</a></li>
-                <li><a href="publication.html">视觉表征</a></li>
-                <li><a href="publication.html">具身智能</a></li>
-                <li><a href="publication.html">自动驾驶</a></li>
+                <li><a href="team.html">团队成员</a></li>
+                <li><a href="visual_representation.html">视觉表征</a></li>
+                <!--                <li><a href="publication.html">具身智能</a></li>-->
+                <li><a href="automatic_drive.html">自动驾驶</a></li>
                 <!--                <li><a href="team.html">学术研究</a></li>-->
-                <li><a href="demo.html">科研项目</a></li>
-                <li><a href="contact.html">产学合作</a></li>
-                <li><a href="contact.html">加入我们</a></li>
+                <li><a href="publication.html">科研成果</a></li>
+                <li><a href="">产学合作</a></li>
+                <li><a href="contact.html">联系我们</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -100,11 +108,12 @@
             </div> -->
             <div class="carousel-container">
                 <h2 class="animate__animated animate__fadeInDown">视觉表征与学习实验室</h2>
-                <p class="mb-0 text-justify">视觉表征与学习实验室始建于2018年1月1日，主要从事深度学习中的计算机视觉研究。现有教职人员2名，博士研究生和硕士研究生共30多名。
+                <p class="mb-0 text-justify" style="font-weight: bold">
+                    视觉表征与学习实验室依托于西安电子科技大学人工智能学院，专注于计算机视觉与人工智能领域的前沿研究。实验室以视觉表征为基础，聚焦于图像增强智能算法的开发与优化，同时持续深入探索具身智能和自动驾驶技术的创新应用。通过强化视觉表征能力，实验室致力于构建高效、精准的智能系统，为智能感知与决策提供可靠支撑。
                     <br/><br/>
-                <p class="mb-0 text-justify"> 实验室的主要研究方向包括底层视觉、图像和视频理解、图像和视频去噪、图像和视频超分辨、3D场景理解和重构和图像识别和检测等。点击查看各项<a
-                        href="./research.html">工作</a>的内容介绍和<a href="publication.html">论文</a>。 <br/><br/></p>
-                <a href="research.html" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>
+                    <!--                <p class="mb-0 text-justify"> 实验室的主要研究方向包括底层视觉、图像和视频理解、图像和视频去噪、图像和视频超分辨、3D场景理解和重构和图像识别和检测等。点击查看各项<a-->
+                    <!--                        href="./research.html">工作</a>的内容介绍和<a href="publication.html">论文</a>。 <br/><br/></p>-->
+                    <!--                <a href="research.html" class="btn-get-started animate__animated animate__fadeInUp">查看更多</a>-->
 
             </div>
         </div>
@@ -160,12 +169,11 @@
     <!-- End about Section -->
 
     <!-- ======= Services Section ======= -->
-    <section class="services">
+    <section class="services" style="margin-top: -50px">
         <div class="container">
             <div class="section-title">
-                <h2>团队信息</h2>
+                <h2>团队成员</h2>
             </div>
-            <br>
             <div class="row">
                 <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
                     <div class="icon-box icon-box-pink">
@@ -229,6 +237,10 @@
                         <p style="text-align: center;">博士后</p>
                     </div>
                 </div>
+<!--                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">-->
+<!--                </div>-->
+<!--                <div class="col-md-3 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">-->
+<!--                </div>-->
             </div>
         </div>
     </section><!-- End Services Section -->
@@ -266,9 +278,8 @@
 
 
     <!-- ======= Features Section ======= -->
-    <section class="features">
+    <section class="features" style="margin-top: -30px">
         <div class="container">
-
             <div class="section-title">
                 <h2 style="font-weight: bold; color: #d12948; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">News !</h2>
                 <!--                <p>下面是我们实验室的一些最新研究进展</p>-->
@@ -359,6 +370,15 @@
             </div>
         </div>
     </section><!-- End Features Section -->
+
+    <!-- ======= Map Section ======= -->
+    <section class="map mt-2">
+        <div class="container-fluid p-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3545.601672231631!2d108.91523507269906!3d34.232650441628316!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x366370bb3c349879%3A0x9e14d1d65f45d072!2z6KW_5a6J55S15a2Q56eR5oqA5aSn5a2m!5e0!3m2!1szh-CN!2shk!4v1681706758456!5m2!1szh-CN!2shk"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section><!-- End Map Section -->
 
 </main><!-- End #main -->
 
