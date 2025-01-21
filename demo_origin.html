@@ -2,248 +2,359 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Demo of our lab</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>具身智能</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+          rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/theme.css" rel = "stylesheet">
-  <!-- =======================================================
-  * Template Name: Moderna - v4.10.1
-  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Moderna - v4.10.1
+    * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <style>
+        .container {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /*.container h2 {*/
+        /*    font-size: 24px;*/
+        /*    color: #222;*/
+        /*    margin-bottom: 15px;*/
+        /*}*/
+
+        .container p {
+            margin-bottom: 15px;
+        }
+
+        .container ul {
+            padding-left: 20px;
+        }
+
+        .container li {
+            /*margin-bottom: 10px;*/
+            /*font-weight: bold;*/
+        }
+
+        .container h3 {
+            border-bottom: 2px solid #ff338b;
+            display: inline-block;
+            padding-bottom: 0px;
+        }
+
+        .member-video video {
+            border-radius: 7px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .member-video video {
+                height: auto;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
+<!--&lt;!&ndash; ======= Header ======= &ndash;&gt;-->
+<!--<header id="header" class="fixed-top d-flex align-items-center">-->
+<!--  <div class="container d-flex justify-content-between align-items-center">-->
+
+<!--    <div class="logo">-->
+<!--      <h1 class="text-light"><span>Publication</span></h1>-->
+<!--      &lt;!&ndash; Uncomment below if you prefer to use an image logo &ndash;&gt;-->
+<!--      &lt;!&ndash; <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>&ndash;&gt;-->
+<!--    </div>-->
+
+<!--    <nav id="navbar" class="navbar">-->
+<!--      <ul>-->
+<!--        <li><a class="" href="index.html">Home</a></li>-->
+<!--        <li><a href="research.html">Research</a></li>-->
+<!--        <li><a class="active" href="publication.html">Publication</a></li>-->
+<!--        <li><a href="team.html">People</a></li>-->
+<!--        <li><a href="demo.html">Demo</a></li>-->
+<!--        <li><a href="contact.html">Join Us</a></li>-->
+<!--      </ul>-->
+<!--      <i class="bi bi-list mobile-nav-toggle"></i>-->
+<!--    </nav>&lt;!&ndash; .navbar &ndash;&gt;-->
+
+<!--  </div>-->
+<!--</header>-->
+<!--&lt;!&ndash; End Header &ndash;&gt;-->
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex justify-content-between align-items-center">
 
-      <div class="logo">
-        <h1 class="text-light"><span>Demo</span></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
+        <!--        <div class="logo">-->
+        <!--            <h1 class="text-light"><a href="index.html"><span></span></a></h1>-->
+        <!--            &lt;!&ndash; Uncomment below if you prefer to use an image logo &ndash;&gt;-->
+        <!--            &lt;!&ndash; <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>&ndash;&gt;-->
+        <!--        </div>-->
+        <div class="logo">
+            <!--            <h1 class="text-light">-->
+            <!--                <a href="index.html">-->
+            <!--                    <span>-->
+            <!--                        <img src="assets/img/Xidian.jpg" class="img-fluid"-->
+            <!--                             style="object-fit: cover; height: 300px; width: 100%;" alt="">-->
+            <!--                    </span>-->
+            <!--                </a>-->
+            <!--            </h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="index.htm">
+                <img src="assets/img/XiaoHui.jpg" style="height: 100px">
+                <img src="assets/img/Xidian.jpg" style="height: 100px">
+            </a>
+        </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="" href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publication.html">Publication</a></li>
-          <li><a href="team.html">People</a></li>
-          <li><a class="active" href="demo.html">Demo</a></li>
-          <li><a href="contact.html">Join us</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- <li><a class="" href="index.html">Eng</a></li> -->
+                <li><a href="team.html">团队成员</a></li>
+                <li><a href="visual_representation.html">多模态感知</a></li>
+                <li style="font-weight: bold"><a href="publication.html">具身智能</a></li>
+                <li><a href="automatic_drive.html">自动驾驶</a></li>
+                <!--                <li><a href="team.html">学术研究</a></li>-->
+                <li><a href="publication.html">科研成果</a></li>
+                <li><a href="industry_academy.html">产学合作</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+</header><!-- End Header -->
 
-  <main id="main">
-
+<main id="main">
     <!-- ======= Our Services Section ======= -->
     <section class="breadcrumbs">
-      <div class="container">
+        <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Demo</li>
-          </ol>
-          <h2>Demo</h2>
-
+            <div class="d-flex justify-content-between align-items-center">
+                <ol>
+                    <li><a href="index.htm">主页</a></li>
+                    <li>具身智能</li>
+                </ol>
+                <h2>具身智能</h2>
+            </div>
         </div>
-
-      </div>
     </section><!-- End Our Services Section -->
+    <!-- ======= Hero Section ======= -->
+    <!--  <section id="main" class="d-flex justify-cntent-center align-items-center">-->
+    <!--    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">-->
+
+    <!--      &lt;!&ndash; Slide 1 &ndash;&gt;-->
+    <!--      <div class="carousel-item active">-->
+    <!--        <div class="carousel-container">-->
+    <!--          <h1 class="animate__animated animate__fadeInDown">Publication <span>of our Lab</span></h1>-->
+    <!--          <p class="animate__animated animate__fadeInUp"> All papers published by our Lab are as follows. You can click one if you are interested in any one of them.</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--    </div>-->
+    <!--  </section>&lt;!&ndash; End Hero &ndash;&gt;-->
 
 
-    <!-- ======= Service Details Section ======= -->
-    <section class="service-details">
-      <div class="container">
+    <!-- ======= Papers Section ======= -->
+    <section id="section-1" class="pb-0">
+        <div class="container">
+            <h3>具身智能</h3>
+            <br>
+            <br>
+            <p>
+                本实验室聚焦机器人具身智能领域，以视觉语言行动（Vision-Language-Action, VLA）作为核心研究切入点。研究旨在深度挖掘
+                VLA
+                在融合视觉感知、语言理解与行动规划方面的潜力，通过构建先进的算法模型与系统架构，让机器人能够敏锐捕捉并准确解析复杂多变的环境视觉信息，精准理解自然语言表述的任务指令，并将这些信息高效转化为合理、连贯且适应性强的具身行动。
+            </p>
+            <p>
+                &emsp;&emsp;团队运用跨学科研究方法，整合计算机视觉、自然语言处理、机器人学等多领域知识，致力于攻克机器人在复杂场景下具身智能实现的关键技术难题，力求在该领域产出创新性理论成果与突破性技术方案，为推动机器人具身智能技术的广泛应用与发展奠定坚实基础。
+            </p>
+            具体研究方向
 
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="project/fzx_eccv2022/img/visual_demo.png" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://demo_fzx.vrl-lab.org">Uncertainty learning in kernel estimation for multi-stage blind image super-resolution</a></h5>
-                <p class="card-text">Z. Fang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi </p>
-                <p class="card-text">ECCV 2022</p>
-                <p class="card-text">A novel kernel estimation method was proposed with uncertainty learning, achieving SOTA blind image SR results.</p>
-                <div class="Try"><a href="https://demo_fzx.vrl-lab.org"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="project/yz_eccv2022/img/network.png" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="./projects/yz_eccv_2022/index.html">Self-feature distillation with uncertainty modeling for degraded image recognition</a></h5>
-                <p class="card-text">Z. Yang, W. Dong*, X. Li, J. Wu, L. Li, and G. Shi </p>
-                <p class="card-text">ECCV 2022</p>
-                <p class="card-text">A weighted feature distillation loss with uncertainty learning was proposed for degraded image recognition.</p>
 
-                <div class="Try"><a href="./projects/yz_eccv_2022/index.html"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
 
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-details-3.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Our Vision</a></h5>
-                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
-                <div class="Try"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-details-4.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Our Care</a></h5>
-                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut incidunt aut</p>
-                <div class="Try"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
-              </div>
-            </div>
-          </div>
+            <ol>
+                <li style="font-weight: bold;">一种基于语义相似的近邻类梯度扰动的低质目标识别方法&emsp;&emsp;<a
+                        href="">[Paper]</a>&emsp;
+                    <a href="">[Code]</a>
+                </li>
+                <br>
+                <div class="row">
+                    <div class="col-md-7 col-lg-7d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <div class="member-img">
+                            <img src="assets/img/automatic_drive/automatic_drive1.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <!--                    <div class="col-md-1 col-lg-6 d-flex align-items-stretch" data-aos="fade-up">-->
+                    <!--                    </div>-->
+                    <div class="col-md-5 col-lg-5 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center; ">
+                        <!--                        <div class="member-video">-->
+                        <!--                            <video controls style="object-fit: cover; height: 300px; width: 500px;">-->
+                        <!--                                <source src="assets/img/visual_representation/huangtaoTPAMI.mp4" type="video/mp4">-->
+                        <!--                                Your browser does not support the video tag.-->
+                        <!--                            </video>-->
+                        <!--                        </div>-->
+                        <div class="member-img">
+                            <img src="assets/img/automatic_drive/automatic_drive1-2.jpg" class="img-fluid"
+                                 style="object-fit: cover; height: 250px; width: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li style="font-weight: bold;">一种基于多阶段注意力和神经符号推理的方法 &emsp;&emsp;
+                    <a href="">[Paper]</a>&emsp;<a
+                            href="">[Code]</a>
+                </li>
+                <br>
+
+                <div class="row">
+                    <!--                    <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="fade-up"-->
+                    <!--                         style="display: flex; justify-content: center; ">-->
+                    <!--                        <div class="member-img">-->
+                    <!--                            <img src="assets/img/visual_representation/fangzhenxuanCVPR.jpg" class="img-fluid"-->
+                    <!--                                 style="object-fit: cover; height: 300px; width: 100%;" alt="">-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="col-md-1 col-lg-1 d-flex align-items-stretch" data-aos="fade-up">-->
+                    <!--                    </div>-->
+                    <div class="col-md-12 col-lg-12 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center;">
+                        <div class="member-video">
+                            <video controls style="object-fit: cover; height: 500px; width: 100%;">
+                                <source src="assets/img/automatic_drive/automatic_drive2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <li style="font-weight: bold;">基于时域对称不确定性建模的无监督单目深度估计&emsp;&emsp;<a
+                        href="">[Paper]</a>&emsp;<a
+                        href="">[Code]</a>
+                </li>
+                <br>
+                <div class="row" style="display: flex; justify-content: center; ">
+                    <div class="col-md-8 col-lg-8 d-flex align-items-stretch" data-aos="fade-up"
+                         style="display: flex; justify-content: center;">
+                        <div class="member-img">
+                            <img src="assets/img/automatic_drive/automatic_drive3-1.jpg" class="img-fluid"
+                                 style="object-fit: cover; width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <!--                    <div class="col-md-1 col-lg-1 d-flex align-items-stretch" data-aos="fade-up">-->
+                    <!--                    </div>-->
+                    <div class="col-md-3 col-lg-3 d-flex align-items-center justify-content-center" data-aos="fade-up"
+                         style="height: 300px;">
+                        <div class="member-img"
+                             style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                            <img src="assets/img/automatic_drive/automatic_drive3-2.gif" class="img-fluid"
+                                 style="object-fit: cover; height: 200px; width: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </ol>
         </div>
 
-      </div>
-    </section><!-- End Service Details Section -->
+    </section>
+</main><!-- End #main -->
 
-    <!-- ======= Pricing Section ======= -->
-    <!-- <section class="pricing section-bg" data-aos="fade-up">
-      <div class="container">
+<!--&lt;!&ndash; ======= Footer ======= &ndash;&gt;-->
+<!--<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">-->
 
-        <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+<!--    <div class="footer-top">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-3 col-md-6 footer-contact">-->
+<!--                    <h4>Contact Us</h4>-->
+<!--                    <p>-->
+<!--                        School of Artificial Intelligence <br>-->
+<!--                        Xidian University <br>-->
+<!--                        8 Taibai South Road, Xi 'an, China<br>-->
+<!--                        wsdong@mail.xidian.edu.cn-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 box">
-            <h3>Free</h3>
-            <h4>$0<span>per month</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-              <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
-              <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-            </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
-          </div>
-
-          <div class="col-lg-4 box featured">
-            <h3>Business</h3>
-            <h4>$29<span>per month</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-              <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-              <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-            </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
-          </div>
-
-          <div class="col-lg-4 box">
-            <h3>Developer</h3>
-            <h4>$49<span>per month</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-              <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-              <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-            </ul>
-            <a href="#" class="get-started-btn">Get Started</a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Pricing Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+<!--    <div class="container">-->
+<!--        <div class="copyright">-->
+<!--            &copy;VRL Lab@XDU, 2023 Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+<!--&lt;!&ndash; End Footer &ndash;&gt;-->
+<!-- ======= Footer ======= -->
+<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              School of Artificial Intelligence <br>
-              Xidian University <br>
-              8 Taibai South Road, Xi 'an, China<br>
-              wsdong@mail.xidian.edu.cn
-            </p>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>联系我们</h4>
+                    <p style="color: white;">
+                        西安电子科技大学 人工智能学院<br>
+                        陕西省西安市长安区西沣路266号网络安全创新大楼720<br>
+                        wsdong@mail.xidian.edu.cn
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="container">
-      <div class="copyright">
-        &copy;VRL Lab@XDU, 2023  Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>
-      </div>
+        <div class="copyright">
+            <!--            &copy;VRL Lab@XDU, 2023 Powered by <a href="https://jerryw1120.github.io/">Yichen Wang</a>-->
+        </div>
     </div>
-  </footer><!-- End Footer -->
+</footer><!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

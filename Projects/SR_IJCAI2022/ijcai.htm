@@ -1,0 +1,434 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:等线;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:等线;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+span.1
+	{mso-style-name:未处理的提及1;
+	color:#605E5C;
+	background:#E1DFDD;}
+span.a
+	{mso-style-name:"页眉 字符";
+	mso-style-link:页眉;}
+span.a0
+	{mso-style-name:"页脚 字符";
+	mso-style-link:页脚;}
+.MsoChpDefault
+	{font-size:10.5pt;
+	font-family:等线;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:36.0pt;line-height:150%;font-family:"Palatino Linotype",serif'>Learning
+Degradation Uncertainty for Unsupervised Real-world Image</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+style='font-size:36.0pt;line-height:150%;font-family:"Palatino Linotype",serif'>Super-Resolution</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+style='font-size:20.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:45.0pt'><span
+class=MsoHyperlink><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Qian
+Ning</span></span><sup><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp; <u>Jingzhu Tang</u><sup>1</sup>&nbsp;&nbsp;&nbsp;
+<u>Fangfang Wu</u><sup>1</sup>&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://see.xidian.edu.cn/faculty/wsdong/">Weisheng Dong</a></span></span><sup><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>1</span></sup><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>*&nbsp;&nbsp;&nbsp;
+</span><span class=MsoHyperlink><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Xin
+Li</span></span><sup><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>2</span></sup><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span class=MsoHyperlink><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://web.xidian.edu.cn/gmshi/">Guangming Shi</a></span></span><sup><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>1</span></sup></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:45.0pt'><sup><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>1</span></sup><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>School
+of Artificial Intelligence, Xidian
+University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<sup>2</sup>West Virginia University</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+style='font-size:20.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Garamond",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=1132 height=290 id="图片 12" src="ijcai.files/image001.jpg"></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Figure 1. The
+framework of learning degradation uncertainty for unsupervised real image
+super-resolution. The whole training process can be divided into two steps. The
+first step estimates the uncertainty of degradation <b><i>θ</i></b> (variance)
+of the learned LR images (means) in a downsampling network. In the second step,
+an HR image is paired with multiple LR images, which are sampled from the
+learned LR image (mean) and corresponding degradation uncertainty (variance).
+Those LR-HR pairs will be used to train the SR network.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif'>Abstract</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Acquiring
+degraded images with paired high-resolution (HR) images is often challenging,
+impeding the advance of image super-resolution in real-world applications. By
+generating realistic low-resolution (LR) images with degradation similar to
+that in real-world scenarios, simulated paired LR-HR data can be constructed
+for supervised training. However, most of the existing work ignores the
+degradation uncertainty of the generated realistic LR images, since only one LR
+image has been generated given an HR image. To address this weakness, we
+propose learning the degradation uncertainty of generated LR images and
+sampling multiple LR images from the learned LR image (mean) and degradation
+uncertainty (variance) and construct LR-HR pairs to train the super-resolution
+(SR) networks. Specifically, uncertainty can be learned by minimizing the
+proposed loss based on Kullback-Leibler (KL) divergence. Furthermore, the
+uncertainty in the feature domain is exploited by a novel perceptual loss; and
+we propose to calculate the adversarial loss from the gradient information in
+the SR stage for stable training performance and better visual quality.
+Experimental results on popular real-world datasets show that our proposed
+method has performed better than other unsupervised approaches.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><a name="OLE_LINK1"><b><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Paper</span></b></a></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=230 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=133 height=134 src="ijcai.files/image002.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<b><span style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><span class=MsoHyperlink><span style='font-size:16.0pt;font-family:
+"Palatino Linotype",serif'><a
+href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/IJCAI-2022.pdf">IJCAI
+2022</a></span></span><span style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span style='font-size:
+14.0pt;font-family:"Palatino Linotype",serif'>Citation</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Qian Ning,
+Jingzhu Tang, Fangfang Wu, Weisheng Dong, Xin Li, Guangming Shi, &quot;</span> <span
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Learning
+Degradation Uncertainty for Unsupervised Real-world Image Super-resolution &quot;,
+in Proceedings of the Thirty-First International Joint Conference on Artificial
+Intelligence (</span><span style='font-size:16.0pt;font-family:"Times New Roman",serif'>IJCAI</span><span
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>), 2021.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span style='font-size:
+14.0pt;font-family:"Palatino Linotype",serif'>Bibtex</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>@inproceedings{ijcai2022p176,</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+title&nbsp;&nbsp;&nbsp;&nbsp; = {Learning Degradation Uncertainty for
+Unsupervised Real-world Image Super-resolution},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+author&nbsp;&nbsp;&nbsp; = {Ning, Qian and Tang, Jingzhu and Wu, Fangfang and
+Dong, Weisheng and Li, Xin and Shi, Guangming},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; booktitle =
+{Proceedings of the Thirty-First International Joint Conference on</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Artificial Intelligence, {IJCAI-22}},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; publisher =
+{International Joint Conferences on Artificial Intelligence Organization},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+editor&nbsp;&nbsp;&nbsp; = {Lud De Raedt},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+pages&nbsp;&nbsp;&nbsp;&nbsp; = {1261--1267},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = {2022},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+month&nbsp;&nbsp;&nbsp;&nbsp; = {7},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+note&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = {Main Track},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+doi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = {10.24963/ijcai.2022/176},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;
+url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+{https://doi.org/10.24963/ijcai.2022/176},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>}</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif'>Download</span></b></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=189 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=113 height=113 src="ijcai.files/image003.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:16.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;</span><span class=MsoHyperlink><span
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://github.com/QianNing0/USR-DU">Code</a></span></span><span
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:11.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif'>Results</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:10.5pt'><img
+border=0 width=751 height=272 id="图片 4" src="ijcai.files/image004.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=677 height=383 id="图片 7" src="ijcai.files/image005.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=682 height=314 id="图片 10" src="ijcai.files/image006.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=1107 height=474 id="图片 1" src="ijcai.files/image007.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=1054 height=338 id="图片 11" src="ijcai.files/image008.jpg"></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:18.0pt;
+font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif'>Contact</span></b></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Qian Ning,
+Email: ningqian@stu.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Jingzhu Tang, Email:
+tangjingzhu@stu.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Fangfang Wu, Email:
+ffwu_xd@163.com</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Weisheng Dong,
+Email: wsdong@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Xin Li, Email: xin.li@mail.wvu.edu</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Guangming Shi,
+Email: gmshi@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

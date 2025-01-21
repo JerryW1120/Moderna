@@ -1,0 +1,618 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+span.UnresolvedMention
+	{mso-style-name:"Unresolved Mention";
+	color:#605E5C;
+	background:#E1DFDD;}
+.MsoChpDefault
+	{font-family:等线;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+lang=EN-US style='font-size:36.0pt;line-height:150%;font-family:"Palatino Linotype",serif'>Deep
+Maximum a Posterior Estimator for Video Denoising</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:45.0pt'><span
+lang=EN-US><a href="https://github.com/sunlustar"><span style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif'>Lu Sun</span></a></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US><a href="https://see.xidian.edu.cn/faculty/wsdong/"><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Weisheng Dong</span></a></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US><a
+href="https://scholar.google.com/citations?user=gMBvzGoAAAAJ&amp;hl=zh-CN"><span
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Xin Li</span></a></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>2</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US><a href="https://web.xidian.edu.cn/wjj/"><span style='font-size:
+22.0pt;font-family:"Palatino Linotype",serif'>Jinjian Wu</span></a></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US><a href="https://web.xidian.edu.cn/ldli/"><span style='font-size:
+22.0pt;font-family:"Palatino Linotype",serif'>Leida Li</span></a></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US><a href="https://web.xidian.edu.cn/gmshi/"><span style='font-size:
+22.0pt;font-family:"Palatino Linotype",serif'>Guangming Shi</span></a></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:45.0pt'><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>School of Artificial
+Intelligence, Xidian University&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>West
+Virginia University, Morgantown, USA</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=165 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1315 height=613 src="MAP-VDNet.files/image001.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:74.55pt;
+margin-bottom:0cm;margin-left:49.55pt;margin-bottom:.0001pt;text-align:center;
+line-height:30.0pt'><span lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Figure
+1</span><span lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>.</span><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'> The
+architecture of the proposed model-guided DCNN for video denoising. (a)</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Palatino Linotype",serif'> </span><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>The
+overall architecture of the proposed network, (b)<b> </b>the architecture of
+the alignment module, (c) the architecture of the robust multi-frame fusion, and
+(d) the architecture of the encoding and decoding block of the U-net denoiser.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Garamond",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Abstract</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Unlike
+the maturity of image denoising research, video denoising has remained a
+challenging problem. A fundamental issue at the core of the video denoising
+(VD) problem is how to efficiently remove noise by exploiting temporal
+redundancy in video frames in a principled manner. Based on the Maximum a
+Posterior (MAP) estimation framework and recent advances in deep learning, we
+present a novel deep MAP-based video denoising method named MAP-VDNet with
+adaptive temporal fusion and deep image prior. The proposed MAP-based VD
+algorithm allows computationally efficient untangling of motion estimation
+(frame alignment) and image restoration (denoising). To address the
+misalignment issue, we also present a robust multi-frame fusion strategy for
+predicting spatially varying fusion weights by a neural network. To facilitate
+end-to-end optimization, we unfold the proposed iterative MAP-based VD
+algorithm into a deep convolutional network named MAP-VDNet. Extensive
+experimental results on three popular video datasets have shown that the
+proposed MAP-VDNet significantly outperforms current state-of-the-art VD
+techniques such as ViDeNN and FastDVDnet.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><a name="OLE_LINK1"><b><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Paper
+</span></b></a></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=905 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=133 height=134 src="MAP-VDNet.files/image002.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<b><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+lang=EN-US><a
+href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Journal/IJCV_VD_final.pdf"><span
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>IJCV&nbsp; 2021</span></a></span><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Citation</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Lu Sun,
+Weisheng Dong, Xin Li, Jinjian Wu, Leida Li, Guangming Shi, &quot;</span><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'> </span><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Deep
+Maximum a Posterior Estimator for Video Denoising</span><span lang=EN-US
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'> &quot;, in International
+Journal of Computer Vision (IJCV), 2021.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Bibtex</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:56.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>@article{sun2021deep,</span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp; = {Sun, Lu and Dong, Weisheng and Li,
+Xin and Wu, Jinjian and Li, Leida and Shi, Guangming}, </span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp; = { Deep Maximum a Posterior
+Estimator for Video Denoising }, </span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle = { International Journal of Computer Vision },</span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp; = {2021}</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>}</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Download</span></b></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=352 height=0></td>
+  <td width=170></td>
+  <td width=197></td>
+  <td width=170></td>
+  <td width=247></td>
+  <td width=170></td>
+ </tr>
+ <tr>
+  <td height=170></td>
+  <td align=left valign=top><img width=113 height=113
+  src="MAP-VDNet.files/image003.jpg"></td>
+  <td></td>
+  <td align=left valign=top><img width=113 height=113
+  src="MAP-VDNet.files/image004.jpg"></td>
+  <td></td>
+  <td align=left valign=top><img width=113 height=113
+  src="MAP-VDNet.files/image004.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span><span lang=EN-US style='font-size:14.0pt;
+font-family:"Palatino Linotype",serif'>&nbsp;</span><span lang=EN-US><a
+href="https://github.com/sunlustar/MAP-VDNet"><span style='font-size:14.0pt;
+font-family:"Palatino Linotype",serif'>Code</span></a></span><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US><a href="http://data.csail.mit.edu/tofu/dataset/vimeo_septuplet.zip"><span
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Training data (Vimeo-90K)</span></a></span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US><a
+href="https://drive.google.com/drive/folders/1bOmulFTlGozqb_49ocBDKzblHA4LpSKN"><span
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Testing data (</span><span
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif;background:white'>DTMC-HD
+and ASU</span><span style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>)</span></a></span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:11.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Simulation Results</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Table 1</span><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>.</span><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'> The
+average PSNR/SSIM video denoising results on Vimeo, ASU, and DTMC-HD dataset at
+different noise levels</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>(boldface
+highlights the best).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=278 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1241 height=635 src="MAP-VDNet.files/image005.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=1381 height=427 id="图片 3" src="MAP-VDNet.files/image006.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+2. Denoising results for a noisy frame from Vimeo test set with noise level 25.
+(a) Original frame; denoised frame by (b) V-BM4D [1] (31.66 dB, 0.7169), (c)
+RTA-LSM [2] (32.27 dB, 0.7429), (d) VNLB [3] (32.27 dB, 0.7427), (e) TOFlow [4]
+(35.13 dB, 0.8925), (f) TOFlow-EN (36.75dB, 0.9484), (g) ViDeNN [5] (37.65 dB,
+0.9533), (h) VNLnet [6] (36.63 dB, 0.9462), (i) FastDVDnet [7] (37.25 dB,
+0.9546), and (j) MAP-VDNet (39.30 dB, 0.9627).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=1360 height=413 id="图片 4" src="MAP-VDNet.files/image007.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+3. Denoising results for a noisy frame of <i>Station </i>video of DTMC-HD test
+set with noise level 50. (a) Original frame; denoised frame by (b) V-BM4D [1]
+(30.74 dB, 0.7445), (c) RTA-LSM [2] (30.63 dB, 0.7682), (d) VNLB [3] (31.78 dB,
+0.8020), (e) TOFlow [4] (31.99 dB, 0.8029), (f) TOFlow-EN (32.99 dB, 0.8391), (g)
+ViDeNN [5] (32.72 dB, 0.8274), (h) VNLnet [6] (30.79 dB, 0.7759), (i) FastDVDnet
+[7] (33.25 dB, 0.8497), and (j) MAP-VDNet (33.82 dB, 0.8608).</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Table 2</span><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>. The
+average PSNR/SSIM super-resolution results on Vid4 test set for <i>×</i>4 video
+super-resolution (boldface highlights the best.) &#8224; denotes the results from
+their publications, and </span><i><span lang=EN-US style='font-size:20.0pt;
+font-family:"Cambria Math",serif'>&#8727;</span></i><i><span lang=EN-US
+style='font-size:20.0pt;font-family:"Palatino Linotype",serif'> </span></i><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>denotes
+the results from TGA [13].</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=869 height=421 id="图片 14" src="MAP-VDNet.files/image008.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=1353 height=654 id="图片 6" src="MAP-VDNet.files/image009.jpg"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+4. Video superresolution results (<i>×</i>4 up-sampling) for a low-resolution
+frame of <i>City </i>video of Vid4 test set. (a) Original<br>
+frame; superresolved frame by (b) TOFlow [4] (25.40 dB, 0.7081), (c) FRVSR [8]
+(26.78 dB, 0.8136), (d) RBPN [9] (26.51 dB, 0.7929), (e) EDVR-L [10] (26.86 dB,
+0.7995), (f) DUF-52L [11] (26.89 dB, 0.8147), (g) PFNL [12] (26.94 dB, 0.8298),
+(h) MAP-VDNet (27.28 dB, 0.8369).</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>References</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[1]</span><span
+lang=EN-US style='font-size:8.0pt'> </span><span lang=EN-US style='font-size:
+16.0pt;font-family:"Palatino Linotype",serif'>Maggioni M, Boracchi G, Foi A,
+Egiazarian K (2012) Video denoising, deblocking, and enhancement through
+separable 4-d nonlocal spatiotemporal transforms. IEEE Transactions on image
+processing 21(9):3952–3966.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[2]
+Dong W, Huang T, Shi G, Ma Y, Li X (2018a) Robust tensor approximation with
+laplacian scale mixture modeling for multiframe image and video denoising. J
+Sel Topics Signal Processing 12(6):1435–1448.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[3]
+Pablo A, Jean MM (2018) Video denoising via empirical bayesian estimation of
+space-time patches. Journal of Mathematical Imaging and Vision 60(1):70–93.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[4]
+Xue T, Chen B, Wu J, Wei D, Freeman WT (2019) Video enhancement with
+task-oriented flow. International Journal of Computer Vision 127(8):1106–1125.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[5]
+Claus M, van Gemert J (2019) Videnn: Deep blind video denoising. In: IEEE
+Conference on Computer Vision and Pattern Recognition Workshops, CVPR Workshops
+2019, Long Beach, CA, USA, June 16-20, 2019, pp 1843–1852.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[6]
+Davy A, Ehret T, Morel JM, Arias P, Facciolo G (2019) A non-local cnn for video
+denoising. In: 2019 IEEE International Conference on Image Processing (ICIP),
+pp 2409–2413.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[7]
+Tassano M, Delon J, Veit T (2020) Fastdvdnet: Towards real-time deep video
+denoising without flow estimation. In: 2020 IEEE/CVF Conference on Computer
+Vision and Pattern Recognition, CVPR 2020, Seattle, WA, USA, June 13-19, 2020,
+pp 1351–1360.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[8]
+Sajjadi MSM, Vemulapalli R, Brown M (2018) Framerecurrent video
+super-resolution. In: 2018 IEEE Conference on Computer Vision and Pattern
+Recognition, CVPR 2018, Salt Lake City, UT, USA, June 18-22, 2018, pp 6626–6634.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[9]
+Haris M, Shakhnarovich G, Ukita N (2019) Recurrent backprojection network for
+video super-resolution. In: IEEE Conference on Computer Vision and Pattern
+Recognition, CVPR 2019, Long Beach, CA, USA, June 16-20, 2019, pp 3897–3906.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[10]
+Wang X, Chan KCK, Yu K, Dong C, Loy CC (2019) EDVR: video restoration with
+enhanced deformable convolutional networks. In: IEEE Conference on Computer Vision
+and Pattern Recognition Workshops, CVPR Workshops 2019, Long Beach, CA, USA,
+June 16-20, 2019, pp 1954–1963.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[11]
+Jo Y, Oh SW, Kang J, Kim SJ (2018) Deep video superresolution network using
+dynamic upsampling filters without explicit motion compensation. In: 2018 IEEE Conference
+on Computer Vision and Pattern Recognition, CVPR 2018, Salt Lake City, UT, USA,
+June 18-22, 2018, pp 3224–3232.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[12]
+Yi P, Wang Z, Jiang K, Jiang J, Ma J (2019) Progressive fusion video
+super-resolution network via exploiting nonlocal spatio-temporal correlations.
+In: 2019 IEEE/CVF International Conference on Computer Vision, ICCV 2019,
+Seoul, Korea (South), October 27 - November 2, 2019, pp 3106–3115.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[13]
+Isobe T, Li S, Jia X, Yuan S, Slabaugh GG, Xu C, Li Y, Wang S, Tian Q (2020)
+Video super-resolution with temporal group attention. In: 2020 IEEE/CVF Conference
+on Computer Vision and Pattern Recognition, CVPR 2020, Seattle, WA, USA, June
+13-19, 2020, pp 8005–8014.</span></p>
+
+<p class=MsoNormal style='margin-right:49.75pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Contact</span></b></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Lu
+Sun, Email: sunlu@stu.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Weisheng
+Dong, Email: wsdong@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Xin Li,
+Email: xin.li@ieee.org</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Jinjian
+Wu, Email: jinjian.wu@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Leida
+Li, Email: ldli@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Guangming
+Shi, Email: gmshi@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
