@@ -470,6 +470,34 @@
         <div class="copyright">
             &copy;西安电子科技大学 版本号 1.0.0
         </div>
+        <p class="copyright">访问次数：<span id="globalCount" class="loading">加载中...</span></p>
+        <script>
+            // 定义 API 路径
+            const apiUrl = "http://8.136.102.158:5000/visit";
+    
+            // 获取访问次数并更新页面
+            async function fetchVisitData() {
+                try {
+                    // 请求 API
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+    
+                    // 解析 JSON 数据
+                    const data = await response.json();
+    
+                    // 更新页面内容
+                    document.getElementById("globalCount").textContent = data.global_visits;
+                } catch (error) {
+                    console.error("Error fetching visit data:", error);
+                    document.getElementById("globalCount").textContent = "0";
+                }
+            }
+    
+            // 页面加载时调用
+            window.onload = fetchVisitData;
+        </script>
     </div>
 </footer><!-- End Footer -->
 
