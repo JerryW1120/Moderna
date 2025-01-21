@@ -1,0 +1,1089 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:等线;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+lang=EN-US style='font-size:36.0pt;line-height:150%;font-family:"Palatino Linotype",serif'>Deep
+Gaussian Scale Mixture Prior for Spectral Compressive Imaging</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:45.0pt'><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://github.com/TaoHuang95">Tao Huang</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://see.xidian.edu.cn/faculty/wsdong/">Weisheng Dong</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>*&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="http://www.bell-labs.com/about/researcher-profiles/xyuan/">Xin Yuan</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>2</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>*&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://web.xidian.edu.cn/wjj/">Jinjian Wu</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://web.xidian.edu.cn/gmshi/">Guangming Shi</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:45.0pt'><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>School of Artificial
+Intelligence, Xidian University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<sup>2</sup>Bell Labs</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><img
+width=1318 height=555 src="DGSM-SCI.files/image001.png"><br clear=ALL>
+<span lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Figure
+1. (a)</span><span lang=EN-US style='font-size:12.0pt;font-family:"Palatino Linotype",serif'>
+</span><span lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>The
+imaging schematic of CASSI system. (b) A single shot measurement captured by [7]
+and 28 reconstructed</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>spectral
+channels using our proposed method.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Garamond",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Abstract</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>In
+coded aperture snapshot spectral imaging (CASSI) system, the real-world
+hyperspectral image (HSI) can be reconstructed from the captured compressive
+image in a snapshot. Model-based HSI reconstruction methods employed
+hand-crafted priors to solve the reconstruction problem, but most of which
+achieved limited success due to the poor representation capability of these
+hand-crafted priors. Deep learning based methods learning the mappings between
+the compressive images and the HSIs directly achieved much better results. Yet,
+it is nontrivial to design a powerful deep network heuristically for achieving
+satisfied results. In this paper, we propose a novel HSI reconstruction method
+based on the Maximum a Posterior (MAP) estimation framework using learned Gaussian
+Scale Mixture (GSM) prior. Different from existing GSM models using
+hand-crafted scale priors (e.g., the Jeffrey’s prior), we propose to learn the
+scale prior through a deep convolutional neural network (DCNN). Furthermore, we
+also propose to estimate the local means of the GSM models by the DCNN. All the
+parameters of the MAP estimation algorithm and the DCNN parameters are jointly
+optimized through end-to-end training. Extensive experimental results on both
+synthetic and real datasets demonstrate that the proposed method outperforms
+existing state-of-the-art methods.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><a name="OLE_LINK1"><b><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Paper</span></b></a></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=567 height=0></td>
+  <td width=133></td>
+  <td width=245></td>
+  <td width=133></td>
+ </tr>
+ <tr>
+  <td height=134></td>
+  <td align=left valign=top><img width=133 height=134
+  src="DGSM-SCI.files/image002.png"></td>
+  <td></td>
+  <td align=left valign=top><img width=133 height=134
+  src="DGSM-SCI.files/image002.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<b><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://see.xidian.edu.cn/faculty/wsdong/Papers/Conference/DGSM-SCI.pdf">CVPR
+&nbsp;2021</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supplementary
+Material</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Citation</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Tao
+Huang, Weisheng Dong, Xin Yuan, Jinjian Wu, Guangming Shi, &quot;Deep Gaussian
+Scale Mixture Prior for Spectral Compressive Imaging&quot;, in IEEE Conference
+on Computer Vision and Pattern Recognition (CVPR), 2021.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Bibtex</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:56.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>@inproceedings{huang2021deep,</span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;
+= {Huang, Tao and Dong, WeiSheng and Yuan, Xin and Wu, Jinjian and Shi,
+Guangming}, </span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;
+= { Deep Gaussian Scale Mixture Prior for Spectral Compressive Imaging }, </span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booktitle = {IEEE
+Conference on Computer Vision and Pattern Recognition},</span></p>
+
+<p class=MsoNormal style='line-height:22.0pt'><span lang=EN-US
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= {2021}</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>}</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Download</span></b></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=189 height=0></td>
+  <td width=113></td>
+  <td width=190></td>
+  <td width=113></td>
+  <td width=151></td>
+  <td width=113></td>
+  <td width=190></td>
+  <td width=113></td>
+ </tr>
+ <tr>
+  <td height=113></td>
+  <td align=left valign=top><img width=113 height=113
+  src="DGSM-SCI.files/image003.jpg"></td>
+  <td></td>
+  <td align=left valign=top><img width=113 height=113
+  src="DGSM-SCI.files/image004.jpg"></td>
+  <td></td>
+  <td align=left valign=top><img width=113 height=113
+  src="DGSM-SCI.files/image004.jpg"></td>
+  <td></td>
+  <td align=left valign=top><img width=113 height=113
+  src="DGSM-SCI.files/image004.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>&nbsp;<span
+class=MsoHyperlink><a href="https://github.com/TaoHuang95/DGSMP">Code</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=MsoHyperlink><a
+href="https://www.cs.columbia.edu/CAVE/databases/multispectral/">Training data
+(CAVE)</a></span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=MsoHyperlink><a
+href="http://vclab.kaist.ac.kr/siggraphasia2017p1/kaistdataset.html">Training
+data (KAIST)</a></span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=MsoHyperlink><a href="https://github.com/mengziyi64/TSA-Net">Testing data
+(<span style='background:white'>simulation data and real data</span>)</a></span></span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:11.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Results</span></b></p>
+
+<p class=MsoNormal style='text-indent:45.0pt'><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://github.com/TaoHuang95/DGSMP/tree/main/Simulation/Results">Simulation
+Results:</a></span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Table 1. The
+PSNR in dB (left entry in each cell) and SSIM (right entry in each cell)
+results of the test methods on 10 scenes.</span></p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Method</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>TwIST [1]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>GAP-TV [2]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>DeSCI [3]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>λ-net [4]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>HSSP [5]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>DNU [6]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>TSA-Net [7]</span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Ours</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene1</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>25.16, 0.6996</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>26.82, 0.7544</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>27.13, 0.7479</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.10, 0.8492</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.48, 0.8577</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.72, 0.8634</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>32.03, 0.8920</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>33.26,
+  0.9152</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene2</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.02, 0.6038</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.89, 0.6103</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.04, 0.6198</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.49, 0.8054</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.09, 0.8422</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.13, 0.8464</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.00, 0.8583</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>32.09,
+  0.8977</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene3</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>21.40, 0.7105</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>26.31, 0.8024</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>26.62, 0.8182</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>27.73, 0.8696</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.96, 0.8231</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>29.99, 0.8447</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>32.25, 0.9145</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>33.06,
+  0.9251</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene4</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.19, 0.8508</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.65, 0.8522</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>34.96, 0.8966</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>37.01, 0.9338</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>34.56, 0.9018</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>35.34, 0.9084</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>39.19, 0.9528</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>40.54,
+  0.9636</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene5</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>21.41, 0.6351</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.64,0.7033</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.94, 0.7057</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>26.19, 0.8166</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.53, 0.8084</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>29.03, 0.8326</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>29.39,
+  0.8835</span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.86, 0.8820</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene6</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>20.95, 0.6435</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>21.85, 0.6625</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.38, 0.6834</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.64, 0.8527</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.83, 0.8766</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.87, 0.8868</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.44, 0.9076</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>33.08,
+  0.9372</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene7</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.20, 0.6427</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.76, 0.6881</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>24.45, 0.7433</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>26.47, 0.8062</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.71, 0.8236</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.99, 0.8386</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.32, 0.8782</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.74,
+  0.8860</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene8</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>21.82, 0.6495</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>21.98, 0.6547</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.03, 0.6725</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>26.09, 0.8307</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.09, 0.8811</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.13, 0.8845</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>29.35, 0.8884</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.55,
+  0.9234</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene9</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.42, 0.6902</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.63, 0.6815</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>24.56, 0.7320</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>27.50, 0.8258</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.43, 0.8676</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.03, 0.8760</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.01, 0.8901</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.66,
+  0.9110</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Scene10</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>22.67, 0.5687</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.10, 0.5839</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.59, 0.5874</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>27.13, 0.8163</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.78, 0.8416</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>29.14, 0.8494</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>29.59, 0.8740</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.44,
+  0.9247</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>Average</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>23.12, 0.6694</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>24.36, 0.6993</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>25.27, 0.7207</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>28.53, 0.8406</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.35, 0.8524</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>30.74, 0.8631</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:18.0pt;font-family:"Times New Roman",serif'>31.46, 0.8939</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:18.0pt;font-family:"Times New Roman",serif'>32.63,
+  0.9166</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=122 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1599 height=663 src="DGSM-SCI.files/image005.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+2. Reconstructed images of Scene 2 (left) and Scene 9 (right) with 4 out of 28
+spectral channels by the five deep learning-based</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>methods.
+Two regions in each scene are selected for analysing the spectra of the
+reconstructed results. </span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:35.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:42.4pt;text-indent:.05pt;line-height:
+35.0pt'><span class=MsoHyperlink><b><i><span lang=EN-US style='font-size:18.0pt;
+font-family:"Palatino Linotype",serif'><a
+href="https://github.com/TaoHuang95/DGSMP/tree/main/Real/Results">Real Data
+Results:</a></span></i></b></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><img
+width=945 height=706 src="DGSM-SCI.files/image006.png"><br clear=ALL>
+<span lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+3. Reconstructed images of two real scenes (Scene 1 and Scene 3) with 2 out of
+28 spectral channels by the competing methods. </span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>References</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[1]</span><span
+lang=EN-US style='font-size:8.0pt'> </span><span lang=EN-US style='font-size:
+16.0pt;font-family:"Palatino Linotype",serif'>José MBioucas-Dias and Mário
+ATFigueiredo. Anew twist: Two-step iterative shrinkage/thresholding algorithms
+for image restoration. IEEE Transactions on Image processing, 16(12):2992–3004,
+2007.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[2]
+Xin Yuan. Generalized alternating projection based total variation minimization
+for compressive sensing. In 2016 IEEE International Conference on Image
+Processing (ICIP), pages 2539–2543. IEEE, 2016.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[3]
+Yang Liu, Xin Yuan, Jinli Suo, David J Brady, and Qionghai Dai. Rank
+minimization for snapshot compressive imaging. IEEE transactions on pattern
+analysis and machine intelligence, 41(12):2990–3006, 2018.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[4]
+Xin Miao, Xin Yuan, Yunchen Pu, and Vassilis Athitsos. lambda-net: Reconstruct
+hyperspectral images from a snapshot measurement. In 2019 IEEE/CVF
+International Conference on Computer Vision (ICCV), pages 4058–4068. IEEE, 2019.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[5]
+Lizhi Wang, Chen Sun, Ying Fu, Min H Kim, and Hua Huang. Hyperspectral image
+reconstruction using a deep spatial-spectralprior. In Proceedings of the IEEE
+Conference on Computer Vision and Pattern Recognition, pages 8032–8041, 2019.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[6]
+Lizhi Wang, Chen Sun, Maoqing Zhang, Ying Fu, and Hua Huang. Dnu: Deep
+non-local unrolling for computational spectral imaging. In Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages
+1661–1671, 2020.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:49.75pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-indent:-22.4pt;line-height:
+22.0pt'><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>[7]
+Ziyi Meng, Jiawei Ma, and Xin Yuan. End-to-end low cost compressive spectral
+imaging with spatial-spectral self-attention. In European Conference on
+Computer Vision, pages 187–204. Springer, 2020.</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Contact</span></b></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Tao
+Huang, Email: thuang_666@stu.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Weisheng
+Dong, Email: wsdong@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Xin
+Yuan, Email: xyuan@bell-labs.com</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Jinjian
+Wu, Email: jinjian.wu@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Guangming
+Shi, Email: gmshi@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

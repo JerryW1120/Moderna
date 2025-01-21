@@ -1,0 +1,476 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><b><span
+lang=EN-US style='font-size:36.0pt;font-family:"Palatino Linotype",serif'>Uncertainty
+Learning in Kernel Estimation for Multi-Stage </span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><b><span
+lang=EN-US style='font-size:36.0pt;font-family:"Palatino Linotype",serif'>Blind
+Image Super-Resolution</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://github.com/Fangzhenxuan">Zhenxuan Fang</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://see.xidian.edu.cn/faculty/wsdong/">Weisheng Dong</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>*&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://xinli.faculty.wvu.edu/">Xin Li</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>2</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://web.xidian.edu.cn/wjj/">Jinjian Wu</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp; &nbsp;</span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://web.xidian.edu.cn/ldli/index.html">Leida Li</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><span
+class=MsoHyperlink><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://web.xidian.edu.cn/gmshi/">Guangming Shi</a></span></span><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>School of Artificial
+Intelligence, Xidian University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sup>2</sup> West
+Virginia University, Morgantown WV, USA</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=387 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1097 height=536 src="ECCV22-UncertaintySR.files/image001.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Figure
+1. Overview of the proposed KULNet for blind SR. The architectures of (a) the uncertain
+kernel estimation network, </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>(b)
+the layer A, which contains a convolution layer with the estimated kernel and a
+downsampling layer, (c) the multi-stage SR network.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Abstract</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Conventional
+wisdom in blind super-resolution (SR) first estimates the unknown degradation
+from the low-resolution image and then exploits the degradation information for
+image reconstruction. Such sequential approaches suffer from two fundamental
+weaknesses - i.e., the lack of robustness (the performance drops when the
+estimated degradation is inaccurate) and the lack of transparency (network
+architectures are heuristic without incorporating domain knowledge). To address
+these issues, we propose a joint Maximum a Posteriori (MAP) approach for
+estimating the unknown kernel and high-resolution image simultaneously. Our
+method first introduces uncertainty learning in the latent space when
+estimating the blur kernel, aiming at improving the robustness to the
+estimation error. Then we propose a novel SR network by unfolding the joint MAP
+estimator with a learned Laplacian Scale Mixture (LSM) prior and the estimated
+kernel. We have also developed a novel approach of estimating both the scale
+prior coefficient and the local means of the LSM model through a deep
+convolutional neural network (DCNN). All parameters of the MAP estimation
+algorithm and the DCNN parameters are jointly optimized through end-to-end
+training. Extensive experiments on both synthetic and real-world images show
+that our method achieves state-of-the-art performance for the task of blind
+image SR.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><a name="OLE_LINK1"><b><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Paper</span></b></a></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=567 height=0></td>
+  <td width=133></td>
+  <td width=245></td>
+  <td width=133></td>
+ </tr>
+ <tr>
+  <td height=134></td>
+  <td align=left valign=top><img width=133 height=134
+  src="ECCV22-UncertaintySR.files/image002.png"></td>
+  <td></td>
+  <td align=left valign=top><img width=133 height=134
+  src="ECCV22-UncertaintySR.files/image002.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<b><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><span
+class=MsoHyperlink><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'><a
+href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141.pdf">ECCV
+2022</a></span></span><span lang=EN-US style='font-size:16.0pt;font-family:
+"Palatino Linotype",serif'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=MsoHyperlink><a
+href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136780141-supp.pdf">Supplementary
+Material</a></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Citation</span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Zhenxuan
+Fang, Weisheng Dong, Xin Li, Jinjian Wu, Leida Li, and Guangming Shi.
+Uncertainty learning in kernel estimation for multi-stage blind image
+super-resolution. In<br>
+<i>European Conference on Computer Vision</i>, pages 144–161. Springer, 2022.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Bibtex</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>@inproceedings{fang2022uncertainty,</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; &nbsp;title={Uncertainty
+Learning in Kernel Estimation for Multi-stage Blind Image Super-Resolution},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; &nbsp;author={Fang,
+Zhenxuan and Dong, Weisheng and Li, Xin and Wu, Jinjian and Li, Leida and Shi, Guangming},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; &nbsp;booktitle={European
+Conference on Computer Vision},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; &nbsp;pages={144--161},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; &nbsp;year={2022},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp; &nbsp;organization={Springer}</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>}</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Download</span></b></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=189 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=113 height=113 src="ECCV22-UncertaintySR.files/image003.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>&nbsp;<span
+class=MsoHyperlink><a href="https://github.com/Fangzhenxuan/UncertaintySR">Code</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Results</span></b></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;color:#2E75B6'>Quantitative
+Results:</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Table 1. Quantitative
+comparison of the SOTA blind SR methods and the proposed method on various
+datasets and noise levels.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=328 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1203 height=545 src="ECCV22-UncertaintySR.files/image004.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal><span class=MsoHyperlink><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;text-decoration:
+none'>&nbsp;</span></i></b></span></p>
+
+<p class=MsoNormal><span class=MsoHyperlink><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;text-decoration:
+none'>&nbsp;</span></i></b></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;color:#2E75B6'>Visualization
+Results:</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+2. Visual comparison to other methods. The blur kernels are illustrated on the </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>top
+left. Noise levels are set to 0 and 10 for scale factor ×2 and ×4,
+respectively. </span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:35.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=346 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1175 height=629 src="ECCV22-UncertaintySR.files/image005.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal style='margin-left:42.4pt;text-indent:.05pt;line-height:
+35.0pt'><span class=MsoHyperlink><b><i><span lang=EN-US style='font-size:18.0pt;
+font-family:"Palatino Linotype",serif;text-decoration:none'>&nbsp;</span></i></b></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;color:#2E75B6'>Real
+Image Result:</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+3. Visualization results of different methods on real-world images upscaled by
+×4. </span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=419 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1023 height=380 src="ECCV22-UncertaintySR.files/image006.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Contact</span></b></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Zhenxuan
+Fang, Email: zxfang@stu.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Weisheng
+Dong, Email: wsdong@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Xin Li,
+Email: xin.li@mail.wvu.edu</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Leida
+Li, Email: ldli@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Jinjian
+Wu, Email: jinjian.wu@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Guangming
+Shi, Email: gmshi@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

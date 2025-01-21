@@ -1,0 +1,819 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="ACCV14_Sparse_tutorial_files/filelist.xml">
+<title>ACCV Tutorial</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Weisheng</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Weisheng</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>38</o:TotalTime>
+  <o:Created>2014-09-17T03:19:00Z</o:Created>
+  <o:LastSaved>2014-10-21T11:46:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1481</o:Words>
+  <o:Characters>8447</o:Characters>
+  <o:Lines>70</o:Lines>
+  <o:Paragraphs>19</o:Paragraphs>
+  <o:CharactersWithSpaces>9909</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="ACCV14_Sparse_tutorial_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="ACCV14_Sparse_tutorial_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>5.25 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>7.8 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	color:black;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.5pt;
+	mso-ansi-font-size:10.5pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 70.9pt 70.9pt 70.9pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:14.0pt;mso-bidi-font-size:11.0pt;font-family:
+"Times New Roman","serif"'>ACCV 2014 Tutorial<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
+"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:14.0pt;mso-bidi-font-size:11.0pt;font-family:
+"Times New Roman","serif"'>Advanced Sparse Representation Models for Image and
+Video Analysis<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
+"Times New Roman","serif"'>Speaker:</span></b><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'> <span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>Shenghua Gao, Assistant
+professor, ShanghaiTech University, China<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Kui
+Jia, Research Scientist, Advanced Digital Sciences Center (ADSC), Singapore<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp; </span>Tianzhu
+Zhang, Assistant professor, Institute of Automation, Chinese Academy of
+Sciences<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp; </span>Weisheng
+Dong, Associate professor, Xidian University, China<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
+"Times New Roman","serif"'>Date:</span></b><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Nov.
+2, 2014<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
+"Times New Roman","serif"'>Duration:</span></b><span style='font-size:12.0pt;
+mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span>Half day<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-bottom:4.65pt;mso-para-margin-bottom:
+.3gd;text-align:left'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Description:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'>Intrinsic structures of high-dimensional
+visual data often have the properties of low dimensionality, sparsity, or
+degeneracy. By discovering and properly harnessing these intrinsic structures,
+groundbreaking results have been achieved in the past decade on diverse
+applications in the domains of signal/image processing, computational
+neuroscience, computer vision, and machine learning. This tutorial aims to
+present the very recent breakthroughs in computer vision and image processing
+research. These results are achieved by leveraging new powerful, more advanced
+sparse representation models and by developing efficient large-scale
+optimization algorithms.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:4.65pt;mso-para-margin-bottom:.3gd'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Times New Roman","serif"'>Session 1: </span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Theory
+and algorithms of sparse coding and its extensions<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'>This session will introduce the basic
+theory of sparse/low-rank recovery, with its generalization to more advanced
+sparse models which considers other structures of the data, for example,
+locality information, group sparse structure, nonlinear structure, tree-guided
+structure, etc. We introduce these concepts in the context of signal processing
+and from the perspectives of geometric intuition, formal definition, and
+recovery conditions, with motivating applications.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:4.65pt;mso-para-margin-bottom:.3gd'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Times New Roman","serif"'>Session 2: </span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Advanced
+sparse representation models for image processing<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'>This session will present the very
+recent breakthroughs in image processing. These results are essentially
+obtained by properly harnessing these rich low-dimensional structures
+prevailing in natural images, using carefully designed more advanced models
+with sparsity/low-rank constriants, for various low-level vision tasks
+including image de-noising, de-blurring, super-resolution, and compressive
+sensing, etc. We will specially show that how local sparsity/low-rank models
+and non-local self-similarity of natural images are exploited to achieve these
+breakthrough results.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:4.65pt;mso-para-margin-bottom:.3gd'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Times New Roman","serif"'>Session 3</span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>:
+Advanced sparse representation models for object/face recognition<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'>This session will present striking
+results recently obtained in computer vision research. We cover a variety of
+mainstream vision applications ranging from face/object recognition, object
+alignment, feature correspondence/matching, tracking, to unsupervised object
+discovery and ambiguous learning. We will introduce the respective nature of
+these problems and explain the principles in designing more advanced sparse
+representation models in order to harness their problem nature and achieve
+striking performance.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:4.65pt;mso-para-margin-bottom:.3gd'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Times New Roman","serif"'>Session 4</span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>:
+Advanced sparse representation models for object tracking<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'>This session will also discuss how the
+advanced sparse representation models can be used for video tracking tasks.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:7.8pt;mso-para-margin-bottom:.5gd'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:
+11.0pt;font-family:"Times New Roman","serif"'>Speaker bios:<o:p></o:p></span></b></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:11.0pt'>Shenghua
+Gao</span></b><span style='mso-bidi-font-size:11.0pt'> is an assistant
+professor in ShanghaiTech University, China. He received the B.E. degree from
+the University of Science and Technology of China in 2008 (outstanding
+graduates), and received the Ph.D. degree from the Nanyang Technological
+University in 2012. From Jun 2012 to Aug 2014, he worked as a research
+scientist in Advanced Digital Sciences Center, Singapore. His research
+interests include computer vision and machine learning. He has published more
+than 20 papers on object and face recognition related topics in many
+international conferences and journals, including IEEE T-PAMI, IJCV, IEEE TIP,
+IEEE TNNLS, IEEE TMM, IEEE TCSVT, CVPR, ECCV, etc.). He was awarded the
+Microsoft Research Fellowship in 2010.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:11.0pt'>Kui
+Jia</span></b><span style='mso-bidi-font-size:11.0pt'> received the B.Eng.
+degree in marine engineering from Northwestern Polytechnic University, China,
+in 2001, the M.Eng. degree in electrical and computer engineering from National
+University of Singapore in 2003, and the Ph.D. degree in computer science from
+Queen Mary, University of London, London, U.K., in 2007. Since October 2011, he
+has been working as a Research Scientist at Advanced Digital Sciences Center
+(ADSC), Singapore, which is a joint research center between the University of
+Illinois at Urbana-Champaign (UIUC) and the Agency for Science, Technology and
+Research (A-STAR), Singapore. He also holds a joint appointment with the
+Coordinated Science Laboratory of UIUC. Before joining ADSC, he was with The
+Chinese University of Hong Kong, and Shenzhen Institute of Advanced Technology,
+Chinese Academy of Sciences. His research interests are in computer vision,
+machine learning, and image processing. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif"'>Tianzhu
+Zhang</span></b><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt'> </span><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+color:black;mso-font-kerning:0pt'>received the B.Eng. degree in communications
+and information technology from Beijing Institute of Technology, Beijing,
+China, in 2006, and the Ph.D. degree in pattern recognition and intelligent
+systems from the Institute of Automation, Chinese Academy of Sciences in 2011.
+After graduation, he worked as a research postdoctoral fellow at Advanced
+Digital Sciences Center (ADSC), Singapore, which is a joint research center
+between the University of Illinois at Urbana-Champaign (UIUC) and the Agency
+for Science, Technology and Research (A-STAR), Singapore. Since October 2013,
+he has been working as a Research Scientist. His current research interests
+include computer vision and multimedia, especially action recognition, object
+classification and object tracking.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif";color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-size:11.0pt'>Weisheng
+Don</span></b><span style='mso-bidi-font-size:11.0pt'>g received the B. S
+degree in communication engineering from Huazhong University of science and
+technology, Wuhan, China in 2004 and the Ph. D. degree in circuit and systems
+from Xidian University, Xi’an, China in 2010. From Jan. 2009 to Jun. 2010, he
+was a research assistant / associate with Dep. of Computing, the Hong Kong
+Polytechnic University, Hong Kong. From Aug. 2012 to Feb. 2013 he was a
+visiting researcher with Microsoft Research Asia. In Sep. 2010 he joined the
+school of electronic engineering, Xidian University as a Lecturer, and has been
+an associate professor since Jun. 2012. His research interests include inverse
+problems in image processing, sparse representation, and image compression. He
+was the recipient of the best paper award at SPIE VCIP 2010. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif";color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:"Times New Roman","serif";
+color:black;mso-font-kerning:0pt'>References:<o:p></o:p></span></b></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[1] <span style='mso-bidi-font-weight:bold'>Weisheng
+Dong<b>, </b></span>Guangming Shi, Xiaocheng Hu, and Yi Ma, &quot;Nonlocal
+sparse and low-rank regularization for optical flow estimation,&quot; <i>IEEE
+Trans. on Image Processing (TIP),&nbsp;</i><span style='mso-bidi-font-style:
+italic'>in press, </span>2014.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[2] <span style='mso-bidi-font-weight:bold'>Weisheng
+Dong<b>, </b></span>Lei Zhang, Rastislav Lukac, and Guangming Shi,
+“Sparse&nbsp;representation based image interpolation with nonlocal
+autoregressive modeling,” <i>IEEE Trans. on Image Processing (TIP)</i>,&nbsp;vol.
+22, no. 4, pp. 1382-1394, Apr. 2013.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[3] <span style='mso-bidi-font-weight:bold'>Weisheng
+Dong</span>, Guangming Shi, Xin Li, Yi Ma, and Feng Huang, &quot;Comressive
+sensing via nonlocal low-rank regularization&quot;, <i style='mso-bidi-font-style:
+normal'><span style='mso-bidi-font-weight:bold'>IEEE Trans. on Image Processing
+(TIP),</span></i><b> </b>vol. 23, no. 8, pp. 3618-3612, Aug. 2014. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[4] Weisheng Dong, Lei Zhang, Guangming Shi,
+and Xin Li, “Nonlocal centralized sparse representation for image restoration,”
+<i>IEEE Trans. on Image Processing (TIP)</i>, vol. 22, no. 4, pp. 1620-1630,
+Apr. 2013. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[5] Weisheng Dong, Lei Zhang, Guangming Shi,
+and Xiaolin Wu, “Image deblurring and super-resolution by adaptive sparse
+domain selection and adaptive regularization,” <i>IEEE Trans. On Image
+Processing (TIP)</i>, vol. 20, no. 7, pp. 1838-1857, July 2011. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[6] Kui Jia, Xiaogang Wang, and Xiaoou Tang,
+&quot;Image Transformation based on Learning Dictionaries across Image
+Spaces&quot;, <i>IEEE Trans. on Pattern Analysis and Machine Intelligence
+(TPAMI)</i>, Vol. 35, Issue 2, pp. 367-380, 2013. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[7] Kui Jia, Tsung-Han Chan, and Yi Ma,
+&quot;Robust and Practical Face Recognition via Structured Sparsity&quot;, in
+Proc. <i>European Conference on Computer Vision (ECCV)</i>, 2012. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[8] Kui Jia, Tsung-Han Chan, Zinan Zeng, and
+Yi Ma, &quot;ROML: A Robust Feature Correspondence Approach for Matching
+Objects in A Set of Images&quot;, arXiv:1403.7877. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[9] Zinan Zeng, Shijie Xiao, Kui Jia,
+Tsung-Han Chan, Shenghua Gao, Dong Xu, and Yi Ma, &quot;Learning by Associating
+Ambiguously Labeled Images&quot;, in Proc. <i>IEEE Conference on Computer
+Vision and Pattern Recognition (CVPR)</i>, 2013. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[10] Tianzhu Zhang, Bernard Ghanem, Si Liu,
+Narendra Ahuja.&quot;Robust Visual Tracking via Structured Multi- Task Sparse
+Learning,&quot; International Journal of Computer Vision (IJCV), Volume: 101,
+Issue: 2, pp. 367- 383, 2013. <o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[11] Tianzhu Zhang, Bernard Ghanem, Si Liu,
+Narendra Ahuja.&quot;Robust Visual Tracking via Multi-Task Sparse
+Learning&quot;, IEEE International Conference on Computer Vision and Pattern
+Recognition (CVPR Oral 2.5%), 2012.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[12] Shenghua Gao, IvorWai-Hung Tsung, Yi
+Ma.&nbsp;“Learning Category-Specific Dictionary and Shared Dictionary for
+Fine-Grained Image Categorization”, IEEE Transactions on Image Processing
+(TIP),23(2):623 - 634, Feb 2014.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[13] Shenghua Gao, IvorWai-Hung Tsang and
+Liang-Tien Chia.”&nbsp;Sparse Representation with Kernels”, IEEE Transactions
+on Image Processing (TIP). 22(2):423 - 434, Feb 2013.&nbsp;<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[14] Shenghua Gao, Ivor Wai-Hung Tsang and
+Liang-Tien Chia.&nbsp;“Laplacian Sparse Coding, Hypergraph Laplacian Sparse
+Coding, and Applications”, IEEE Transactions on Pattern Analysis and Machine
+Intelligence (TPAMI). 35:(1):92-104, Jan 2013.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[15] Zhixiang Ren,&nbsp;Shenghua Gao,
+Liang-Tien Chia, Deepu Rajan and Yun Huang.&nbsp;“Regularized Feature
+Reconstruction for Spatio-temporal Saliency Detection”, IEEE Transactions on
+Image Processing (TIP).22(8):3120 - 3132, August 2013.<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[16] Shenghua Gao, Kui Jia, Liansheng Zhuang,
+Yi Ma, “Neither Global Nor Local: Regularized Patch-based Representation for
+Single Sample Per person Face Recognition”, To appear in International Journal
+of Computer Vision (IJCV).<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph'><span
+style='mso-bidi-font-size:10.0pt'>[17] Tianzhu Zhang, Si Liu, Narendra Ahuja,
+Ming-Hsuan Yang, Bernard Ghanem.&quot;Robust Visual Tracking via Consistent
+Low-Rank Sparse Learning&quot;, International Journal of Computer Vision
+(IJCV), 2014<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;mso-bidi-font-size:11.0pt;
+font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

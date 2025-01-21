@@ -1,0 +1,499 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:等线;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:等线;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"页眉 字符";
+	mso-style-link:页眉;}
+span.a0
+	{mso-style-name:"页脚 字符";
+	mso-style-link:页脚;}
+.MsoChpDefault
+	{font-family:等线;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><b><span
+lang=EN-US style='font-size:36.0pt;font-family:"Palatino Linotype",serif'>Self-supervised
+Non-uniform Kernel Estimation with Flow-based Motion Prior</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><b><span
+lang=EN-US style='font-size:36.0pt;font-family:"Palatino Linotype",serif'>for
+Blind Image Deblurring</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><u><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'><a href="https://github.com/Fangzhenxuan">Zhenxuan Fang</a></span></u><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><u><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'>Fangfang Wu</span></u><sup><span lang=EN-US style='font-size:
+22.0pt;font-family:"Palatino Linotype",serif;color:#0070C0'>1</span></sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>*&nbsp;&nbsp;&nbsp; </span><u><span lang=EN-US style='font-size:
+22.0pt;font-family:"Palatino Linotype",serif;color:#0563C1'><a
+href="https://see.xidian.edu.cn/faculty/wsdong/">Weisheng Dong</a></span></u><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><u><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'><a href="https://xinli.faculty.wvu.edu/">Xin Li</a></span></u><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>2</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><u><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'><a href="https://web.xidian.edu.cn/wjj/">Jinjian Wu</a></span></u><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp; </span><u><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'><a href="https://web.xidian.edu.cn/gmshi/">Guangming Shi</a></span></u><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50.0pt'><sup><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>1</span></sup><span lang=EN-US style='font-size:22.0pt;
+font-family:"Palatino Linotype",serif;color:#0070C0'>Xidian
+University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sup>2</sup> West Virginia University</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=412 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1055 height=631 src="UFPNet.files/image001.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Figure
+1. Overview of the proposed UFPNet for blind image deblurring. The architecture
+of (a) the flow-based uncertain kernel </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>estimation
+network, (b) the encoder-decoder deblurring network with kernel attention
+module, (c) the kernel attention module (KAM).</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Abstract</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Many
+deep learning-based solutions to blind image deblurring estimate the blur
+representation and reconstruct the target image from its blurry observation.
+However, these methods suffer from severe performance degradation in real-world
+scenarios because they ignore important prior information about motion blur
+(e.g., real-world motion blur is diverse and spatially varying). Some methods
+have attempted to explicitly estimate non-uniform blur kernels by CNNs, but
+accurate estimation is still challenging due to the lack of ground truth about
+spatially varying blur kernels in real-world images. To address these issues,
+we propose to represent the field of motion blur kernels in a latent space by
+normalizing flows, and design CNNs to predict the latent codes instead of
+motion kernels. To further improve the accuracy and robustness of non-uniform
+kernel estimation, we introduce uncertainty learning into the process of
+estimating latent codes and propose a multi-scale kernel attention module to
+better integrate image features with estimated kernels. Extensive experimental
+results, especially on real-world blur datasets, demonstrate that our method
+achieves state-of-the-art results in terms of both subjective and objective
+quality as well as excellent generalization performance for non-uniform image
+deblurring.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><a name="OLE_LINK1"><b><span
+lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Paper</span></b></a></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=567 height=0></td>
+  <td width=133></td>
+  <td width=245></td>
+  <td width=133></td>
+ </tr>
+ <tr>
+  <td height=134></td>
+  <td align=left valign=top><img width=133 height=134
+  src="UFPNet.files/image002.png"></td>
+  <td></td>
+  <td align=left valign=top><img width=133 height=134
+  src="UFPNet.files/image002.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<b><span lang=EN-US style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><u><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'><a
+href="UFPNet.files/Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior.pdf">CVPR
+2023</a></span></u><span lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=MsoHyperlink><a
+href="UFPNet.files/Supplementary%20Material%20for%20Self-supervised%20Non-uniform%20Kernel%20Estimation%20with%20Flow-based%20Motion%20Prior%20for%20Blind%20Image%20Deblurring.pdf">Supplementary
+Material</a></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Palatino Linotype",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Citation </span></i></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Zhenxuan
+Fang, Fangfang Wu, Weisheng Dong, Xin Li, Jinjian Wu, and Guangming Shi. Self-supervised
+Non-uniform Kernel Estimation with Flow-based Motion Prior</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>for
+Blind Image Deblurring. In <i>Proceedings of the IEEE/CVF Conference on
+Computer Vision and Pattern Recognition</i>, 2023.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:28.0pt'><b><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>Bibtex</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>@inproceedings{fang2022self,</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:47.55pt;margin-bottom:
+0cm;margin-left:38.85pt;margin-bottom:.0001pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={</span><span lang=EN-US
+style='font-size:16.0pt;font-family:"Palatino Linotype",serif'>Self-supervised
+Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image
+Deblurring</span><span lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>
+},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;
+author={Fang, Zhenxuan and Wu Fangfang and Dong, Weisheng and Li, Xin and Wu,
+Jinjian and Shi, Guangming},</span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;
+booktitle={</span><span lang=EN-US> </span><span lang=EN-US style='font-size:
+16.0pt;font-family:"Times New Roman",serif'>Proceedings of the IEEE/CVF
+Conference on Computer Vision and Pattern Recognition},&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;
+year={2023}, </span></p>
+
+<p class=MsoNormal style='text-indent:64.0pt;line-height:22.0pt'><span
+lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif'>}</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Download</span></b></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=527 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=113 height=113 src="UFPNet.files/image003.jpg"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='line-height:30.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:16.0pt;font-family:"Times New Roman",serif;
+color:#0070C0'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Palatino Linotype",serif'>&nbsp;<u><span
+style='color:#0563C1'><a href="https://github.com/Fangzhenxuan/UFPDeblur">Github</a></span></u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Results</span></b></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;color:#2E74B5'>Quantitative
+Results:</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Table 1. The
+comparison results on the benchmark datasets, the models are trained only on
+the GoPro dataset.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=381 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1120 height=604 src="UFPNet.files/image004.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal><b><i><span lang=EN-US style='color:#0563C1'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span lang=EN-US style='font-size:18.0pt;font-family:
+"Palatino Linotype",serif;color:#0563C1'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b><i><span lang=EN-US
+style='font-size:18.0pt;font-family:"Palatino Linotype",serif;color:#2E74B5'>Visualization
+Results:</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='color:#2E74B5'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:25.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+2. Visual comparisons on the GoPro dataset. The estimated kernel at the
+indicated pixel is illustrated on the left-top. </span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:35.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=304 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1251 height=464 src="UFPNet.files/image005.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal style='margin-left:42.4pt;text-indent:.05pt;line-height:
+35.0pt'><b><i><span lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif;
+color:#0563C1'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:30.0pt'><span
+lang=EN-US style='font-size:20.0pt;font-family:"Palatino Linotype",serif'>Figure
+3. Visual comparisons on the RealBlur-J dataset. The estimated kernel at the
+indicated pixel is illustrated on the left-top. </span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=302 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=1246 height=464 src="UFPNet.files/image006.png"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:22.0pt'><b><span lang=EN-US
+style='font-size:22.0pt;font-family:"Palatino Linotype",serif'>Contact</span></b></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Zhenxuan
+Fang, Email: zxfang@stu.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Fangfang
+Wu, Email: wufangfang@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Weisheng
+Dong, Email: wsdong@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Xin
+Li, Email: xin.li@mail.wvu.edu</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Jinjian
+Wu, Email: jinjian.wu@mail.xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;line-height:28.0pt'><span
+lang=EN-US style='font-size:18.0pt;font-family:"Palatino Linotype",serif'>Guangming
+Shi, Email: gmshi@xidian.edu.cn</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
